@@ -84,6 +84,10 @@ h6 {
     text-transform: uppercase;
 }
 
+p, span {
+    max-width: 60ch;
+}
+
 /**************
 ****Buttons*****
 ***************/
@@ -149,7 +153,7 @@ h6 {
 ***************/
 
 .header-main {
-    background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') fixed center center / cover;
+    background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') no-repeat fixed center center / 100% 100%;
     width: 100%;
     .carousel {
         height: 100%;
@@ -227,6 +231,9 @@ h6 {
         .col {
             text-align: center;
             width: 50%;
+            .desktop-nav {
+                display: none;
+            }
             a {
                 display: inline-block;
                 font-weight: 700;
@@ -294,7 +301,7 @@ h6 {
         height: auto;
         margin: 0 auto;
         overflow: hidden;
-        padding: 40px 0 40px 0;
+        padding: 0 0 40px 0;
         position: absolute;
         top: 0;
         transform: translateX(-100%);
@@ -402,7 +409,7 @@ section.services {
         background: #046582;
         color: #fff;
         display: grid;
-        height: 50vh;
+        min-height: 50vh;
         position: relative;
         text-align: center;
         &::before,
@@ -495,7 +502,7 @@ section.services {
     &.about {
         .services-header {
             background: rgba(4, 101, 130, 0.75);
-            height: 100vh;
+            min-height: 50vh;
             .row {
                 .col {
                     p {
@@ -535,7 +542,7 @@ section.services {
         &.testimonials {
             .services-header {
                 background: rgba(4, 101, 130, 0.50);
-                height: 100vh;
+                min-height: 50vh;
                 margin-bottom: 2rem;
             }
             .row {
@@ -558,7 +565,11 @@ section.services {
                 }
             }
             &.contact {
+                .services-header {
+                    min-height: 33vh;
+                }
                 .row {
+                    align-items: initial;
                     .col {
                         .card {
                             .inner-card {
@@ -620,17 +631,26 @@ section.services {
 .footer-main {
     background: #6e7582;
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 2fr .25fr;
     .row {
         grid-column-start: 1;
         grid-column-end: 2;
         .col {
             margin: 1rem auto 0;
+            address span {
+                margin-left: unset;
+            }
+            span {
+                font-weight: 600;
+                margin-left: 2.5rem;
+                text-decoration: underline;
+            }
             
             a {
                 color: #f39189;
+                font-weight: initial;
+                padding: 0;
                 transition: color 250ms ease;
                 -webkit-transition: color 250ms ease;
                 &:hover {
@@ -654,6 +674,7 @@ section.services {
                     font-size: 20px;
                     margin: 2rem auto;
                     height: 100%;
+                    text-decoration: none;
                 }
             }
         }
@@ -685,12 +706,14 @@ section.services {
                     }
                 }
                 .fa-ul {
+                    margin-left: 2.5rem;
                     .navbar-main__menu-title {
                         display: block;
                         font-weight: 700;
                     }
                     li.menu-social {
-                        display: inline;
+                        display: inline-block;
+                        padding: 0 .5rem;
                         width: auto;
                     }
                 }
@@ -714,6 +737,7 @@ section.services {
             grid-row-end: 4;
             text-align: center;
             p {
+                line-height: 1;
                 a {
                     padding: 0;
                 }
@@ -725,7 +749,23 @@ section.services {
 
 
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
+    .navbar-main {
+        .col {
+            &:nth-child(1) {
+                flex: 1 1 33%;
+            }
+            &:nth-child(2) {
+                flex: 2 2 66%;
+                .desktop-nav {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .navbar-main nav.active {
+        transform: translateX(-5%);
+    }
     section.services {
         header.services-header {
             min-height: 50vh;
@@ -736,19 +776,171 @@ section.services {
             flex-wrap: wrap;
             .col {
                 width: 45%;
-                .card {
-                    min-height: 50vh;
+            }
+        }
+        &.about {
+            .services-header {
+                min-height: 33vh;
+            }
+            .row {
+                .col {
+                    width: 100%;
+                    .card {
+                        .inner-card {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        h3 {
+                            font-size: 2em;
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        .card-content {
+                            text-indent: 4ch;
+                        }
+                        h3,
+                        .card-content {
+                            flex: 1 1 100%; 
+                        }
+                    }
+                }
+            }
+            &.testimonials {
+                .services-header {
+                    min-height: 33vh;
+                }
+                .row {
+                    .col {
+                        flex: 1 1 50%;
+                        .card {
+                            .inner-card {
+                                flex-direction: column;
+                                
+                            }
+                        }
+                    }
+                }
+                &.contact {
+                    .services-header {
+                       
+                    }
+                    .row {
+                        align-items: initial;
+                        .col {
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            flex: 1 1 100%;
+                            .card {
+                                .inner-card {
+                                    .main-form {
+                                        .form-control {
+                                            margin: 0 auto;
+                                            max-width: calc(100% * .66);
+                                            label,
+                                            input,
+                                            textarea {
+                                                flex: 0 0 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                min-height: 400px;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+    .footer-main {
+        span {
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+        } 
+        .row {
+            align-items: center;
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-columns: 1f 1fr 1fr;
+            justify-content: center;
+            .col { 
+                &:nth-child(1) {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+                &:nth-child(2){ 
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    .fa-ul { 
+                        li.menu-social {
+                            display: inline-block;
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+                &:nth-child(3){ 
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                }
+            }
+            &:nth-child(2) {
+                align-items: start;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar-main { 
+        .navbar-main__container { 
+            background: #fff;
+            .col {
+                .hamburger-container { 
+                    display: none;
+                }
+                .desktop-nav {
+                    display: block;
+                    padding: 0;
+                    position: relative;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    section.services {
+        &.about {
+            .row {
+                .col {
+                    max-width: 768px;
+                }
+            }
+            &.testimonials {
+                .row {
+                    .col {
+                        max-width: unset;
+                    }
+                }
+                &.contact {
+
+                }
+
+            }
+        }
+    
+    }
+
 }
 
 
 @media screen and (min-width: 1365px) {
     section.services {
         header.services-header {
-            height: auto;
+            min-height: 50vh;
         }
         .row {
             display: flex;
@@ -759,6 +951,42 @@ section.services {
                 .card {
                    
                 }
+                &.header-col {
+                    width: 75ch;
+                }
+            }
+
+        }
+        &.about {
+            header.services-header {
+            }
+            .fixed-background {
+                align-items: center;
+                background: linear-gradient(1turn, rgba(243, 145, 137, 1), rgba(243, 145, 137, 0.66),rgba(243, 145, 137, .33), rgba(243, 145, 137, 0)), url('../images/child-elderly-parent-1.jpg') no-repeat fixed center center / cover;
+                min-height: 100vh;
+                .col {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                }
+                .card {
+                    background: rgba(0,0,0,0.50);
+                    box-shadow: none;
+                    color: #fff;
+                    .inner-card {
+                        .card-content {
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+            .row {
+                .col {
+                }
+            }
+            &.testimonials {
+
             }
         }
     }

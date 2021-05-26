@@ -57,6 +57,10 @@ h6 {
   text-transform: uppercase;
 }
 
+p, span {
+  max-width: 60ch;
+}
+
 /**************
 ****Buttons*****
 ***************/
@@ -115,7 +119,7 @@ h6 {
 ****Header*****
 ***************/
 .header-main {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/holding-hands-1920.jpg") fixed center center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/holding-hands-1920.jpg") no-repeat fixed center center/100% 100%;
   width: 100%;
 }
 .header-main .carousel {
@@ -188,6 +192,9 @@ h6 {
   text-align: center;
   width: 50%;
 }
+.navbar-main .navbar-main__container .col .desktop-nav {
+  display: none;
+}
 .navbar-main .navbar-main__container .col a {
   display: inline-block;
   font-weight: 700;
@@ -251,7 +258,7 @@ h6 {
   height: auto;
   margin: 0 auto;
   overflow: hidden;
-  padding: 40px 0 40px 0;
+  padding: 0 0 40px 0;
   position: absolute;
   top: 0;
   transform: translateX(-100%);
@@ -347,7 +354,7 @@ section.services .services-header {
   background: #046582;
   color: #fff;
   display: grid;
-  height: 50vh;
+  min-height: 50vh;
   position: relative;
   text-align: center;
 }
@@ -450,7 +457,7 @@ section.services .row .col .card .inner-card img.icon {
 }
 section.services.about .services-header {
   background: rgba(4, 101, 130, 0.75);
-  height: 100vh;
+  min-height: 50vh;
 }
 section.services.about .services-header .row .col p {
   letter-spacing: 1px;
@@ -481,7 +488,7 @@ section.services.about .row .col .card .inner-card .card-content {
 }
 section.services.about.testimonials .services-header {
   background: rgba(4, 101, 130, 0.5);
-  height: 100vh;
+  min-height: 50vh;
   margin-bottom: 2rem;
 }
 section.services.about.testimonials .row .col {
@@ -498,6 +505,12 @@ section.services.about.testimonials .row .col .card i {
 }
 section.services.about.testimonials .row .col .card .inner-card .card-content {
   padding: 1rem;
+}
+section.services.about.testimonials.contact .services-header {
+  min-height: 33vh;
+}
+section.services.about.testimonials.contact .row {
+  align-items: initial;
 }
 section.services.about.testimonials.contact .row .col .card .inner-card h3 {
   text-align: center;
@@ -547,9 +560,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 .footer-main {
   background: #6e7582;
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 2fr 0.25fr;
 }
 .footer-main .row {
   grid-column-start: 1;
@@ -558,8 +570,18 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 .footer-main .row .col {
   margin: 1rem auto 0;
 }
+.footer-main .row .col address span {
+  margin-left: unset;
+}
+.footer-main .row .col span {
+  font-weight: 600;
+  margin-left: 2.5rem;
+  text-decoration: underline;
+}
 .footer-main .row .col a {
   color: #f39189;
+  font-weight: initial;
+  padding: 0;
   transition: color 250ms ease;
   -webkit-transition: color 250ms ease;
 }
@@ -584,6 +606,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   font-size: 20px;
   margin: 2rem auto;
   height: 100%;
+  text-decoration: none;
 }
 .footer-main .row:nth-child(2) {
   background: rgba(4, 101, 130, 0.75);
@@ -612,12 +635,16 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   padding: 0;
   text-decoration: underline;
 }
+.footer-main .row:nth-child(2) .col .fa-ul {
+  margin-left: 2.5rem;
+}
 .footer-main .row:nth-child(2) .col .fa-ul .navbar-main__menu-title {
   display: block;
   font-weight: 700;
 }
 .footer-main .row:nth-child(2) .col .fa-ul li.menu-social {
-  display: inline;
+  display: inline-block;
+  padding: 0 0.5rem;
   width: auto;
 }
 .footer-main .row:nth-child(2) .col nav .fa-ul {
@@ -634,11 +661,28 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   grid-row-end: 4;
   text-align: center;
 }
+.footer-main .row:nth-child(3) p {
+  line-height: 1;
+}
 .footer-main .row:nth-child(3) p a {
   padding: 0;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
+  .navbar-main .col:nth-child(1) {
+    flex: 1 1 33%;
+  }
+  .navbar-main .col:nth-child(2) {
+    flex: 2 2 66%;
+  }
+  .navbar-main .col:nth-child(2) .desktop-nav {
+    width: 100%;
+  }
+
+  .navbar-main nav.active {
+    transform: translateX(-5%);
+  }
+
   section.services header.services-header {
     min-height: 50vh;
   }
@@ -650,13 +694,116 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   section.services .row .col {
     width: 45%;
   }
-  section.services .row .col .card {
-    min-height: 50vh;
+  section.services.about .services-header {
+    min-height: 33vh;
+  }
+  section.services.about .row .col {
+    width: 100%;
+  }
+  section.services.about .row .col .card .inner-card {
+    display: flex;
+    flex-direction: row;
+  }
+  section.services.about .row .col .card h3 {
+    font-size: 2em;
+  }
+  section.services.about .row .col .card h3::after {
+    display: none;
+  }
+  section.services.about .row .col .card .card-content {
+    text-indent: 4ch;
+  }
+  section.services.about .row .col .card h3,
+section.services.about .row .col .card .card-content {
+    flex: 1 1 100%;
+  }
+  section.services.about.testimonials .services-header {
+    min-height: 33vh;
+  }
+  section.services.about.testimonials .row .col {
+    flex: 1 1 50%;
+  }
+  section.services.about.testimonials .row .col .card .inner-card {
+    flex-direction: column;
+  }
+  section.services.about.testimonials.contact .row {
+    align-items: initial;
+  }
+  section.services.about.testimonials.contact .row .col {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1 1 100%;
+  }
+  section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control {
+    margin: 0 auto;
+    max-width: calc(100% * .66);
+  }
+  section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control label,
+section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control input,
+section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control textarea {
+    flex: 0 0 100%;
+  }
+  section.services.about.testimonials.contact .row .col:nth-child(2) {
+    min-height: 400px;
+  }
+
+  .footer-main span {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .footer-main .row {
+    align-items: center;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1f 1fr 1fr;
+    justify-content: center;
+  }
+  .footer-main .row .col:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer-main .row .col:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .footer-main .row .col:nth-child(2) .fa-ul li.menu-social {
+    display: inline-block;
+    font-size: 12px !important;
+  }
+  .footer-main .row .col:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .footer-main .row:nth-child(2) {
+    align-items: start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar-main .navbar-main__container {
+    background: #fff;
+  }
+  .navbar-main .navbar-main__container .col .hamburger-container {
+    display: none;
+  }
+  .navbar-main .navbar-main__container .col .desktop-nav {
+    display: block;
+    padding: 0;
+    position: relative;
+    transform: translateX(0);
+  }
+
+  section.services.about .row .col {
+    max-width: 768px;
+  }
+  section.services.about.testimonials .row .col {
+    max-width: unset;
   }
 }
 @media screen and (min-width: 1365px) {
   section.services header.services-header {
-    height: auto;
+    min-height: 50vh;
   }
   section.services .row {
     display: flex;
@@ -665,6 +812,27 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
   section.services .row .col {
     width: 20%;
+  }
+  section.services .row .col.header-col {
+    width: 75ch;
+  }
+  section.services.about .fixed-background {
+    align-items: center;
+    background: linear-gradient(1turn, #f39189, rgba(243, 145, 137, 0.66), rgba(243, 145, 137, 0.33), rgba(243, 145, 137, 0)), url("../images/child-elderly-parent-1.jpg") no-repeat fixed center center/cover;
+    min-height: 100vh;
+  }
+  section.services.about .fixed-background .col {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  section.services.about .fixed-background .card {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    color: #fff;
+  }
+  section.services.about .fixed-background .card .inner-card .card-content {
+    color: #fff;
   }
 }
 
