@@ -46,8 +46,8 @@ slideContainer.addEventListener('click', () => {
 const images = document.querySelectorAll('.lazy');
 
 const config = {
-    rootMargin: '50px 20px 75px 30px',
-  threshold: [0.25, 0.25, 0.75, 1]
+    rootMargin: '15px 0px 0px 15px',
+  threshold: [1, 0.5, 0.5, 1]
 }
 
 const observer = new IntersectionObserver(entries => {
@@ -63,4 +63,11 @@ const observer = new IntersectionObserver(entries => {
 images.forEach(image => {
     observer.observe(image);
 })
+
+
+const yearContainer = document.getElementById('currentYear');
+const currentYear = new Date().getFullYear();
+
+yearContainer.textContent = currentYear;
+
 

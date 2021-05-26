@@ -10,7 +10,7 @@
             height: 2px;
             left: 50%;
             margin: 0 auto;
-            max-width: 60ch;
+            max-width: 80px;
             position: absolute;
             transform: translateX(-50%);
             width: 50%;
@@ -28,16 +28,17 @@
 *,
 *::before,
 *::after {
-    // border: 1px dotted red;
+     
     line-height: 1.75;
 }
 
 html,
 body {
+    background: #dcdcdc;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    height: auto;
     margin: 0;
-    overflow-x: hidden;
     padding: 0;
 }
 
@@ -72,6 +73,15 @@ img {
 
 img.fadeIn {
     opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
 }
 
 /**************
@@ -140,7 +150,6 @@ img.fadeIn {
 
 .header-main {
     background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') fixed center center / cover;
-    height: 100vh;
     width: 100%;
     .carousel {
         height: 100%;
@@ -187,6 +196,9 @@ img.fadeIn {
                             padding: 1rem;
                         }
                         figure {
+                            img {
+                                max-height: 250px;
+                            }
                             figcaption {
                                 color: #000;
                             }
@@ -222,10 +234,11 @@ img.fadeIn {
             }
             .hamburger-container {
                 cursor: pointer;
-                display: inline-block;
-                margin-left: 5em;
+                display: block;
+                float: right;
+                margin-right: 1.5rem;
                 padding: 1.5em;
-                position: absolute;
+                // position: absolute;
                 right: 2em;
                 text-align: initial;
                 top: .66em;
@@ -278,7 +291,7 @@ img.fadeIn {
     }
     nav {
         background: #fff;
-        height: 100vh;
+        height: auto;
         margin: 0 auto;
         overflow: hidden;
         padding: 40px 0 40px 0;
@@ -380,21 +393,16 @@ img.fadeIn {
 
 
 /***********
-**Services**
+**Sections & Services**
 ************/
 
 section.services {
     .services-header {
         align-items: center;
-        background: repeating-linear-gradient(
-            45deg,
-            #046582,
-            #046582 10px,
-            #6e7582 10px,
-            #6e7582 20px
-          );
+        background: #046582;
         color: #fff;
         display: grid;
+        height: 50vh;
         position: relative;
         text-align: center;
         &::before,
@@ -438,9 +446,13 @@ section.services {
             margin: 1rem auto;
             width: 100%;
             .card {
+                background: #fff;
                 box-shadow: 0 0 20px -5px rgba(0,0,0,0.33);
                 margin: auto;
                 width: 90%;
+                &:first {
+                    margin-top: 0;
+                }
                 .inner-card {
                     padding: 1rem 0;
                     width: 100%;
@@ -456,6 +468,8 @@ section.services {
                     .card-content {
                         color: #000;
                         font-size: 14px;
+                        margin: 0 auto;
+                        max-width: 60ch;
                         padding: 1rem;
                     }
                     .card-content + .cta-btn {
@@ -474,6 +488,276 @@ section.services {
                         margin: 0 auto;
                         width: auto;
                     }
+                }
+            }
+        }
+    }
+    &.about {
+        .services-header {
+            background: rgba(4, 101, 130, 0.75);
+            height: 100vh;
+            .row {
+                .col {
+                    p {
+                        letter-spacing: 1px;
+                        a {
+                            color: #fff;
+                            padding: 0 0;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .row {
+            .col {
+                .card {
+                    display: block;
+                    margin: 0 auto;
+                    width: 90%;
+                    .inner-card {
+                        width: 100%;
+                        h3 {
+                            margin: 0 auto;
+                            max-width: 300px;
+                            padding: 1rem;
+                            text-align: left;
+                            text-transform: initial;
+                        }
+                        .card-content {
+                            max-width: 60ch;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        &.testimonials {
+            .services-header {
+                background: rgba(4, 101, 130, 0.50);
+                height: 100vh;
+                margin-bottom: 2rem;
+            }
+            .row {
+                .col {
+                    margin: 2rem auto;
+                    .card {
+                        position: relative;
+                        i {
+                            color: #046582;
+                            position: absolute;
+                            top: calc(-56px /2);
+                            right: calc(-32px / 2);
+                        }
+                        .inner-card {
+                            .card-content {
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &.contact {
+                .row {
+                    .col {
+                        .card {
+                            .inner-card {
+                                h3 {
+                                    text-align: center;
+                                }
+                                .main-form {
+                                    display: block;
+                                    width: 100%;
+                                    .form-control {
+                                        align-items: center;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: flex-start;
+                                        max-width: 350px;
+                                        width: 100%;
+                                        label,
+                                        input,
+                                        textarea {
+                                            flex: 0 1 250px;
+                                            margin: 1rem auto 0;
+                                            transition: all 250ms linear;
+                                            -webkit-transition: all 250ms linear;
+                                        }
+                                        input,
+                                        textarea {
+                                            background: #e6e6e6;
+                                            border: none;
+                                            font-weight: 700;
+                                            line-height: 1.75;
+                                            &:focus-within {
+                                                outline: 2px dotted rgba(4, 101, 130, 0.75);
+                                            }
+                                        }
+                                        button {
+                                            color: #fff;
+                                            margin: 1rem auto;
+                                            max-width: 175px;
+                                            padding: .5rem 1rem;
+                                            width: 33%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*****************
+****Footer****
+******************/
+
+.footer-main {
+    background: #6e7582;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    .row {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        .col {
+            margin: 1rem auto 0;
+            
+            a {
+                color: #f39189;
+                transition: color 250ms ease;
+                -webkit-transition: color 250ms ease;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        &:nth-child(1) {
+            align-self: center;
+            background: rgba(4, 101, 130, 0.5);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 100%;
+            text-align: center;
+            .col {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                span.hero-text {
+                    color: #fff;
+                    font-size: 20px;
+                    margin: 2rem auto;
+                    height: 100%;
+                }
+            }
+        }
+        &:nth-child(2) {
+            background: rgba(4, 101, 130, 0.75);
+            color: #fff;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            .col {
+                address {
+                    margin-left: 2.5rem;
+                    max-width: 300px;
+                    ul {
+                        max-width: 250px;
+                        margin: 0;
+                        padding: 0;
+                        span {
+                            color: #fff;
+                            font-weight: 700;
+                        }
+                        li {
+                            font-style: italic;
+                            a {
+                                color: #fff;
+                                padding: 0;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .fa-ul {
+                    .navbar-main__menu-title {
+                        display: block;
+                        font-weight: 700;
+                    }
+                    li.menu-social {
+                        display: inline;
+                        width: auto;
+                    }
+                }
+                nav {
+                    .fa-ul {
+                        list-style: none;
+                        max-width: 250px;
+                        li {
+                            a {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(3) {
+            color: #fff;
+            background: rgba(4, 101, 130, 1.0);
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+            p {
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 767px) {
+    section.services {
+        header.services-header {
+            min-height: 50vh;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .col {
+                width: 45%;
+                .card {
+                    min-height: 50vh;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1365px) {
+    section.services {
+        header.services-header {
+            height: auto;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .col {
+                width: 20%;
+                .card {
+                   
                 }
             }
         }
