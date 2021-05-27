@@ -28,7 +28,7 @@
 *,
 *::before,
 *::after {
-     
+     box-sizing: border-box;
     line-height: 1.75;
 }
 
@@ -153,8 +153,9 @@ p, span {
 ***************/
 
 .header-main {
-    background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') no-repeat fixed center center / 100% 100%;
+    // background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') no-repeat fixed center center / 100% 100%;
     width: 100%;
+    min-height: 75vh;
     .carousel {
         height: 100%;
         overflow: hidden;
@@ -209,6 +210,19 @@ p, span {
                         }
 
                 }
+            }
+            &.one { 
+                background-image: -webkit-image-set(
+                    url('../images/nurse-senior-walker-1x.jpg') 1x,
+                    url('../images/nurse-senior-walker-2x.jpg') 2x,
+                    url('../images/nurse-senior-walker-3x.jpg') 3x,
+                    url('../images/nurse-senior-walker-4x.jpg') 4x                    
+                );
+                background-image: image-set(
+                    url('../images/nurse-senior-walker-1x.jpg') 1x,
+                    url('../images/nurse-senior-walker-2x.jpg') 2x,
+                    url('../images/nurse-senior-walker-3x.jpg') 3x,
+                    url('../images/nurse-senior-walker-4x.jpg') 4x                );
             }
         }
     }
@@ -572,6 +586,7 @@ section.services {
                     align-items: initial;
                     .col {
                         .card {
+                            height: 100%;
                             .inner-card {
                                 h3 {
                                     text-align: center;
@@ -921,11 +936,27 @@ section.services {
             }
             &.testimonials {
                 .row {
+                    justify-content: center;
                     .col {
-                        max-width: unset;
+                        flex: 0 0 25%;
+                       .card {
+                           &.testimonial {
+                               .inner-card {
+                                   h3 {
+                                       font-size: 1.25rem;
+                                   }
+                               }
+                           }
+                       }
                     }
                 }
                 &.contact {
+                    .row {
+                        padding: 0;
+                        .col {
+                            flex: 1 1 40%;
+                        }
+                    }
 
                 }
 
