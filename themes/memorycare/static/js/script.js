@@ -33,7 +33,7 @@ counter += 1;
 console.log(counter)
 }
 
-let timer = setInterval(changeSlide, 10000);
+let timer = setInterval(changeSlide, 12000);
 
 slideContainer.addEventListener('click', () => {
     clearInterval(timer);

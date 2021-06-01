@@ -37,7 +37,7 @@ body {
     background: #dcdcdc;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -154,9 +154,10 @@ p, span {
 
 .header-main {
     // background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/holding-hands-1920.jpg') no-repeat fixed center center / 100% 100%;
+    min-height: calc(100vh - 100px);
     width: 100%;
-    min-height: 75vh;
     .carousel {
+        display: block;
         height: 100%;
         overflow: hidden;
         width: 100%;
@@ -167,10 +168,10 @@ p, span {
             flex-wrap: nowrap;
             height: 100%;
             justify-content: flex-start;
-            transform: translateX(000%);
             transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
             .carousel-item {
+                background: #fff no-repeat fixed center center / cover;
                 flex: 0 0 100%;
                 height: 100%;
                 opacity: 1;
@@ -185,12 +186,12 @@ p, span {
                     align-items: center;
                     display: flex;
                     flex-direction: column;
-                    height: 100%;
                     justify-content: flex-start;
+                    min-height: 50%;
                     width: 100%;
                     .col {
                         color: #000;
-                        // height: 100%;
+                        height: 100%;
                         padding: rem;
                         text-align: center;
                         // text-shadow: 2px 2px 15px #777;
@@ -198,11 +199,13 @@ p, span {
                         h1 {
                             font-family: 'Playfair Display', serif;
                             font-weight: 700;
+                            margin: auto;
+                            max-width: 968px;
                             padding: 1rem;
                         }
                         figure {
                             img {
-                                max-height: 250px;
+                                
                             }
                             figcaption {
                                 color: #000;
@@ -212,17 +215,15 @@ p, span {
                 }
             }
             &.one { 
-                background-image: -webkit-image-set(
-                    url('../images/nurse-senior-walker-1x.jpg') 1x,
-                    url('../images/nurse-senior-walker-2x.jpg') 2x,
-                    url('../images/nurse-senior-walker-3x.jpg') 3x,
-                    url('../images/nurse-senior-walker-4x.jpg') 4x                    
-                );
-                background-image: image-set(
-                    url('../images/nurse-senior-walker-1x.jpg') 1x,
-                    url('../images/nurse-senior-walker-2x.jpg') 2x,
-                    url('../images/nurse-senior-walker-3x.jpg') 3x,
-                    url('../images/nurse-senior-walker-4x.jpg') 4x                );
+                background-image: none;
+                
+            }
+            &.two {
+                background-image: none;
+                
+            }
+            &.three {
+                background-image: none;
             }
         }
     }
@@ -765,6 +766,53 @@ section.services {
 
 
 @media screen and (min-width: 768px) {
+    header.header-main {
+        min-height: unset;
+        .carousel {
+            .carousel-inner { 
+                .carousel-item { 
+                    &.one {
+                        background-image: url('../images/nurse-senior-walker-tablet.jpg');
+                    }
+                    &.two { 
+                        background-image: url('../images/assisted-living-tablet.jpg');
+                        // background-clip: text;
+                        // -webkit-background-clip: text;
+                        // -webkit-text-fill-color: transparent;
+                        color: #fff;
+                         .row {
+                             .col {  
+                                 color: #fff;                               
+                                 h1 {
+                                     background: rgba(255,255,255,0.25);
+                                     color: #000;
+                                     margin: 2rem auto;
+                                     
+                                 }
+
+                             }
+                         }
+                    }
+                    &.three { 
+                        background-image: url('../images/child-elderly-parent-tablet.jpg');
+                            .row {
+                                .col {
+                                    color: #fff;
+                                    h1 {
+                                        background: rgba(255,255,255,0.25);
+                                     color: #000;
+                                     margin: 2rem auto;
+                                    }
+                                    
+                                }
+                            }
+                    }
+
+                }
+            }
+        }
+    }
+
     .navbar-main {
         .col {
             &:nth-child(1) {
@@ -911,6 +959,26 @@ section.services {
 }
 
 @media screen and (min-width: 1024px) {
+    header.header-main {
+        min-height: unset;
+        .carousel {
+            .carousel-inner { 
+                .carousel-item { 
+                    min-height: calc(100vh - 200px);
+                    &.one {
+                        background-image: url('../images/nurse-senior-walker-1024.jpg');
+                    }
+                    &.two { 
+                        background-image: url('../images/assisted-living-tablet-1024.jpg');
+                    }
+                    &.three { 
+                        background-image: url('../images/child-elderly-parent-1024.jpg');
+                    }
+
+                }
+            }
+        }
+    }
     .navbar-main { 
         .navbar-main__container { 
             background: #fff;
@@ -969,6 +1037,24 @@ section.services {
 
 
 @media screen and (min-width: 1365px) {
+    header.header-main {
+        .carousel {
+            .carousel-inner { 
+                .carousel-item { 
+                    &.one {
+                        background-image: url('../images/nurse-senior-walker-1365.jpg');
+                    }
+                    &.two { 
+                        background-image: url('../images/assisted-living-1365.jpg');
+                    }
+                    &.three { 
+                        background-image: url('../images/child-elderly-parent-1365.jpg');
+                    }
+
+                }
+            }
+        }
+    }
     section.services {
         header.services-header {
             min-height: 50vh;
@@ -1018,6 +1104,27 @@ section.services {
             }
             &.testimonials {
 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    header.header-main {
+        .carousel {
+            .carousel-inner { 
+                .carousel-item { 
+                    &.one {
+                        background-image: url('../images/nurse-senior-walker-1920.jpg');
+                    }
+                    &.two { 
+                        background-image: url('../images/assisted-living-1920.jpg');
+                    }
+                    &.three { 
+                        background-image: url('../images/child-elderly-parent-1.jpg');
+                    }
+
+                }
             }
         }
     }
