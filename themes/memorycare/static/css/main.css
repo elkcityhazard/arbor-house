@@ -58,7 +58,8 @@ h6 {
   text-transform: uppercase;
 }
 
-p, span {
+p,
+span {
   max-width: 60ch;
 }
 
@@ -120,7 +121,7 @@ p, span {
 ****Header*****
 ***************/
 .header-main {
-  min-height: calc(100vh - 100px);
+  height: calc(100%);
   width: 100%;
 }
 .header-main .carousel {
@@ -144,7 +145,7 @@ p, span {
   flex: 0 0 100%;
   height: 100%;
   opacity: 1;
-  padding: 1rem 0;
+  padding: 0;
   transition: all 250ms linear;
   -webkit-trainsition: all 250ms linear;
   width: 100%;
@@ -174,8 +175,10 @@ p, span {
   max-width: 968px;
   padding: 1rem;
 }
-.header-main .carousel .carousel-inner .carousel-item .row .col figure figcaption {
-  color: #000;
+.header-main .carousel .carousel-inner .carousel-item .row .col ul li {
+  padding: 0 2rem;
+  text-align: left;
+  width: auto;
 }
 .header-main .carousel .carousel-inner .carousel-item.one {
   background-image: none;
@@ -292,7 +295,7 @@ p, span {
   list-style-position: inside;
   margin: 2em auto 0;
   text-align: center;
-  width: calc(100% * .66);
+  width: calc(100% * 0.66);
 }
 .navbar-main nav ul .navbar-main__menu-title {
   display: inline-block;
@@ -426,12 +429,22 @@ section.services .row .col .card .inner-card h5,
 section.services .row .col .card .inner-card h6 {
   text-align: center;
 }
-section.services .row .col .card .inner-card h1, section.services .row .col .card .inner-card h2, section.services .row .col .card .inner-card h3, section.services .row .col .card .inner-card h4, section.services .row .col .card .inner-card h5, section.services .row .col .card .inner-card h6 {
+section.services .row .col .card .inner-card h1,
+section.services .row .col .card .inner-card h2,
+section.services .row .col .card .inner-card h3,
+section.services .row .col .card .inner-card h4,
+section.services .row .col .card .inner-card h5,
+section.services .row .col .card .inner-card h6 {
   font-size: 1.25em;
   position: relative;
   text-transform: uppercase;
 }
-section.services .row .col .card .inner-card h1::after, section.services .row .col .card .inner-card h2::after, section.services .row .col .card .inner-card h3::after, section.services .row .col .card .inner-card h4::after, section.services .row .col .card .inner-card h5::after, section.services .row .col .card .inner-card h6::after {
+section.services .row .col .card .inner-card h1::after,
+section.services .row .col .card .inner-card h2::after,
+section.services .row .col .card .inner-card h3::after,
+section.services .row .col .card .inner-card h4::after,
+section.services .row .col .card .inner-card h5::after,
+section.services .row .col .card .inner-card h6::after {
   background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
   content: "";
   display: block;
@@ -443,7 +456,12 @@ section.services .row .col .card .inner-card h1::after, section.services .row .c
   transform: translateX(-50%);
   width: 50%;
 }
-section.services .row .col .card .inner-card h1::after, section.services .row .col .card .inner-card h2::after, section.services .row .col .card .inner-card h3::after, section.services .row .col .card .inner-card h4::after, section.services .row .col .card .inner-card h5::after, section.services .row .col .card .inner-card h6::after {
+section.services .row .col .card .inner-card h1::after,
+section.services .row .col .card .inner-card h2::after,
+section.services .row .col .card .inner-card h3::after,
+section.services .row .col .card .inner-card h4::after,
+section.services .row .col .card .inner-card h5::after,
+section.services .row .col .card .inner-card h6::after {
   bottom: -7px;
   margin: 0 auto;
 }
@@ -511,7 +529,7 @@ section.services.about.testimonials .row .col .card {
 section.services.about.testimonials .row .col .card i {
   color: #046582;
   position: absolute;
-  top: calc(-56px /2);
+  top: calc(-56px / 2);
   right: calc(-32px / 2);
 }
 section.services.about.testimonials .row .col .card .inner-card .card-content {
@@ -683,11 +701,23 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 }
 
 @media screen and (min-width: 768px) {
-  header.header-main {
-    min-height: unset;
+  header.header-main .carousel .carousel-inner .carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  header.header-main .carousel .carousel-inner .carousel-item .row {
+    height: 100%;
+  }
+  header.header-main .carousel .carousel-inner .carousel-item .row .col {
+    font-size: 1.33em;
+  }
+  header.header-main .carousel .carousel-inner .carousel-item .row .col ul {
+    margin: 0 auto;
+    max-width: 499px;
+    padding-left: 3rem;
   }
   header.header-main .carousel .carousel-inner .carousel-item.one {
-    background-image: url("../images/nurse-senior-walker-tablet.jpg");
+    background: url("../images/nurse-senior-walker-tablet.jpg") no-repeat 100% 100%/cover;
   }
   header.header-main .carousel .carousel-inner .carousel-item.two {
     background-image: url("../images/assisted-living-tablet.jpg");
@@ -697,20 +727,19 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
     color: #fff;
   }
   header.header-main .carousel .carousel-inner .carousel-item.two .row .col h1 {
-    background: rgba(255, 255, 255, 0.25);
     color: #000;
     margin: 2rem auto;
   }
   header.header-main .carousel .carousel-inner .carousel-item.three {
     background-image: url("../images/child-elderly-parent-tablet.jpg");
   }
-  header.header-main .carousel .carousel-inner .carousel-item.three .row .col {
-    color: #fff;
-  }
   header.header-main .carousel .carousel-inner .carousel-item.three .row .col h1 {
-    background: rgba(255, 255, 255, 0.25);
     color: #000;
     margin: 2rem auto;
+  }
+  header.header-main .carousel .carousel-inner .carousel-item.three .row .col ul li {
+    color: #333;
+    text-shadow: 1px 1px 5px #fff;
   }
 
   .navbar-main .col:nth-child(1) {
@@ -781,7 +810,7 @@ section.services.about .row .col .card .card-content {
   }
   section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control {
     margin: 0 auto;
-    max-width: calc(100% * .66);
+    max-width: calc(100% * 0.66);
   }
   section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control label,
 section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control input,
@@ -825,19 +854,39 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 }
 @media screen and (min-width: 1024px) {
-  header.header-main {
-    min-height: unset;
+  header.header-main .carousel .carousel-inner {
+    height: 100%;
   }
-  header.header-main .carousel .carousel-inner .carousel-item {
+  header.header-main .carousel .carousel-inner .row {
+    background: transparent;
+    height: 100%;
+  }
+  header.header-main .carousel .carousel-inner .row .col .carousel-item {
     min-height: calc(100vh - 200px);
   }
-  header.header-main .carousel .carousel-inner .carousel-item.one {
-    background-image: url("../images/nurse-senior-walker-1024.jpg");
+  header.header-main .carousel .carousel-inner .row .col .carousel-item .row {
+    height: 100%;
   }
-  header.header-main .carousel .carousel-inner .carousel-item.two {
+  header.header-main .carousel .carousel-inner .row .col .carousel-item .row .col {
+    float: left;
+    height: 100%;
+    width: 50%;
+  }
+  header.header-main .carousel .carousel-inner .row .col .carousel-item .row .col ul {
+    max-width: 968px;
+  }
+  header.header-main .carousel .carousel-inner .row .col .carousel-item .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  header.header-main .carousel .carousel-inner .row .col .carousel-item.one {
+    background: url("../images/nurse-senior-walker-1024.jpg");
+  }
+  header.header-main .carousel .carousel-inner .row .col .carousel-item.two {
     background-image: url("../images/assisted-living-tablet-1024.jpg");
   }
-  header.header-main .carousel .carousel-inner .carousel-item.three {
+  header.header-main .carousel .carousel-inner .row .col .carousel-item.three {
     background-image: url("../images/child-elderly-parent-1024.jpg");
   }
 
@@ -875,7 +924,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 }
 @media screen and (min-width: 1365px) {
   header.header-main .carousel .carousel-inner .carousel-item.one {
-    background-image: url("../images/nurse-senior-walker-1365.jpg");
+    background: url("../images/nurse-senior-walker-1365.jpg");
   }
   header.header-main .carousel .carousel-inner .carousel-item.two {
     background-image: url("../images/assisted-living-1365.jpg");
@@ -893,7 +942,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
     flex-wrap: wrap;
   }
   section.services .row .col {
-    width: 20%;
+    width: 25%;
   }
   section.services .row .col.header-col {
     width: 75ch;
@@ -915,6 +964,12 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
   section.services.about .fixed-background .card .inner-card .card-content {
     color: #fff;
+  }
+  section.services.about.testimonials .row {
+    align-items: center;
+  }
+  section.services.about.testimonials .row .col {
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 1920px) {
