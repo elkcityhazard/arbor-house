@@ -10,32 +10,32 @@
 
 // Slider
 
-const slideContainer = document.querySelector(".carousel-inner");
-const slides = document.querySelectorAll(".carousel-item");
-let counter = 1;
+// const slideContainer = document.querySelector(".carousel-inner");
+// const slides = document.querySelectorAll(".carousel-item");
+// let counter = 1;
 
-function changeSlide() {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
+// function changeSlide() {
+//   slides.forEach((slide) => {
+//     slide.classList.remove("active");
+//   });
 
-  if (counter > slides.length - 1) {
-    counter = 0;
-  }
-  if (counter < 0) {
-    counter = 0;
-  }
-  slides[counter].classList.add("active");
-  slideContainer.style.transform = `translateX(${counter * -100}%)`;
-  counter += 1;
-  console.log(counter);
-}
+//   if (counter > slides.length - 1) {
+//     counter = 0;
+//   }
+//   if (counter < 0) {
+//     counter = 0;
+//   }
+//   slides[counter].classList.add("active");
+//   slideContainer.style.transform = `translateX(${counter * -100}%)`;
+//   counter += 1;
+//   console.log(counter);
+// }
 
-let timer = setInterval(changeSlide, 2000);
+// let timer = setInterval(changeSlide, 2000);
 
-slideContainer.addEventListener("click", () => {
-  clearInterval(timer);
-});
+// slideContainer.addEventListener("click", () => {
+//   clearInterval(timer);
+// });
 
 //lazy load images
 
@@ -49,6 +49,7 @@ const config = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
+      console.log();
       entry.target.src = entry.target.getAttribute("data-src");
       entry.target.classList.add("fadeIn");
       observer.unobserve(entry.target);
@@ -59,6 +60,25 @@ const observer = new IntersectionObserver((entries) => {
 images.forEach((image) => {
   observer.observe(image);
 });
+
+function parallax(el, multiplier) {
+  window.addEventListener("scroll", () => {
+    const cont = document.querySelector(el);
+    const y = document.documentElement.getBoundingClientRect().top;
+    const x = document.documentElement.scrollWidth;
+    const rate = y / x * multiplier;
+    console.log(x, y, rate)
+    if (y < 0) {
+      cont.style.backgroundPosition = `center ${rate}px`;
+    }
+  });
+}
+
+
+
+
+
+
 
 const yearContainer = document.getElementById("currentYear");
 const currentYear = new Date().getFullYear();

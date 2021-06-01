@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap&text=ARBORHUSE");
 *,
 *::before,
 *::after {
@@ -120,74 +121,57 @@ span {
 /**************
 ****Header*****
 ***************/
-.header-main {
-  height: calc(100%);
-  width: 100%;
-}
-.header-main .carousel {
-  display: block;
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
-}
-.header-main .carousel .carousel-inner {
+header.header-main {
   align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: 100%;
-  justify-content: flex-start;
-  transition: all 250ms linear;
-  -webkit-transition: all 250ms linear;
-}
-.header-main .carousel .carousel-inner .carousel-item {
-  background: #fff no-repeat fixed center center/cover;
-  flex: 0 0 100%;
-  height: 100%;
-  opacity: 1;
-  padding: 0;
-  transition: all 250ms linear;
-  -webkit-trainsition: all 250ms linear;
-  width: 100%;
-}
-.header-main .carousel .carousel-inner .carousel-item.active {
-  opacity: 1;
-}
-.header-main .carousel .carousel-inner .carousel-item .row {
-  align-items: center;
+  background: #fff;
+  background-image: url("../images/nurse-senior-walker-mobile.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: 50%;
-  width: 100%;
+  height: calc(100%);
+  justify-content: center;
 }
-.header-main .carousel .carousel-inner .carousel-item .row .col {
-  color: #000;
-  height: 100%;
-  padding: rem;
-  text-align: center;
-  width: 100%;
-}
-.header-main .carousel .carousel-inner .carousel-item .row .col h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  margin: auto;
-  max-width: 968px;
+header.header-main .col {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  flex: 1 1 100%;
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
+  width: 100%;
+  transition: background 150ms linear;
 }
-.header-main .carousel .carousel-inner .carousel-item .row .col ul li {
-  padding: 0 2rem;
-  text-align: left;
-  width: auto;
+header.header-main .col h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  text-transform: initial;
+  letter-spacing: 5px;
 }
-.header-main .carousel .carousel-inner .carousel-item.one {
-  background-image: none;
+header.header-main .col p {
+  font-size: 1.5rem;
+  padding: 0.5em;
 }
-.header-main .carousel .carousel-inner .carousel-item.two {
-  background-image: none;
+header.header-main .col ul {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  transition: background 250ms linear;
+  -webkit-transition: background 250ms linear;
 }
-.header-main .carousel .carousel-inner .carousel-item.three {
-  background-image: none;
+header.header-main .col ul li {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.25rem 1.5rem;
+}
+header.header-main:hover > .col {
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+}
+header.header-main:hover > .col ul {
+  background: rgba(255, 255, 255, 0.66);
 }
 
 /********************
@@ -701,45 +685,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 }
 
 @media screen and (min-width: 768px) {
-  header.header-main .carousel .carousel-inner .carousel-item {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item .row {
-    height: 100%;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item .row .col {
-    font-size: 1.33em;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item .row .col ul {
-    margin: 0 auto;
-    max-width: 499px;
-    padding-left: 3rem;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.one {
-    background: url("../images/nurse-senior-walker-tablet.jpg") no-repeat 100% 100%/cover;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.two {
-    background-image: url("../images/assisted-living-tablet.jpg");
-    color: #fff;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.two .row .col {
-    color: #fff;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.two .row .col h1 {
-    color: #000;
-    margin: 2rem auto;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.three {
-    background-image: url("../images/child-elderly-parent-tablet.jpg");
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.three .row .col h1 {
-    color: #000;
-    margin: 2rem auto;
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.three .row .col ul li {
-    color: #333;
-    text-shadow: 1px 1px 5px #fff;
+  header.header-main {
+    background-image: url("../images/nurse-senior-walker-tablet.jpg");
   }
 
   .navbar-main .col:nth-child(1) {
@@ -791,7 +738,7 @@ section.services.about .row .col .card .card-content {
     flex: 1 1 100%;
   }
   section.services.about.testimonials .services-header {
-    min-height: 33vh;
+    height: 50%;
   }
   section.services.about.testimonials .row .col {
     flex: 1 1 50%;
@@ -854,40 +801,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 }
 @media screen and (min-width: 1024px) {
-  header.header-main .carousel .carousel-inner {
-    height: 100%;
-  }
-  header.header-main .carousel .carousel-inner .row {
-    background: transparent;
-    height: 100%;
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item {
-    min-height: calc(100vh - 200px);
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item .row {
-    height: 100%;
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item .row .col {
-    float: left;
-    height: 100%;
-    width: 50%;
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item .row .col ul {
-    max-width: 968px;
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item.one {
-    background: url("../images/nurse-senior-walker-1024.jpg");
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item.two {
-    background-image: url("../images/assisted-living-tablet-1024.jpg");
-  }
-  header.header-main .carousel .carousel-inner .row .col .carousel-item.three {
-    background-image: url("../images/child-elderly-parent-1024.jpg");
+  header.header-main {
+    background-image: url("../images/nurse-senior-walker-1024.jpg");
   }
 
   .navbar-main .navbar-main__container {
@@ -923,14 +838,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 }
 @media screen and (min-width: 1365px) {
-  header.header-main .carousel .carousel-inner .carousel-item.one {
-    background: url("../images/nurse-senior-walker-1365.jpg");
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.two {
-    background-image: url("../images/assisted-living-1365.jpg");
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.three {
-    background-image: url("../images/child-elderly-parent-1365.jpg");
+  header.header-main {
+    background-image: url("../images/nurse-senior-walker-1365.jpg");
   }
 
   section.services header.services-header {
@@ -949,8 +858,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
   section.services.about .fixed-background {
     align-items: center;
-    background: linear-gradient(1turn, #f39189, rgba(243, 145, 137, 0.66), rgba(243, 145, 137, 0.33), rgba(243, 145, 137, 0)), url("../images/child-elderly-parent-1.jpg") no-repeat fixed center center/cover;
-    min-height: 100vh;
+    background: linear-gradient(1turn, #f39189, rgba(243, 145, 137, 0.66), rgba(243, 145, 137, 0.33), rgba(243, 145, 137, 0)), url("../images/child-elderly-parent-1365.jpg") no-repeat fixed center center/cover;
+    height: 100%;
   }
   section.services.about .fixed-background .col {
     align-items: center;
@@ -970,17 +879,6 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
   section.services.about.testimonials .row .col {
     padding: 1rem;
-  }
-}
-@media screen and (min-width: 1920px) {
-  header.header-main .carousel .carousel-inner .carousel-item.one {
-    background-image: url("../images/nurse-senior-walker-1920.jpg");
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.two {
-    background-image: url("../images/assisted-living-1920.jpg");
-  }
-  header.header-main .carousel .carousel-inner .carousel-item.three {
-    background-image: url("../images/child-elderly-parent-1.jpg");
   }
 }
 
