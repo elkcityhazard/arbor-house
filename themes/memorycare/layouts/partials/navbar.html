@@ -1,8 +1,11 @@
+<div class="preloader">
+    
+</div>
 <div class="navbar-main">
     <nav class="">
         <ul class="fa-ul">
             <span class="navbar-main__menu-title">Menu</span>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="/about">About Us</a></li>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="{{.Site.BaseURL}}about">About Us</a></li>
             <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
             <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
             <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
@@ -32,7 +35,7 @@
                 <span class="hamburger"></span>
             </div>
             <nav class="desktop-nav">
-                <a href="/about">About Us</a>
+                <a href="{{.Site.BaseURL}}about">About Us</a>
                 <a href="#">Link Here</a>
                 <a href="#">Link Here</a>
                 <a href="#">Link Here</a>

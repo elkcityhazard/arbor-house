@@ -1,13 +1,17 @@
 {{ partial "navbar.html"}}
 <header class="header-main">
-  <div class="col"><h1>{{ .Site.Title}}</h1></div>
-  <div class="col"><p>{{ .Site.Params.subtitle}}</p></div>
+  <div class="col"><h1 id="siteTitle">{{ .Site.Title}}</h1>
+  <p id="siteSubtitle">{{ .Site.Params.subtitle}}</p>
+  <button class="cta-btn">
+    <a href="tel:+12319353772">Call Now</a>
+  </button>
+  </div>
   <div class="col">
-    <ul>
-      <li>24/7 Licensed Nurses</li>
-      <li>Full 24 hours a day care</li>
-      <li>On-staff dietary manager to oversee nutritional needs</li>
-      <li>Dedicated Daily Housekeeping</li>
+    <ul id="headerServices">
+      <li class="service">24/7 Licensed Nurses</li>
+      <li class="service">Full 24 hours a day care</li>
+      <li class="service">On-staff dietary manager to oversee nutritional needs</li>
+      <li class="service">Dedicated Daily Housekeeping</li>
     </ul>
   </div>
 </header>
