@@ -186,7 +186,7 @@ header.header-main {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: calc(100%);
+  height: auto;
   justify-content: center;
   .col {
     align-items: center;
