@@ -1,4 +1,4 @@
 ---
-title: Services
+title: "Services"
 layout: list
 ---

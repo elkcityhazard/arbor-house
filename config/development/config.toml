@@ -14,5 +14,27 @@ title = "Arbor House"
     url = "/about/"
     weight = -110
 
+ # [[menu.main]]
+ #   identifier = "services"
+ #   name = "Services"
+ #   url = "/services/"
+ #   weight = -100
+
+  [[menu.main]]
+    identifier = "memory care"
+    name = "Memory Care"
+    parent = "Services"
+    url = "/services/traverse-city-memory-care"
+    weight = -100
+
+  [[menu.main]]
+    identifier = "dementia care"
+    name = "Dementia Care"
+    parent = "Services"
+    url = "/services/traverse-city-dementia-care"
+    weight = -100
+
+  
+
 
 

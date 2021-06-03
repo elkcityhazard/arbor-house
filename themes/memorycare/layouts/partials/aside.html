@@ -1,0 +1,15 @@
+<aside>
+    <div>
+    <section>
+      <h4 id="date">Created: {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+    </section>
+    </div>
+    <div>
+        {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+</aside>

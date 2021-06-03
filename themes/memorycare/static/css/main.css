@@ -370,6 +370,12 @@ header.header-main:hover > .col ul {
   display: initial;
   padding: initial;
 }
+.navbar-main nav ul.sub-menu {
+  height: 0;
+  overflow: hidden;
+  transition: height 250ms linear;
+  -webkit-transition: height 250ms linear;
+}
 .navbar-main nav.active {
   border-right: 1px solid #6e7582;
   box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
@@ -525,7 +531,7 @@ section.services.about .row .col .card .inner-card {
 }
 section.services.about .row .col .card .inner-card h3 {
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 100%;
   padding: 1rem;
   text-align: left;
   text-transform: initial;
@@ -536,7 +542,7 @@ section.services.about .row .col .card .inner-card .card-content {
 }
 section.services.about.testimonials .services-header {
   background: rgba(4, 101, 130, 0.5);
-  min-height: 50vh;
+  min-height: 25vh;
   margin-bottom: 2rem;
 }
 section.services.about.testimonials .row .col {
@@ -603,6 +609,35 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   max-width: 175px;
   padding: 0.5rem 1rem;
   width: 33%;
+}
+
+/***********************
+**Special Services Tab**
+************************/
+section.special-services {
+  background: #fff;
+  padding: 1rem;
+}
+section.special-services .row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+section.special-services .row .col {
+  flex: 1 1 100%;
+  padding-left: 1rem;
+}
+section.special-services .row .col ul {
+  margin: 0;
+  padding: 0;
+}
+section.special-services .row .col ul li {
+  padding: 0.25rem 1rem;
+  overflow-wrap: break-word;
+}
+section.special-services .row .col ul li span {
+  margin-right: 1rem;
 }
 
 /*****************
@@ -808,6 +843,20 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
     min-height: 400px;
   }
 
+  /****************************
+  **Special Services Sections**
+  *****************************/
+  section.special-services .row {
+    flex-direction: row;
+  }
+  section.special-services .row .col ul li a {
+    display: inline;
+  }
+  section.special-services .row .col ul li:nth-child(even) {
+    background: #396c81;
+    color: #fff;
+  }
+
   .footer-main span {
     display: block;
     text-align: center;
@@ -897,6 +946,22 @@ header.header-main .col p {
   }
   section.services.about.testimonials.contact .row .col {
     flex: 1 1 40%;
+  }
+
+  /****************************
+  **Special Services Sections**
+  *****************************/
+  section.special-services .row {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 968px;
+  }
+  section.special-services .row .col ul li a {
+    display: inline;
+  }
+  section.special-services .row .col ul li:nth-child(even) {
+    background: #396c81;
+    color: #fff;
   }
 }
 @media screen and (min-width: 1365px) {

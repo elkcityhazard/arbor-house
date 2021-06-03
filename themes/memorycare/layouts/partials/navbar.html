@@ -3,11 +3,29 @@
   <nav class="">
     <ul class="fa-ul">
       <span class="navbar-main__menu-title">Menu</span>
+      {{ $currentPage := . }}
       {{range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} subToggle">
+          <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+          <a href="#">
+              {{ .Pre }}
+              <span>{{ .Name }}</span>
+          </a>
+      </li>
+      <ul class="sub-menu">
+          {{ range .Children }}
+              <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+          {{ end }}
+      </ul>
+  {{ else }}       
 
       <li>
         <span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="{{ .URL }}">{{ .Name }}</a></li>
 
+      {{ end }}
       {{ end }}
     </ul>
     <ul class="fa-ul">
