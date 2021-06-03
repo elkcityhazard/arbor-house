@@ -1,0 +1,72 @@
+@mixin reset-spacing {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin center-spacing {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+/******************
+**Content Section**
+*******************/
+    h1,h2,h3,h4,h5,h6 {
+        @include center-spacing;
+        max-width: 60ch;
+        padding: 1rem;
+    }
+
+    figure {
+        margin: auto;
+        img {
+            display: block;
+            margin: auto;
+        }
+        figcaption {
+            display: block;
+            margin: auto;
+            max-width: 60ch;
+            padding: 1rem;
+        }
+    }
+
+    p {
+        font-size: 1.33em;
+        margin: auto;
+        max-width: 60ch;
+        padding: 1em;
+        a {
+            @include reset-spacing;
+            display: inline;
+        }
+    }
+
+    
+        .cta-btn {
+            @include center-spacing;
+            display: block;
+            margin: 1rem auto;
+        }
+
+
+    /***********
+    **Layouts**
+    ***********/
+
+    div#content {
+        display: flex;
+        section {
+            flex: 2 2 100%;
+        }
+    }
+
+
+
+
+    footer.footer-main {
+        p {
+            max-width: initial;
+        }
+    }
