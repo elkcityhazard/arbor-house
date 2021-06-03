@@ -1,4 +1,4 @@
-baseURL = "https://elkcityhazard.github.io/arbor-house/"
+baseURL = "https://arbor-house.vercel.app/"
 languageCode = "en-us"
 theme = "memorycare"
 title = "Arbor House"
