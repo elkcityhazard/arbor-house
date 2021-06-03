@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>elkcityhazard.github.io/arbor-house/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>elkcityhazard.github.io/arbor-house/categories/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>elkcityhazard.github.io/arbor-house/tags/</loc>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

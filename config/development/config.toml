@@ -1,0 +1,18 @@
+baseURL = "https://localhost:1313"
+languageCode = "en-us"
+theme = "memorycare"
+title = "Arbor House"
+[params]
+  description = "Adult Foster Care and Memory Care In Traverse City, Michigan"
+  subtitle = "Adult Foster Care Traverse City, Michigan"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About Us"
+    url = "/about/"
+    weight = -110
+
+
+

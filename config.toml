@@ -1,8 +1,0 @@
-baseURL = "https://elkcityhazard.github.io/arbor-house/"
-languageCode = "en-us"
-title = "Arbor House"
-theme = "memorycare"
-
-[params]
-    description = "Adult Foster Care and Memory Care In Traverse City, Michigan"
-    subtitle = "Adult Foster Care Traverse City, Michigan"

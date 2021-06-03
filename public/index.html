@@ -7,7 +7,7 @@
     <meta name="description" content="Adult Foster Care and Memory Care In Traverse City, Michigan ">
 
     
-    <title>Arbor House Adult Foster Care - Traverse City, Michigan</title>
+    <title>Arbor House</title>
     
 
     
@@ -15,21 +15,29 @@
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="elkcityhazard.github.io/arbor-house/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<script>
+    window.addEventListener('load', () => {
+        document.querySelector('.preloader').style.opacity = 0;
+        document.querySelector('.preloader').style.zIndex = -1000;
+    })
+</script> 
 </head>
 
-<body><div class="navbar-main">
+<body><div class="preloader">
+    
+</div>
+<div class="navbar-main">
     <nav class="">
         <ul class="fa-ul">
             <span class="navbar-main__menu-title">Menu</span>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="#">Link Here</a></li>
+            
+            
+            
         </ul>
         <ul class="fa-ul">
             <span class="navbar-main__menu-title">Contact</span>
@@ -48,14 +56,14 @@
     </nav>
     <div class="navbar-main__container">
         <div class="col">
-            <a href="/" title="Arbor House"><img data-src="/images/logo-no-bg.png" alt="logo" class="lazy"></a>
+            <a href="/" title="Arbor House"><img data-src="/images/logo-no-bg.png" alt="logo" class="lazy" height="85" width="125"></a>
         </div>
         <div class="col">
             <div class="hamburger-container">
                 <span class="hamburger"></span>
             </div>
             <nav class="desktop-nav">
-                <a href="#">Link Here</a>
+                <a href="about">About Us</a>
                 <a href="#">Link Here</a>
                 <a href="#">Link Here</a>
                 <a href="#">Link Here</a>
@@ -65,67 +73,19 @@
     </div>
 </div>
 <header class="header-main">
-  <div class="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col">
-            <h1>Arbor House Adult Foster Care - Traverse City, Michigan</h1>
-          </div>
-          <div class="col">
-            <figure class="one">
-                <img class="lazy" data-src="elkcityhazard.github.io/arbor-house/images/cover-photo-1.jpg" alt="Cover Photo">
-                <figcaption>
-                    1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus pariatur dolore iusto quis officia saepe.
-                </figcaption>
-            </figure>
-            <button class="cta-btn">
-              <a href="tel:+12319353772">Call Now</a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col">
-            <h1>Arbor House Adult Foster Care - Traverse City, Michigan</h1>
-          </div>
-          <div class="col">
-            <figure class="two">
-                <img class="lazy" data-src="elkcityhazard.github.io/arbor-house/images/cover-photo-2.jpg" alt="Cover Photo">
-                <figcaption>
-                    1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Necessitatibus pariatur dolore iusto quis officia saepe.
-                </figcaption>
-            </figure>
-            <button class="cta-btn">
-              <a href="tel:+12319353772">Call Now</a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col">
-            <h1>Arbor House Adult Foster Care - Traverse City, Michigan</h1>
-          </div>
-          <div class="col">
-            <figure class="three">
-                <img class="lazy" data-src="elkcityhazard.github.io/arbor-house/images/cover-photo-3.jpg" alt="Cover Photo">
-                <figcaption>
-                    3. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus pariatur dolore iusto quis officia saepe.
-                </figcaption>
-              
-            </figure>
-            <button class="cta-btn">
-              <a href="tel:+12319353772">Call Now</a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="col"><h1 id="siteTitle">Arbor House</h1>
+  <p id="siteSubtitle">Adult Foster Care Traverse City, Michigan</p>
+  <button class="cta-btn">
+    <a href="tel:+12319353772">Call Now</a>
+  </button>
+  </div>
+  <div class="col">
+    <ul id="headerServices">
+      <li class="service">24/7 Licensed Nurses</li>
+      <li class="service">Full 24 hours a day care</li>
+      <li class="service">On-staff dietary manager to oversee nutritional needs</li>
+      <li class="service">Dedicated Daily Housekeeping</li>
+    </ul>
   </div>
 </header>
 <div id="content"><section class="services">
@@ -145,7 +105,7 @@
             <div class="card">
                 <div class="inner-card">
                     <h3>Quality Of Life</h3>
-                    <img data-src="elkcityhazard.github.io/arbor-house/images/quality-of-life-icon.jpg" alt="quality of life" class="lazy icon">
+                    <img data-src="/images/quality-of-life-icon.jpg" alt="quality of life" class="lazy icon" height="200px" width="200px">
                     <p class="card-content">
                         Enjoy life in your own private apartment, knowing that you will have necessary services available to you if and when you need them.
                     </p>
@@ -159,7 +119,7 @@
             <div class="card">
                 <div class="inner-card">
                     <h3>Safety And Protection</h3>
-                    <img data-src="elkcityhazard.github.io/arbor-house/images/safety-and-protection-icon.jpg" alt="quality of life" class="lazy icon">
+                    <img data-src="/images/safety-and-protection-icon.jpg" alt="quality of life" class="lazy icon" height="200px" width="200px">
                     <p class="card-content">
                         Benefit from 24-hour emergency assistance and care, security and safety systems, and regular medical monitoring.
                     </p>
@@ -173,7 +133,7 @@
             <div class="card">
                 <div class="inner-card">
                     <h3>Personal Needs</h3>
-                    <img data-src="elkcityhazard.github.io/arbor-house/images/personal-needs-icon.jpg" alt="quality of life" class="lazy icon">
+                    <img data-src="/images/personal-needs-icon.jpg" alt="quality of life" class="lazy icon" height="200px" width="200px">
                     <p class="card-content">
                         Benefit from 24-hour emergency assistance and care, security and safety systems, and regular medical monitoring.
                     </p>
@@ -187,7 +147,7 @@
             <div class="card">
                 <div class="inner-card">
                     <h3>Nutrition</h3>
-                    <img data-src="elkcityhazard.github.io/arbor-house/images/nutrition-icon.jpg" alt="quality of life" class="lazy icon">
+                    <img data-src="/images/nutrition-icon.jpg" alt="quality of life" class="lazy icon" height="200px" width="200px">
                     <p class="card-content">
                         Eating delicious, nutritious meals with friends is an important part of being healthy and active. Our meals are prepared by professional chefs.
                     </p>
@@ -208,7 +168,7 @@
             </div>
         </div>
     </header>
-    <div class="row fixed-background">
+    <div class="row fixed-background" id="background" data-src="/images/child-elderly-parent-1.jpg">
         <div class="col">
             <div class="card ">
                 <div class="inner-card">
@@ -328,6 +288,9 @@
             <li class="menu-social"><a href="mailto:andrew@andrew-mccall.com"><i class="fas fa-2x fa-paper-plane" title="Email Us"></i></a></li>
             <li class="menu-social"><a href="tel:+12319353772"><i class="fas fa-2x fa-phone" title="231-935-3772"></i></a></li>
         </ul>
+        <figure>
+            <img data-src="/images/logo-no-bg.png" alt="logo" height="auto" width="140" class="lazy footer-logo">
+        </figure>
     </div>
     <div class="col">
         <nav>
@@ -343,9 +306,8 @@
     </div>
 </div>
 <div class="row">
-    <p>&copy; <span id="currentYear"></span> Arbor House Adult Foster Care - Traverse City, Michigan</p>
-    <p>Site developed and maintained by <a href="https://andrew-mccall.com">andrew m mccall</a></p>
+    <p>&copy; <span id="currentYear"></span> Arbor House. Site developed and maintained by <a href="https://andrew-mccall.com">andrew m mccall</a></p>
 </div>
 </footer>
-<script src="elkcityhazard.github.io/arbor-house/js/script.js"></script></body>
+<script src="/js/script.js"></script></body>
 </html>

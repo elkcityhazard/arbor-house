@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arbor House Adult Foster Care - Traverse City, Michigan</title>
-    <link>elkcityhazard.github.io/arbor-house/</link>
-    <description>Recent content on Arbor House Adult Foster Care - Traverse City, Michigan</description>
+    <title>Arbor House</title>
+    <link>/</link>
+    <description>Recent content on Arbor House</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="elkcityhazard.github.io/arbor-house/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Arbor House Traverse City</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,60 @@
+/******************
+**Content Section**
+*******************/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 60ch;
+  padding: 1rem;
+}
+
+figure {
+  margin: auto;
+}
+figure img {
+  display: block;
+  margin: auto;
+}
+figure figcaption {
+  display: block;
+  margin: auto;
+  max-width: 60ch;
+  padding: 1rem;
+}
+
+p {
+  font-size: 1.33em;
+  margin: auto;
+  max-width: 60ch;
+  padding: 1em;
+}
+p a {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.cta-btn {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+}
+
+/***********
+**Layouts**
+***********/
+div#content {
+  display: flex;
+}
+div#content section {
+  flex: 2 2 100%;
+}
+
+footer.footer-main p {
+  max-width: initial;
+}
+
+/*# sourceMappingURL=single.css.map */
