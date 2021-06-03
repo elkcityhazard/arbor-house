@@ -314,7 +314,7 @@ header.header-main:hover > .col ul {
   list-style-position: inside;
   margin: 2em auto 0;
   text-align: center;
-  width: calc(100% * 0.66);
+  width: calc(100% * .75);
 }
 .navbar-main nav ul .navbar-main__menu-title {
   display: inline-block;
@@ -372,9 +372,23 @@ header.header-main:hover > .col ul {
 }
 .navbar-main nav ul.sub-menu {
   height: 0;
+  margin-top: 0;
+  font-size: 1em;
   overflow: hidden;
-  transition: height 250ms linear;
-  -webkit-transition: height 250ms linear;
+  transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  transform-origin: top;
+}
+.navbar-main nav ul.sub-menu.active {
+  height: 100%;
+  max-height: 400px;
+}
+.navbar-main nav ul.sub-menu li {
+  width: 100%;
+}
+.navbar-main nav ul.sub-menu li a {
+  font-size: 1em;
+  padding: 0;
 }
 .navbar-main nav.active {
   border-right: 1px solid #6e7582;

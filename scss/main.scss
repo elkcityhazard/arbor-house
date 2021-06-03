@@ -356,7 +356,7 @@ header.header-main {
       list-style-position: inside;
       margin: 2em auto 0;
       text-align: center;
-      width: calc(100% * 0.66);
+      width: calc(100% * .75);
       .navbar-main__menu-title {
         display: inline-block;
         font-weight: 700;
@@ -421,9 +421,23 @@ header.header-main {
     }
     ul.sub-menu {
       height: 0;
+      margin-top: 0;
+      font-size: 1em;
       overflow: hidden;
-      transition: height 250ms linear;
-      -webkit-transition: height 250ms linear;
+      transition: all 250ms linear;
+      -webkit-transition: all 250ms linear;
+      transform-origin: top;
+      &.active {
+        height: 100%;
+        max-height: 400px;
+      }
+      li {
+        width: 100%;
+        a {
+          font-size: 1em;
+          padding: 0;
+        }
+      }
     }
   }
   nav.active {
