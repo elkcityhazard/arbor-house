@@ -77,6 +77,9 @@ function parallax(el, multiplier) {
 window.addEventListener('load', () => {
   const services = document.querySelectorAll('.service');
   const siteHeader = document.getElementById('siteTitle');
+  if (!siteHeader) {
+    return;
+  }
   const siteSubtitle = document.getElementById('siteSubtitle');
   const ctaBtn = document.querySelector('header.header-main .cta-btn');
   siteHeader.style.opacity = 1;
@@ -84,6 +87,7 @@ window.addEventListener('load', () => {
   siteSubtitle.style.opacity = 1;
   siteSubtitle.style.transform = "translateY(0)";
   ctaBtn.style.opacity = 1;
+  
   for (let i = 0; i < services.length; i++) {
     setTimeout(() => {
       services[i].style.opacity = 1;

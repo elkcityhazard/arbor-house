@@ -34,6 +34,12 @@ title = "Arbor House"
     url = "/services/traverse-city-dementia-care"
     weight = -100
 
+  [[menu.main]]
+    identifier = "faq"
+    name = "FAQs"
+    url = "/faqs/"
+    weight = -100
+
   
 
 

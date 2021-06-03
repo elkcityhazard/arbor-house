@@ -12,7 +12,7 @@ function slideToggle(el) {
 
 menuToggle.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-        const submenu = e.target.parentNode.parentNode.parentNode.children[3];
+        const submenu = e.target.parentNode.parentNode.nextElementSibling;
         slideToggle(submenu);
 
     })
