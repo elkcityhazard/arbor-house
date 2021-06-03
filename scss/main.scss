@@ -419,6 +419,12 @@ header.header-main {
         }
       }
     }
+    ul.sub-menu {
+      height: 0;
+      overflow: hidden;
+      transition: height 250ms linear;
+      -webkit-transition: height 250ms linear;
+    }
   }
   nav.active {
     border-right: 1px solid #6e7582;
@@ -564,7 +570,7 @@ section.services {
             width: 100%;
             h3 {
               margin: 0 auto;
-              max-width: 300px;
+              max-width: 100%;
               padding: 1rem;
               text-align: left;
               text-transform: initial;
@@ -580,7 +586,7 @@ section.services {
     &.testimonials {
       .services-header {
         background: rgba(4, 101, 130, 0.5);
-        min-height: 50vh;
+        min-height: 25vh;
         margin-bottom: 2rem;
       }
       .row {
@@ -654,6 +660,36 @@ section.services {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***********************
+**Special Services Tab**
+************************/
+
+section.special-services {
+  background: #fff;
+  padding: 1rem;
+  .row {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    .col {
+      flex: 1 1 100%;
+      padding-left: 1rem;
+      ul {
+       margin: 0;
+       padding: 0;
+        li {
+          padding: .25rem 1rem;
+          overflow-wrap: break-word;
+          span {
+            margin-right: 1rem;
           }
         }
       }
@@ -899,6 +935,28 @@ section.services {
       }
     }
   }
+
+  /****************************
+  **Special Services Sections**
+  *****************************/
+  section.special-services {
+    .row {
+      flex-direction: row;
+      .col {
+        ul {
+          li {
+            a {
+              display: inline;
+            }
+            &:nth-child(even) {
+              background: #396c81;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
   .footer-main {
     span {
       display: block;
@@ -1007,6 +1065,30 @@ section.services {
             padding: 0;
             .col {
               flex: 1 1 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /****************************
+  **Special Services Sections**
+  *****************************/
+  section.special-services {
+    .row {
+      flex-direction: row;
+      margin: 0 auto;
+      max-width: 968px;
+      .col {
+        ul {
+          li {
+            a {
+              display: inline;
+            }
+            &:nth-child(even) {
+              background: #396c81;
+              color: #fff;
             }
           }
         }
