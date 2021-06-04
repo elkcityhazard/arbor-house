@@ -681,6 +681,45 @@ section.special-services .row .col p {
   font-weight: 500;
   margin: 3rem auto 0;
 }
+section.special-services .row .col h1,
+section.special-services .row .col h2,
+section.special-services .row .col h3,
+section.special-services .row .col h4,
+section.special-services .row .col h5,
+section.special-services .row .col h6 {
+  font-size: 1.25em;
+  position: relative;
+  text-transform: uppercase;
+}
+section.special-services .row .col h1::after,
+section.special-services .row .col h2::after,
+section.special-services .row .col h3::after,
+section.special-services .row .col h4::after,
+section.special-services .row .col h5::after,
+section.special-services .row .col h6::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  margin: 0 auto;
+  max-width: 80px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 50%;
+}
+section.special-services .row .col h1::after,
+section.special-services .row .col h2::after,
+section.special-services .row .col h3::after,
+section.special-services .row .col h4::after,
+section.special-services .row .col h5::after,
+section.special-services .row .col h6::after {
+  bottom: -7px;
+  margin: 0 auto;
+}
+section.special-services .row .col h3 {
+  text-align: center;
+}
 
 /***************
 **List Section**
