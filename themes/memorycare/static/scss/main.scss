@@ -738,6 +738,10 @@ section.special-services {
       p {
           font-weight: 500;
           margin: 3rem auto 0;
+        }
+        @include underline-title;
+      h3 {
+        text-align: center;
       }
     }
   }

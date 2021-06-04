@@ -4,7 +4,7 @@
     <ul class="fa-ul">
       <span class="navbar-main__menu-title">Menu</span>
       {{ $currentPage := . }}
-      {{range .Site.Menus.main }}
+      {{range .Site.Menus.mobile }}
         {{ if .HasChildren }}
         <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} subToggle">
           <span class="fa-li"><i class="fas fa-angle-right"></i></span>

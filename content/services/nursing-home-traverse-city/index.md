@@ -1,5 +1,5 @@
 ---
-title: "Nursing Home Traverse City"
+title: "Nursing Home In Traverse City Michigan"
 singleCSS: true
 description: "This is a description"
 ---

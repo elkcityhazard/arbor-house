@@ -5,6 +5,7 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
 [params]
   description = "Adult Foster Care and Memory Care In Traverse City, Michigan"
   subtitle = "Adult Foster Care Traverse City, Michigan"
+  
 [menu]
 
   [[menu.main]]
@@ -19,24 +20,50 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
     url = "/services/"
     weight = -100
 
-  [[menu.main]]
-    identifier = "memory care"
-    name = "Memory Care"
-    parent = "Services"
-    url = "/services/traverse-city-memory-care"
-    weight = -100
-
-  [[menu.main]]
-    identifier = "dementia care"
-    name = "Dementia Care"
-    parent = "Services"
-    url = "/services/traverse-city-dementia-care"
-    weight = -100
-
-  [[menu.main]]
+    [[menu.main]]
     identifier = "faq"
     name = "FAQs"
     url = "/faqs/"
     weight = -100
 
+  
+  [[menu.mobile]]
+    identifier = "about"
+    name = "About Us"
+    url = "/about/"
+    weight = -110
+
+  [[menu.mobile]]
+    identifier = "memory care traverse city"
+    name = "Memory Care"
+    parent = "Services"
+    url = "/services/memory-care-traverse-city"
+    weight = -100
+
+  [[menu.mobile]]
+    identifier = "dementia care traverse city"
+    name = "Dementia Care"
+    parent = "Services"
+    url = "/services/dementia-care-traverse-city"
+    weight = -100
+
+  [[menu.mobile]]
+    identifier = "assisting-living-traverse-city"
+    name = "Assisted Living"
+    parent = "Services"
+    url = "/services/assisted-living-traverse-city"
+    weight = -100
+  
+  [[menu.mobile]]
+    identifier = "nursing-home-traverse-city"
+    name = "Nursing Home"
+    parent = "Services"
+    url = "/services/nursing-home-traverse-city"
+    weight = -100
+
+  [[menu.mobile]]
+    identifier = "faq"
+    name = "FAQs"
+    url = "/faqs/"
+    weight = -100
 
