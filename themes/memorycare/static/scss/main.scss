@@ -106,6 +106,13 @@ span {
   max-width: 60ch;
 }
 
+p > a {
+    display: inline;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+}
+
 .preloader {
     background: #fff;
     position: fixed;
@@ -250,6 +257,12 @@ header.header-main {
   }
 }
 
+header.page-header {
+    h1 {
+        text-align: center;
+    }
+}
+
 /********************
 **Mobile Navigation**
 *********************/
@@ -270,6 +283,7 @@ header.header-main {
       a {
         display: inline-block;
         font-weight: 700;
+        position: relative;
         text-decoration: none;
       }
       .hamburger-container {
@@ -327,6 +341,20 @@ header.header-main {
           transform: rotateZ(45deg) translateY(0);
         }
       }
+    }
+  }
+
+
+  .desktop-nav > a {
+      position: relative;
+      &+ ul.sub-menu {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: auto;
+        a {
+            display: inline;
+        }
     }
   }
   nav {
@@ -707,8 +735,39 @@ section.special-services {
           }
         }
       }
+      p {
+          font-weight: 500;
+          margin: 3rem auto 0;
+      }
     }
   }
+}
+
+/***************
+**List Section**
+****************/
+
+section.list {
+    display: flex;
+    flex-direction: column;
+    .row {
+        flex-direction: column !important;
+        width: 100%;
+        .col {
+            .card {
+                background: #fff;
+                height:  350px;
+                margin: 1em auto;
+                transition: all 250ms ease;
+                -webkit-transition: all 250ms ease;
+                &:hover {
+                    box-shadow: 2px 2px 20px -10px rgba(0,0,0,0.33);
+                }
+            }
+
+        }
+    }
+
 }
 
 /*****************
@@ -1109,6 +1168,42 @@ section.special-services {
       }
     }
   }
+}
+
+/***************
+**List Section**
+****************/
+
+section.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 100%;
+        justify-content: space-around;
+        margin: auto;
+        max-width: 968px;
+        width: 100%;
+        .col {
+            align-self: stretch;
+            flex: 1 1 50%;
+            padding: 1rem;
+            .card {
+                background: #fff;
+                display: block;
+                margin: 1em auto;
+                transition: all 250ms ease;
+                -webkit-transition: all 250ms ease;
+                width: 100%;
+                &:hover {
+                    box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.33);
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (min-width: 1365px) {

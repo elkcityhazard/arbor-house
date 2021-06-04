@@ -61,7 +61,7 @@
   </nav>
   <div class="navbar-main__container">
     <div class="col">
-      <a href="/" title="Arbor House"
+      <a href="{{ .Site.BaseURL}}" title="Arbor House"
         ><img
           data-src="{{.Site.BaseURL}}/images/logo-no-bg.png"
           alt="logo"
@@ -76,9 +76,7 @@
       </div>
       <nav class="desktop-nav">
         {{range .Site.Menus.main }}
-
-        <a href="{{ .URL }}">{{ .Name }}</a>
-  
+    <a href="{{ .URL}}">{{ .Name }}</a>
         {{ end }}
             </nav>
     </div>

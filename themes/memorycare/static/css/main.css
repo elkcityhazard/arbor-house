@@ -69,6 +69,13 @@ span {
   max-width: 60ch;
 }
 
+p > a {
+  display: inline;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  padding: 0;
+}
+
 .preloader {
   background: #fff;
   position: fixed;
@@ -209,6 +216,10 @@ header.header-main:hover > .col ul {
   background: rgba(255, 255, 255, 0);
 }
 
+header.page-header h1 {
+  text-align: center;
+}
+
 /********************
 **Mobile Navigation**
 *********************/
@@ -231,6 +242,7 @@ header.header-main:hover > .col ul {
 .navbar-main .navbar-main__container .col a {
   display: inline-block;
   font-weight: 700;
+  position: relative;
   text-decoration: none;
 }
 .navbar-main .navbar-main__container .col .hamburger-container {
@@ -285,6 +297,18 @@ header.header-main:hover > .col ul {
   color: #046582;
   top: 0;
   transform: rotateZ(45deg) translateY(0);
+}
+.navbar-main .desktop-nav > a {
+  position: relative;
+}
+.navbar-main .desktop-nav > a + ul.sub-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+}
+.navbar-main .desktop-nav > a + ul.sub-menu a {
+  display: inline;
 }
 .navbar-main nav {
   background: #fff;
@@ -653,6 +677,32 @@ section.special-services .row .col ul li {
 section.special-services .row .col ul li span {
   margin-right: 1rem;
 }
+section.special-services .row .col p {
+  font-weight: 500;
+  margin: 3rem auto 0;
+}
+
+/***************
+**List Section**
+****************/
+section.list {
+  display: flex;
+  flex-direction: column;
+}
+section.list .row {
+  flex-direction: column !important;
+  width: 100%;
+}
+section.list .row .col .card {
+  background: #fff;
+  height: 350px;
+  margin: 1em auto;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+}
+section.list .row .col .card:hover {
+  box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
+}
 
 /*****************
 ****Footer****
@@ -978,6 +1028,40 @@ header.header-main .col p {
     color: #fff;
   }
 }
+/***************
+**List Section**
+****************/
+section.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section.list .row {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100%;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 968px;
+  width: 100%;
+}
+section.list .row .col {
+  align-self: stretch;
+  flex: 1 1 50%;
+  padding: 1rem;
+}
+section.list .row .col .card {
+  background: #fff;
+  display: block;
+  margin: 1em auto;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  width: 100%;
+}
+section.list .row .col .card:hover {
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.33);
+}
+
 @media screen and (min-width: 1365px) {
   header.header-main {
     background-image: url("../images/nurse-senior-walker-1365.jpg");

@@ -1,4 +1,5 @@
 const menuToggle = document.querySelectorAll('.subToggle > a');
+const mainMenuToggle = document.querySelectorAll('.desktop-nav > a');
 
 function slideToggle(el) {
     el.style.height = el.scrollHeight + 'px';
@@ -13,6 +14,16 @@ function slideToggle(el) {
 menuToggle.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         const submenu = e.target.parentNode.parentNode.nextElementSibling;
+        slideToggle(submenu);
+
+    })
+})
+
+
+mainMenuToggle.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const submenu = e.target.nextElementSibling;
+        console.log(e.target.nextElementSibling);
         slideToggle(submenu);
 
     })
