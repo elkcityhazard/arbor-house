@@ -1064,7 +1064,11 @@ section.list .row .col .card:hover {
 
 @media screen and (min-width: 1365px) {
   header.header-main {
+    max-height: 75vh;
     background-image: url("../images/nurse-senior-walker-1365.jpg");
+  }
+  header.header-main .col {
+    max-width: 33%;
   }
 
   section.services header.services-header {
@@ -1104,6 +1108,11 @@ section.list .row .col .card:hover {
   }
   section.services.about.testimonials .row .col {
     padding: 1rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header.header-main {
+    height: 75vh;
   }
 }
 
