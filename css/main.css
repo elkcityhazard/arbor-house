@@ -115,6 +115,18 @@ aside.breadcrumbs ol.breadcrumbs li:last-child::after {
   display: none;
 }
 
+/****************
+****Section Pagination**
+*****************/
+aside.paginate {
+  font-size: 0.66rem;
+  margin: 0 auto;
+  text-align: center;
+}
+aside.paginate span {
+  color: #000;
+}
+
 /**************
 ****Buttons*****
 ***************/
