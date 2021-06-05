@@ -5,7 +5,7 @@
 <section id="main" class="single-page">
   <h2>{{ .Params.subtitle }}</h2>
   <figure>
-    <img data-src="{{.Params.imageURL}}" alt="{{ .Title }}" class="lazy">
+    <img data-src="{{.Site.BaseURL}}{{.Params.imageURL}}" alt="{{ .Title }}" class="lazy">
     <figcaption>{{.Params.figcaption}}</figcaption>
   </figure>
   <div>

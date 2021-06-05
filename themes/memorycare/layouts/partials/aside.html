@@ -1,4 +1,4 @@
-<aside>
+<aside class="paginate">
     <div>
     <section>
       <h4 id="date">Created: {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
@@ -6,10 +6,16 @@
     </div>
     <div>
         {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        <a class="previous" href="{{.Permalink}}">
+          <span><i class="fas fa-angle-double-left"></i></span>
+          {{.Title}}</a>
         {{ end }}
         {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          <a class="next" href="{{.Permalink}}">
+            {{.Title}}
+            <span><i class="fas fa-angle-double-right"></i></span>
+          </a> 
+  
         {{ end }}
     </div>
 </aside>
