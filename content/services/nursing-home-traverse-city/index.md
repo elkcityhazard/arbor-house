@@ -2,6 +2,7 @@
 title: "Nursing Home In Traverse City Michigan"
 singleCSS: true
 description: "This is a description"
+cardContent: "Our community encourages personal independence and provides a safe, calm environment.  We have skilled nurses on hand 24 hours a day to ensure your loved one is well cared for."
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Volutpat consequat mauris nunc congue nisi vitae suscipit. Et ligula ullamcorper malesuada proin. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Netus et malesuada fames ac turpis egestas sed. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Et malesuada fames ac turpis egestas sed. Nisi quis eleifend quam adipiscing vitae proin. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ridiculus mus mauris vitae ultricies leo. Posuere urna nec tincidunt praesent semper.

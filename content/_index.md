@@ -1,4 +1,4 @@
 ---
-title: Services
+title: Home
 layout: list
 ---

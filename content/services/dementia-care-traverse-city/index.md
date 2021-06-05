@@ -1,6 +1,7 @@
 ---
-title: "Assisted Living Traverse City"
+title: "Dementia Care Traverse City"
 singleCSS: true
+cardContent: "Our approach to dementia care is to create a calm environment and support our resident's independence.  We encourage familiar routines that provide stability to your loved one."
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Volutpat consequat mauris nunc congue nisi vitae suscipit. Et ligula ullamcorper malesuada proin. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Netus et malesuada fames ac turpis egestas sed. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Et malesuada fames ac turpis egestas sed. Nisi quis eleifend quam adipiscing vitae proin. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ridiculus mus mauris vitae ultricies leo. Posuere urna nec tincidunt praesent semper.

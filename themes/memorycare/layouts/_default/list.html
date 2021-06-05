@@ -1,18 +1,15 @@
 {{ define "main" }}
+<!-- breadcrumbs -->
+{{ partial "breadcrumbs.html" . }}
 <section class="list">
     {{ range .Pages }}
-    <div class="row">
-        <div class="col">
             <div class="card">
                 <div class="inner-card">
-                    <a href="{{.RelPermalink}}">{{ .Name }}</a>
+                    <a href="{{.RelPermalink}}"><h4>{{ .Name }}</h4></a>
+                    <p class="card-content">{{ .Params.cardContent}}</p>
                 </div>
-            </div>
         </div>
-    </div>
     
     {{end }}
 </section>
-
-
 {{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "Alzheimer's Care Traverse City"
 singleCSS: true
+cardContent: "Arbor house is an Assisted Living home specializing in dementia, memory loss and alzheimers. "
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Volutpat consequat mauris nunc congue nisi vitae suscipit. Et ligula ullamcorper malesuada proin. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Netus et malesuada fames ac turpis egestas sed. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Et malesuada fames ac turpis egestas sed. Nisi quis eleifend quam adipiscing vitae proin. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ridiculus mus mauris vitae ultricies leo. Posuere urna nec tincidunt praesent semper.

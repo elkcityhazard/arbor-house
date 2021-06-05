@@ -88,6 +88,33 @@ p > a {
   z-index: 1000;
 }
 
+#siteTitle {
+  margin: 0 auto -0.5em;
+}
+
+/****************
+****Breadcrumbs**
+*****************/
+aside.breadcrumbs ol.breadcrumbs {
+  font-size: 0.75em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+aside.breadcrumbs ol.breadcrumbs li {
+  display: inline-block;
+}
+aside.breadcrumbs ol.breadcrumbs li.active a {
+  font-weight: 800;
+  text-decoration: underline;
+}
+aside.breadcrumbs ol.breadcrumbs li::after {
+  content: "/";
+}
+aside.breadcrumbs ol.breadcrumbs li:last-child::after {
+  display: none;
+}
+
 /**************
 ****Buttons*****
 ***************/
@@ -338,7 +365,7 @@ header.page-header h1 {
   list-style-position: inside;
   margin: 2em auto 0;
   text-align: center;
-  width: calc(100% * .75);
+  width: calc(100% * 0.75);
 }
 .navbar-main nav ul .navbar-main__menu-title {
   display: inline-block;
@@ -543,8 +570,12 @@ section.services .row .col .card .inner-card .card-content + .cta-btn a i {
   margin-right: 1rem;
 }
 section.services .row .col .card .inner-card img.icon {
+  border: 10px solid #e6e6e6;
+  border-radius: 50%;
   display: block;
   margin: 0 auto;
+  transition: border-color 400ms ease;
+  -webkit-transition: border-color 400ms ease;
   width: auto;
 }
 section.services.about .services-header {
@@ -725,22 +756,32 @@ section.special-services .row .col h3 {
 **List Section**
 ****************/
 section.list {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-content: center;
+  padding: 1em 1em 2em 1em;
+  position: relative;
 }
-section.list .row {
-  flex-direction: column !important;
+section.list .card {
+  background: #fff;
+  height: 100%;
+  margin: 1em auto;
+  padding: 1em;
   width: 100%;
 }
-section.list .row .col .card {
-  background: #fff;
-  height: 350px;
-  margin: 1em auto;
-  transition: all 250ms ease;
-  -webkit-transition: all 250ms ease;
-}
-section.list .row .col .card:hover {
-  box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
+section.list::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 /*****************
@@ -1070,37 +1111,6 @@ header.header-main .col p {
 /***************
 **List Section**
 ****************/
-section.list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-section.list .row {
-  display: flex;
-  flex-direction: row;
-  flex: 0 0 100%;
-  justify-content: space-around;
-  margin: auto;
-  max-width: 968px;
-  width: 100%;
-}
-section.list .row .col {
-  align-self: stretch;
-  flex: 1 1 50%;
-  padding: 1rem;
-}
-section.list .row .col .card {
-  background: #fff;
-  display: block;
-  margin: 1em auto;
-  transition: all 250ms ease;
-  -webkit-transition: all 250ms ease;
-  width: 100%;
-}
-section.list .row .col .card:hover {
-  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.33);
-}
-
 @media screen and (min-width: 1365px) {
   header.header-main {
     max-height: 75vh;
