@@ -6,6 +6,10 @@
             <div class="card">
                 <div class="inner-card">
                     <a href="{{.RelPermalink}}"><h4>{{ .Name }}</h4></a>
+                    <div class="card-icon">
+                        <a href="{{ .RelPermalink}}"><i class="fas fa-star-of-life fa-2x"></i></a>
+                    </div>
+                    <a href="{{ .RelPermalink}}" class="cta-link"><button class="cta-btn">Learn More</button></a>
                     <p class="card-content">{{ .Params.cardContent}}</p>
                 </div>
         </div>

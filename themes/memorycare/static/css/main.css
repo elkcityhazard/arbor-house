@@ -9,7 +9,7 @@
 
 html,
 body {
-  background: #dcdcdc;
+  background: #fff;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   height: 100%;
@@ -451,7 +451,7 @@ header.page-header h1 {
 }
 .navbar-main nav ul.sub-menu li a {
   font-size: 1em;
-  padding: 0;
+  padding: 1em 0.25em;
 }
 .navbar-main nav.active {
   border-right: 1px solid #6e7582;
@@ -773,8 +773,11 @@ section.list {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   justify-content: center;
+  margin: auto;
+  max-width: 1366px;
   padding: 1em 1em 2em 1em;
   position: relative;
+  text-align: center;
 }
 section.list .card {
   background: #fff;
@@ -794,6 +797,39 @@ section.list::after {
   position: absolute;
   transform: translateX(-50%);
   width: 100%;
+}
+section.list .cta-link {
+  display: block;
+  margin: auto;
+}
+section.list .cta-btn {
+  color: #fff;
+  display: block;
+  margin: auto;
+  padding: 1em 1.5em;
+}
+section.list .cta-btn:hover {
+  color: #046582;
+}
+section.list .card-icon {
+  align-items: center;
+  border: 10px solid #e6e6e6;
+  border-radius: 50%;
+  color: #f39189;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  width: 100px;
+}
+section.list .card-icon:hover {
+  border-color: #046582;
+}
+section.list p.card-content {
+  text-align: left;
 }
 
 /*****************
@@ -1049,7 +1085,8 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
     grid-column-end: 4;
   }
   .footer-main .row:nth-child(2) {
-    align-items: start;
+    align-items: flex-start;
+    padding-top: 1.25em;
   }
 }
 @media screen and (min-width: 1024px) {

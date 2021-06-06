@@ -2,7 +2,7 @@
 title: "Assisted Living Traverse City"
 singleCSS: true
 cardContent: "We are a long term assisted living facility capable of ensuring that resident's personal needs get met and and autonomy is encouraged" 
-imageURL: "images/senior-woman-holding-hands-with-caretaker.jpg"
+imageURL: "images/senior-woman-holding-hands-with-caretaker-1x.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Volutpat consequat mauris nunc congue nisi vitae suscipit. Et ligula ullamcorper malesuada proin. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Netus et malesuada fames ac turpis egestas sed. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Et malesuada fames ac turpis egestas sed. Nisi quis eleifend quam adipiscing vitae proin. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ridiculus mus mauris vitae ultricies leo. Posuere urna nec tincidunt praesent semper.

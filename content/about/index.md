@@ -4,7 +4,7 @@ subtitle: "Arbor House nursing home specializes in Alzheimer's care and Dementia
 layout: single
 singleCSS: true
 Date: 2021-06-03
-imageURL: "https://elkcityhazard.github.io/arbor-house/images/cover-photo-3.jpg"
+imageURL: "images/cover-photo-3.jpg"
 figcaption: "Our beautiful custom built home is close to Traverse City, yet nestled alongside the Pelizzari Natural Area on a quiet wooded cul de sac on Old Mission Peninsula."
 ---
 Arbor House Assisted Living home (ALH) specializes in providing total care for seniors with memory loss, alzheimer’s care and dementia care.  ![Skilled Licensed Nurses](https://elkcityhazard.github.io/arbor-house/images/assisted-living-1x.jpg#img-floatRight "Our skilled nurses interact with our guests every day") The beautiful custom built home is close to Traverse City, yet nestled alongside the [Pelizzari Natural Area](https://www.gtrlc.org) on a quiet wooded cul de sac on Old Mission Peninsula. The peaceful setting allows the residents to regain their sense of independence by enjoying the lush grounds and walkways which are fenced and secured.
