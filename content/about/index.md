@@ -1,6 +1,7 @@
 ---
 title: "About Us"
 subtitle: "Arbor House nursing home specializes in Alzheimer's care and Dementia care in Traverse City, Michigan."
+description: "Arbor House Assisted Living home specializes in providing total care for seniors with memory loss, alzheimer's care and dementia care."
 layout: single
 singleCSS: true
 Date: 2021-06-03
