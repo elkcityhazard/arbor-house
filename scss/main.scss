@@ -1,3 +1,6 @@
+@use './_single';
+@use './components/_contact_page';
+
 @mixin underline-title {
   h1,
   h2,
@@ -999,6 +1002,7 @@ section.video {
       p {
         line-height: 1;
         a {
+          color: #fff;
           padding: 0;
         }
       }
