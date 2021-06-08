@@ -6,8 +6,8 @@
       {{ $currentPage := . }}
       {{range .Site.Menus.mobile }}
         {{ if .HasChildren }}
-        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} subToggle">
-          <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+        <li aria-hidden="true" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} subToggle">
+          <span class="fa-li"><i aria-hidden="true" class="fas fa-angle-right"></i></span>
           <a href="#">
               {{ .Pre }}
               <span>{{ .Name }}</span>
@@ -15,7 +15,7 @@
       </li>
       <ul class="sub-menu">
           {{ range .Children }}
-              <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <li aria-hidden="true" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                   <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
           {{ end }}
@@ -23,36 +23,35 @@
   {{ else }}       
 
       <li>
-        <span class="fa-li"><i class="fas fa-angle-right"></i></span><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <span class="fa-li"><i aria-hidden="true" class="fas fa-angle-right"></i></span><a href="{{ .URL }}">{{ .Name }}</a></li>
 
       {{ end }}
       {{ end }}
     </ul>
     <ul class="fa-ul">
       <span class="navbar-main__menu-title">Contact</span>
-      <li class="menu-social">
+      <li aria-hidden="true" class="menu-social">
         <a
           href="https://www.facebook.com/ArborHouseAssistedLivingHome/"
           target="_blank"
           rel="nofollow noreferrer"
           title="Facebook"
-          ><i class="fab fa-2x fa-facebook"></i
+          ><i aria-hidden="true" class="fab fa-2x fa-facebook"></i
         ></a>
       </li>
-      <li class="menu-social">
+      <li aria-hidden="true" class="menu-social">
         <a href="mailto:andrew@andrew-mccall.com"
-          ><i class="fas fa-2x fa-paper-plane" title="Email Us"></i
+          ><i aria-hidden="true" class="fas fa-2x fa-paper-plane" title="Email Us"></i
         ></a>
       </li>
-      <li class="menu-social">
+      <li aria-hidden="true" class="menu-social">
         <a href="tel:+12319353772"
-          ><i class="fas fa-2x fa-phone" title="231-935-3772"></i
+          ><i aria-hidden="true" class="fas fa-2x fa-phone" title="231-935-3772"></i
         ></a>
       </li>
     </ul>
     <address>
       <ul>
-        <span class="navbar-main__menu-title">Address</span>
         <li>6901 Mission Rdg</li>
         <li>Traverse City, Michigan 49686</li>
         <li><a href="tel:+12319353772">(231) 935-3772</a></li>

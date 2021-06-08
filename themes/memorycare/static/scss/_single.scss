@@ -1,3 +1,4 @@
+
 @mixin reset-spacing {
     margin: 0;
     padding: 0;
@@ -16,6 +17,10 @@
         @include center-spacing;
         max-width: 60ch;
         padding: 1rem;
+    }
+
+    #content > .cta-btn {
+        display: block;
     }
 
     figure {

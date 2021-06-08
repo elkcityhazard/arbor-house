@@ -1,18 +1,96 @@
 {{ define "header" }}
 <header>
-    <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
 </header>
-{{ end }}
-
-{{ define "main" }}
+{{ end }} {{ define "main" }}
 <section class="contact-us">
-    <div class="row">
-        <div class="col">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+  <div class="row">
+    <div class="col">
+      <header>
+        <h2>We are here for you</h2>
+        <p>We are available for tours and consultations by appointment.</p>
+      </header>
+      <div class="card">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><a href="tel:+12319353772"><i
+            aria-hidden="true"
+            class="fas fa-2x fa-phone"
+            title="231-935-3772"
+          ></i
+        >(231) 935-3772</a></li>
+          <li>
+            <a href="mailto:info@arborhousealh.org"><i
+                aria-hidden="true"
+                class="fas fa-2x fa-paper-plane"
+                title="Email Us"
+              ></i>info@arborhousealh.org</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Address</h3>
+        <address>
+          <ul>
+            <li>6901 Mission Ridge</li>
+            <li>
+              Traverse City, Michigan <br />
+              49686
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="card">
+        <h3>Social</h3>
+        <div class="card-content">
+          <a
+            href="https://www.facebook.com/ArborHouseAssistedLivingHome/"
+            target="_blank"
+            rel="nofollow noreferrer"
+            title="Facebook"
+            ><i aria-hidden="true" class="fab fa-2x fa-facebook"></i
+          >Facebook</a>
+          <a href="mailto:andrew@andrew-mccall.com"
+            ><i
+              aria-hidden="true"
+              class="fas fa-2x fa-paper-plane"
+              title="Email Us"
+            ></i
+          >info@arborhousealh.org</a>
+          <a href="tel:+12319353772"
+            ><i
+              aria-hidden="true"
+              class="fas fa-2x fa-phone"
+              title="231-935-3772"
+            ></i
+          >231 935 3772</a>
         </div>
-        <div class="col"></div>
+      </div>
     </div>
+    <div class="col">
+        <header>
+            <h2>Contact Us</h2>
+            <p>We will answer your inquiry as soon as possible.</p>
+          </header>
+      <form action="" class="main-form">
+        <div class="form-control">
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="form-control">
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="form-control">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-control">
+          <button class="cta-btn" type="submit">Submit</button>
+          <button class="cta-btn" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 {{ end }}
