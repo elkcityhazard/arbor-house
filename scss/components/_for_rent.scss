@@ -252,3 +252,15 @@ section.images {
 
     }
 }
+
+@media screen and (min-width: 1366px) {
+    section.images {
+        .row {
+                img {
+                    flex: 1 1 33%;
+                    height: auto;
+                }
+            
+        }
+    }
+}

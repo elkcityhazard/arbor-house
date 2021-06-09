@@ -39,11 +39,38 @@
 
 //lazy load images
 
+function lazyLoad(elements) {
+  // get DOMList of class
+  elements = document.querySelectorAll(elements);
+  //  Config for Intersection Observer
+  const config = {
+    rootMargin: "15px 0px 0px 15px",
+    threshold: [1, 0.5, 0.5, 1]
+  };
+
+  // Create Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.src = entry.target.getAttribute('data-src');
+        entry.target.classList.add('fadeIn');
+        observer.unobserve(entry.target);
+      }
+    })
+  }, config);
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  })
+
+
+}
+
 const images = document.querySelectorAll(".lazy");
 
 const config = {
   rootMargin: "15px 0px 0px 15px",
-  threshold: [1, 0.5, 0.5, 1],
+  threshold: [1, 0.5, 0.5, 1]
 };
 
 const observer = new IntersectionObserver((entries ) => {

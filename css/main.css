@@ -493,6 +493,12 @@ section.images .row img:hover {
   z-index: 1000000;
 }
 
+@media screen and (min-width: 1366px) {
+  section.images .row img {
+    flex: 1 1 33%;
+    height: auto;
+  }
+}
 *,
 *::before,
 *::after {
