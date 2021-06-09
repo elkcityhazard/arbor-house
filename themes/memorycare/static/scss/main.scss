@@ -137,6 +137,11 @@ p > a {
   margin: 0 auto -0.5em;
 }
 
+.hidden {
+  height: 0;
+  visibility: hidden;
+}
+
 /****************
 ****Breadcrumbs**
 *****************/
@@ -344,10 +349,11 @@ header.page-header {
         float: right;
         margin-right: 1.5rem;
         padding: 1.5em;
-        // position: absolute;
-        right: 2em;
+        position: fixed;
+        right: 0em;
         text-align: initial;
         top: 0.66em;
+        z-index: 10000;
         span.hamburger {
           background: #333;
           border-radius: 10px;
@@ -412,6 +418,7 @@ header.page-header {
     background: #fff;
     height: auto;
     margin: 0 auto;
+    min-height: 100vh;
     overflow: hidden;
     padding: 0 0 40px 0;
     position: absolute;
@@ -522,7 +529,7 @@ header.page-header {
   nav.active {
     border-right: 1px solid #6e7582;
     box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
-    position: absolute;
+    position: fixed;
     transform: translateX(0%);
     transition: all 250ms linear;
     -webkit-transition: all 250ms linear;
@@ -914,6 +921,12 @@ section.video {
     grid-column-end: 2;
     .col {
       margin: 1rem auto 0;
+      nav.footer-nav {
+        a {
+          display: block;
+          text-align: center;
+        }
+      }
       address span {
         margin-left: unset;
       }
@@ -962,7 +975,7 @@ section.video {
       width: 100%;
       .col {
         span {
-          text-align: center;
+          text-align: left;
         }
         address {
           margin: 0 auto;
@@ -970,13 +983,16 @@ section.video {
           ul {
             margin: 0 auto;
             padding: 0;
+            width: auto;
             span {
               color: #fff;
               font-weight: 700;
-              text-align: center;
+              text-align: left;
             }
             li {
               font-style: italic;
+              text-align: center;
+              width: auto;
               a {
                 color: #fff;
                 padding: 0;
@@ -986,7 +1002,10 @@ section.video {
           }
         }
         .fa-ul {
+          align-items: center;
+          display: flex;
           margin: 0 auto;
+          justify-content: center;
           .navbar-main__menu-title {
             display: block;
             font-weight: 700;
@@ -1171,6 +1190,11 @@ section.video {
       grid-template-columns: 1f 1fr 1fr;
       justify-content: center;
       .col {
+        nav.footer-nav {
+          a {
+            text-align: left;
+          }
+        }
         &:nth-child(1) {
           grid-column-start: 1;
           grid-column-end: 2;
@@ -1182,11 +1206,16 @@ section.video {
           .fa-ul {
             align-items: center;
             display: flex;
-            justify-content: center;
-            margin-left: unset;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: {
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            };
             li.menu-social {
-              display: inline-block;
-              font-size: 12px !important;
+              display: block;
             }
           }
         }
@@ -1198,6 +1227,18 @@ section.video {
       &:nth-child(2) {
         align-items: flex-start;
         padding-top: 1.25em;
+        .col {
+          address {
+            ul {
+              li {
+                text-align: left;
+              }
+            }
+          }
+          .fa-ul {
+            justify-content: flex-start;
+          }
+        }
       }
     }
   }
@@ -1229,9 +1270,12 @@ section.video {
       .col {
         .hamburger-container {
           display: none;
+          z-index: -100000;
         }
         .desktop-nav {
           display: block;
+          max-height: 100px;
+          min-height: unset;
           padding: 0;
           position: relative;
           transform: translateX(0);

@@ -1,4 +1,9 @@
-
+{{ define "header" }}
+    {{partial "navbar.html" . }}
+    <header>
+        <h1> {{ .Title }}</h1>
+    </header>
+{{ end }}
 
 {{ define "main" }}
 <!-- breadcrumbs -->

@@ -16,28 +16,19 @@
                 <li><a href="tel:+12319353772">(231) 935-3772</a></li>
             </ul>
         </address>
-    </div>
-    <div class="col">
-        <span class="">Contact</span>
+        <span class="hidden">Contact</span>
         <ul class="fa-ul">
-            <li class="menu-social"><a href="https://www.facebook.com/ArborHouseAssistedLivingHome/" target="_blank" rel="nofollow noreferrer" title="Facebook"><i class="fab fa-2x fa-facebook"></i></a></li>
-            <li class="menu-social"><a href="mailto:andrew@andrew-mccall.com"><i class="fas fa-2x fa-paper-plane" title="Email Us"></i></a></li>
-            <li class="menu-social"><a href="tel:+12319353772"><i class="fas fa-2x fa-phone" title="231-935-3772"></i></a></li>
+            <li class="menu-social"><a href="https://www.facebook.com/ArborHouseAssistedLivingHome/" target="_blank" rel="nofollow noreferrer" title="Facebook"><i class="fab fa-lg fa-facebook"></i></a></li>
+            <li class="menu-social"><a href="mailto:andrew@andrew-mccall.com"><i class="fas fa-lg fa-paper-plane" title="Email Us"></i></a></li>
+            <li class="menu-social"><a href="tel:+12319353772"><i class="fas fa-lg fa-phone" title="231-935-3772"></i></a></li>
         </ul>
-        <figure>
-            <img data-src="{{.Site.BaseURL}}images/logo-no-bg.png" alt="logo" height="85" width="140" class="lazy footer-logo">
-        </figure>
     </div>
     <div class="col">
-        <nav>
-            <span class="">Menu</span>
-            <ul class="fa-ul">
-                <li><a href="#">Link Here</a></li>
-                <li><a href="#">Link Here</a></li>
-                <li><a href="#">Link Here</a></li>
-                <li><a href="#">Link Here</a></li>
-                <li><a href="#">Link Here</a></li>
-            </ul>
+        <span>Menu</span>
+        <nav class="footer-nav">
+            {{range .Site.Menus.main }}
+    <a href="{{ .URL}}" title="{{ .Name }}">{{ .Name }}</a>
+        {{ end }}
         </nav>
     </div>
 </div>
