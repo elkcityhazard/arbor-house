@@ -6,7 +6,7 @@
 <!-- breadcrumbs -->
 <section class="faq">
     <header>
-        <h2>Answers to your questions about Alzheimer's disease</h2>
+        <h2>Answers to your questions about Arbor House Assisted Living Home</h2>
         <p>{{ .Params.introduction}}</p>
     </header>
 
@@ -39,7 +39,6 @@
     function expandCard(el, toggleClose) {
         // el.style.height = el.scrollHeight + 'px';
         // el.scrollHeight = el.scrollHeight;
-        console.log(el.firstElementChild.childNodes[0])
         el.firstElementChild.childNodes[0].classList.toggle('fa-plus')
         el.firstElementChild.childNodes[0].classList.toggle('fa-minus')
         const toExpand = el.getAttribute('data-id');
