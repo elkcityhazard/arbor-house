@@ -46,10 +46,9 @@ const config = {
   threshold: [1, 0.5, 0.5, 1],
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries ) => {
+  entries.forEach( (entry) => {
     if (entry.intersectionRatio > 0) {
-      console.log();
       entry.target.src = entry.target.getAttribute("data-src");
       entry.target.classList.add("fadeIn");
       observer.unobserve(entry.target);
@@ -61,18 +60,6 @@ images.forEach((image) => {
   observer.observe(image);
 });
 
-function parallax(el, multiplier) {
-  window.addEventListener("scroll", () => {
-    const cont = document.querySelector(el);
-    const y = document.documentElement.getBoundingClientRect().top;
-    const x = document.documentElement.scrollWidth;
-    const rate = y / x * multiplier;
-    console.log(x, y, rate)
-    if (y < 0) {
-      cont.style.backgroundPosition = `center ${rate}px`;
-    }
-  });
-}
 
 window.addEventListener('load', () => {
   const services = document.querySelectorAll('.service');

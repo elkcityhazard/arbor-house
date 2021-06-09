@@ -255,6 +255,26 @@ section.faq .row .col .card .inner-card .card-content {
   -webkit-transition: all 250ms linear 250ms;
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 header.page-header {
   position: relative;
 }
@@ -377,6 +397,21 @@ section.assisted-living a:hover {
   color: #f3968e;
 }
 
+section.images .row .col {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  text-align: center;
+}
+section.images .row .col button {
+  margin: 1em 1em;
+  padding: 1em 1.5em;
+}
+section.images .row.interior.exterior {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   section.for-rent .row {
     flex-direction: row;
@@ -396,6 +431,68 @@ section.assisted-living h4 {
     flex-wrap: wrap;
   }
 }
+section.images {
+  overflow: hidden;
+}
+section.images::before, section.images::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+section.images::before {
+  top: 0;
+  display: none;
+}
+section.images::after {
+  bottom: 0;
+}
+section.images h4 {
+  font-size: 2em;
+}
+section.images .row {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100%;
+  padding: 0 1em;
+  width: 100%;
+}
+section.images .row .col {
+  flex-direction: row;
+  justify-content: center;
+}
+section.images .row img {
+  cursor: zoom-in;
+  filter: grayscale(50%);
+  flex: 1 1 250px;
+  height: auto;
+  max-height: 225px;
+  max-width: 100%;
+  margin: 1em auto;
+  padding: 0 1em;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+section.images .row img:nth-child(odd).fadeIn {
+  animation: fadeInRight 350ms ease-in-out;
+  opacity: 1;
+}
+section.images .row img:nth-child(even).fadeIn {
+  animation: fadeInLeft 350ms ease-in-out;
+  opacity: 1;
+}
+section.images .row img:hover {
+  filter: grayscale(0);
+  transform: scale(1.25);
+  z-index: 1000000;
+}
+
 *,
 *::before,
 *::after {
@@ -694,7 +791,7 @@ header.page-header h1 {
   display: block;
   float: right;
   margin-right: 1.5rem;
-  padding: 1.5em;
+  padding: 0.75em;
   position: fixed;
   right: 0em;
   text-align: initial;
@@ -1029,6 +1126,7 @@ section.services.about .row .col .card .inner-card h3 {
   text-transform: initial;
 }
 section.services.about .row .col .card .inner-card .card-content {
+  font-size: 1em;
   max-width: 60ch;
   padding: 1rem;
 }
