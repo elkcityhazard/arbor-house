@@ -349,7 +349,7 @@ header.page-header {
         display: block;
         float: right;
         margin-right: 1.5rem;
-        padding: 1.5em;
+        padding: .75em;
         position: fixed;
         right: 0em;
         text-align: initial;
@@ -688,6 +688,7 @@ section.services {
               text-transform: initial;
             }
             .card-content {
+              font-size: 1em;
               max-width: 60ch;
               padding: 1rem;
             }
