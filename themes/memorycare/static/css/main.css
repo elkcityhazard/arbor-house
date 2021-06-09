@@ -1035,6 +1035,7 @@ section.list {
   padding: 1em 1em 2em 1em;
   position: relative;
   text-align: center;
+  width: 100%;
 }
 section.list .card {
   background: #fff;
