@@ -52,6 +52,9 @@ section.contact-us {
                     position: absolute;
                     width: 100%;
                 }
+                a {
+                    display: block;
+                }
             }
         }
         .main-form {
@@ -93,7 +96,7 @@ section.contact-us {
     }
     i {
         margin: {
-            right: .25em;
+            right: .33em;
         }
     }
     
