@@ -102,18 +102,18 @@
         btn.addEventListener('click', (e) => {
             galleryImages.forEach((img) => {
                 img.parentNode.style.display = "none";
-                img.src = img.getAttribute('data-src');
+                img.src = '';
                 img.style.display = "none";
-                img.style.opacity = 0;
+                img.classList.remove('fadeIn');
+                lazyLoad('.gallery')
             })
             const id = e.target.getAttribute('data-class');
             const idArray = id.split(' ');
             galleryImages.forEach((image) => {
                 idArray.forEach((id) => {
                     if (image.classList.contains(id)) {
-                        image.style.display = "inline";
+                        image.style.display = 'inline';
                         image.parentNode.style.display = "flex";
-                        image.style.opacity = 1;
                     }
                 })
             })
