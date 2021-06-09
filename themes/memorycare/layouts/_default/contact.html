@@ -1,6 +1,8 @@
 {{ define "header" }}
+{{ partial "navbar.html" . }}
 <header>
   <h1>{{ .Title }}</h1>
+  {{ partial "breadcrumbs.html" . }}
 </header>
 {{ end }} {{ define "main" }}
 <section class="contact-us">

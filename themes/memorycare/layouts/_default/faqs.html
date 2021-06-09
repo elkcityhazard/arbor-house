@@ -1,0 +1,61 @@
+{{ define "header" }}
+{{- partial "page-header" .  -}}
+{{ end }}
+
+{{ define "main" }}
+<!-- breadcrumbs -->
+<section class="faq">
+    <header>
+        <h2>Answers to your questions about Alzheimer's disease</h2>
+        <p>{{ .Params.introduction}}</p>
+    </header>
+
+    <!-- Begin Questions -->
+    
+    {{ range .Site.Data.faq }}
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="inner-card">
+                    <button class="data-btn" data-id="{{ .id }}">
+                        <h3 itemprop="question" data-id="{{ .id }}"><i class="fas fa-plus 2xl" data-id="{{ .id }}"></i>{{ .question }}</h3>
+                    </button>
+                    <div id="{{ .id }}" class="card-content">
+                        <p itemprop="answer">{{ .answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    {{ end }}
+    
+</section>
+<!-- VIDEO -->
+{{- partial "video.html" . -}}
+<script defer>
+    const btns = document.querySelectorAll('.data-btn');
+    const answerBoxes = document.querySelectorAll('.card-content');
+
+    function expandCard(el, toggleClose) {
+        // el.style.height = el.scrollHeight + 'px';
+        // el.scrollHeight = el.scrollHeight;
+        console.log(el.firstElementChild.childNodes[0])
+        el.firstElementChild.childNodes[0].classList.toggle('fa-plus')
+        el.firstElementChild.childNodes[0].classList.toggle('fa-minus')
+        const toExpand = el.getAttribute('data-id');
+        const target = document.getElementById(toExpand);
+        target.classList.toggle('active');
+        target.style.height = target.classList.contains('active') ? target.scrollHeight + 'px' : 0;        
+    }
+
+    btns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            // heightToZero(answerBoxes)
+            expandCard(btn);
+
+        })
+    })
+
+    
+</script>
+{{ end }}

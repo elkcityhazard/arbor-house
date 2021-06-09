@@ -1,3 +1,7 @@
+{{ define "header" }}
+{{- partial "page-header" .  -}}
+{{ end }}
+
 {{ define "main" }}
 <!-- breadcrumbs -->
 <section class="list">
@@ -8,7 +12,7 @@
                     <div class="card-icon">
                         <a href="{{ .RelPermalink}}"><i class="fas fa-star-of-life fa-2x"></i></a>
                     </div>
-                    <a href="{{ .RelPermalink}}" class="cta-link"><button class="cta-btn">Learn More</button></a>
+                    <a href="{{ .RelPermalink}}" class="cta-link"><button class="cta-btn">{{ .Name}}</button></a>
                     <p class="card-content">{{ .Params.cardContent}}</p>
                 </div>
         </div>

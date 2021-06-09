@@ -2,7 +2,7 @@
 <html lang="en">
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "page-header.html" . -}}
+        {{- block "header" . }}{{- end }}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>

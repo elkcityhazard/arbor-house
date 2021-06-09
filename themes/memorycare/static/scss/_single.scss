@@ -107,12 +107,7 @@
 @media screen and (min-width: 1365px) {
 
     div#content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        section {
-            flex: 1 1  100%;
-            flex-direction: column;
-        }
+        
         aside {
             flex: 0 0 100%;
         }

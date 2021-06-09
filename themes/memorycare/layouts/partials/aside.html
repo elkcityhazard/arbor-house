@@ -5,12 +5,12 @@
     </section>
     </div>
     <div>
-        {{ with .PrevInSection }}
+        {{ with .NextInSection }}
         <a class="previous" href="{{.Permalink}}">
           <span><i class="fas fa-angle-double-left"></i></span>
           {{.Title}}</a>
         {{ end }}
-        {{ with .NextInSection }}
+        {{ with .PrevInSection }}
           <a class="next" href="{{.Permalink}}">
             {{.Title}}
             <span><i class="fas fa-angle-double-right"></i></span>

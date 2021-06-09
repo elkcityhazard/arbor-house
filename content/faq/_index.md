@@ -1,4 +1,0 @@
----
-title: faq
-layout: list
----
