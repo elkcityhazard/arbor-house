@@ -55,6 +55,12 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
     weight = -110
 
   [[menu.mobile]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = -200
+
+  [[menu.mobile]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"

@@ -542,7 +542,7 @@ header.page-header {
   nav.active {
     border-right: 1px solid #6e7582;
     box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
-    position: fixed;
+    position: absolute;
     transform: translateX(0%);
     transition: all 250ms linear;
     -webkit-transition: all 250ms linear;
