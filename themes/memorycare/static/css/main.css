@@ -639,20 +639,15 @@ header.page-header h1 {
   flex: initial;
   padding: 0;
 }
-.navbar-main nav ul {
+.navbar-main nav .navbar-main__menu-title {
   display: block;
-  list-style-position: inside;
-  margin: 2em auto 0;
-  text-align: center;
-  width: calc(100% * 0.75);
-}
-.navbar-main nav ul .navbar-main__menu-title {
-  display: inline-block;
   font-weight: 700;
+  padding-left: 10%;
   position: relative;
+  text-align: left;
   width: 100%;
 }
-.navbar-main nav ul .navbar-main__menu-title::after {
+.navbar-main nav .navbar-main__menu-title::after {
   background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
   border-radius: 10px;
   content: "";
@@ -660,6 +655,13 @@ header.page-header h1 {
   height: 2px;
   margin: 1em auto;
   width: 100%;
+}
+.navbar-main nav ul {
+  display: block;
+  list-style-position: inside;
+  margin: 2em auto 0;
+  text-align: left;
+  width: calc(100% * 0.75);
 }
 .navbar-main nav ul li {
   align-items: center;
@@ -1417,6 +1419,9 @@ header.header-main .col p {
     width: 100%;
   }
 
+  .navbar-main .mobile-nav {
+    display: none;
+  }
   .navbar-main .navbar-main__container {
     background: #fff;
   }

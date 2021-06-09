@@ -1,8 +1,8 @@
 <div class="preloader"></div>
 <div class="navbar-main">
-  <nav class="">
+  <nav class="mobile">
+    <span class="navbar-main__menu-title">Menu</span>
     <ul class="fa-ul">
-      <span class="navbar-main__menu-title">Menu</span>
       {{ $currentPage := . }}
       {{range .Site.Menus.mobile }}
         {{ if .HasChildren }}
@@ -16,20 +16,20 @@
       <ul class="sub-menu">
           {{ range .Children }}
               <li aria-hidden="true" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                  <a href="{{ .URL }}">{{ .Name }}</a>
+                  <a href="{{ .URL }}" tabindex="-1">{{ .Name }}</a>
               </li>
           {{ end }}
       </ul>
   {{ else }}       
 
       <li>
-        <span class="fa-li"><i aria-hidden="true" class="fas fa-angle-right"></i></span><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <span class="fa-li"><i aria-hidden="true" class="fas fa-angle-right"></i></span><a href="{{ .URL }}" tabindex="-1">{{ .Name }}</a></li>
 
       {{ end }}
       {{ end }}
     </ul>
+    <span class="navbar-main__menu-title">Contact</span>
     <ul class="fa-ul">
-      <span class="navbar-main__menu-title">Contact</span>
       <li aria-hidden="true" class="menu-social">
         <a
           href="https://www.facebook.com/ArborHouseAssistedLivingHome/"
