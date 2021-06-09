@@ -1,0 +1,22 @@
+{
+    "0" : {
+        "question" : "How does a small facility like Arbor House compare with larger Assisted Living facilities?",
+        "id" : 0,
+        "answer" : "A small facility offers the ability to provide very close supervision since the staff to resident ratio is so favorable. In addition, Arbor House is licensed by the State of Michigan (not all Assisted Living facilities are), and complies with all regulations, requirements and bi-annual inspections.  Arbor House provides a home-like atmosphere; much like the residents might have lived in. The home has large private guest rooms, shared bathrooms, large front porch, backyard deck and fenced in grounds, chicken coop and garden benches.  You’ll find our small home to be BIG on love, care and attention."
+    }, 
+    "1" : {
+        "question" : "What kind of pricing structure should I expect to pay for Assisted Living for my loved one?",
+        "id" : 1,
+        "answer" : "Arbor House keeps it simple. One monthly price includes all care for your loved one. Our special services & amenities page outlines in detail what is included in the monthly fee. Meal preparation, meals, snacks, feeding, grooming, dressing, bathing, activities, laundry, transportation to medical appointments, etc. are all included."
+      }, 
+    "2" : {
+        "question" : "How can I make it more comfortable for my loved one to transition to Assisted Living?",
+        "id" : 2,
+        "answer" : "Some residents like to have their special things with them- antique dresser, pictures, quilts. We encourage families to bring these items as it makes the resident feel they are at home.  Photos of family members and holidays are great reminders of how much they are loved.  Our caregivers are trained in dementia and memory loss and anticipate how to provide comfort to the residents by keeping routines and schedules regular, and allowing the resident to be as engaged as they wish to be."
+    },
+    "3" : {
+        "question" : "When are families allowed to come visit?",
+        "id" : 3,
+        "answer" : "Visitors are welcome anytime!"
+    }
+}
