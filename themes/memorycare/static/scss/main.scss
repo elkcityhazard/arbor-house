@@ -326,6 +326,9 @@ header.page-header {
 *********************/
 
 .navbar-main {
+  border: {
+    bottom: 1px solid rgba(0,0,0,0.33);
+  }
   height: 100px;
   .navbar-main__container {
     align-items: center;
@@ -404,6 +407,10 @@ header.page-header {
   }
 
   .desktop-nav > a {
+    padding: {
+      left: 0;
+      right: 1em;
+    }
     position: relative;
     & + ul.sub-menu {
       position: absolute;
@@ -420,8 +427,8 @@ header.page-header {
     height: auto;
     margin: 0 auto;
     min-height: 100vh;
-    overflow: hidden;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding: 0 0 40px 0;
     position: absolute;
     top: 0;

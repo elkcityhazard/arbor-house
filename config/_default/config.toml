@@ -7,42 +7,46 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
   subtitle = "Adult Foster Care Traverse City, Michigan"
   
 [menu]
-
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = -200
   [[menu.main]]
     identifier = "about"
     name = "About Us"
     url = "/about/"
-    weight = -110
+    weight = -190
 
   [[menu.main]]
     identifier = "services"
     name = "Services"
     url = "/services/"
-    weight = -100
+    weight = -180
 
     [[menu.main]]
     identifier = "faq"
     name = "FAQs"
     url = "/faqs/"
-    weight = -100
+    weight = -170
   
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = -110
+    weight = -150
 
   [[menu.main]]
     identifier = "rent"
     name = "For Rent"
     url = "/for-rent/"
-    weight = -110
+    weight = -160
 
   [[menu.main]]
     identifier = "gallery"
     name = "Gallery"
     url = "/gallery/"
-    weight = -110
+    weight = -140
   
   [[menu.mobile]]
     identifier = "about"
