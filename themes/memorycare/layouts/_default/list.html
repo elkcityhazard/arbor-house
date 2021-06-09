@@ -1,6 +1,4 @@
-{{ define "header" }}
-{{- partial "page-header" .  -}}
-{{ end }}
+
 
 {{ define "main" }}
 <!-- breadcrumbs -->
@@ -8,9 +6,9 @@
     {{ range .Pages }}
             <div class="card">
                 <div class="inner-card">
-                    <a href="{{.RelPermalink}}"><h2>{{ .Name }}</h2></a>
+                    <a href="{{.RelPermalink}}"><h4>{{ .Name }}</h4></a>
                     <div class="card-icon">
-                        <a href="{{ .RelPermalink}}"><i class="fas fa-star-of-life fa-2x"></i></a>
+                        <i class="fas fa-star-of-life fa-2x"></i>
                     </div>
                     <a href="{{ .RelPermalink}}" class="cta-link"><button class="cta-btn">{{ .Name}}</button></a>
                     <p class="card-content">{{ .Params.cardContent}}</p>
