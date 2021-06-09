@@ -93,14 +93,6 @@ footer.footer-main p {
 }
 
 @media screen and (min-width: 1365px) {
-  div#content {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  div#content section {
-    flex: 1 1 100%;
-    flex-direction: column;
-  }
   div#content aside {
     flex: 0 0 100%;
   }
@@ -145,7 +137,7 @@ section.contact-us .row .col {
   padding-right: 1em;
 }
 section.contact-us .row .col .card {
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 }
 section.contact-us .row .col .card h3 {
@@ -210,6 +202,56 @@ section.contact-us i {
     margin: 0 2rem;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section.faq button {
+  border: none;
+  transition: color 250ms ease;
+  -webkit-transition: color 250ms ease;
+  width: 100%;
+}
+section.faq button i.fa-plus,
+section.faq button i.fa-minus {
+  animation: fadeIn 250ms linear forwards 150ms;
+  opacity: 0;
+  transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  margin-right: 1em;
+}
+section.faq button:hover {
+  color: #d68885;
+}
+section.faq h3 {
+  text-align: left;
+  width: 100%;
+}
+section.faq .row {
+  width: 100%;
+}
+section.faq .row .col {
+  padding: 1em;
+  width: 100%;
+}
+section.faq .row .col .card {
+  background: #ddd;
+  height: 100%;
+  margin: auto;
+  max-width: 60ch;
+  width: 100%;
+}
+section.faq .row .col .card .inner-card .card-content {
+  height: 0;
+  overflow: hidden;
+  transition: all 250ms linear 250ms;
+  -webkit-transition: all 250ms linear 250ms;
+}
+
 *,
 *::before,
 *::after {
@@ -246,6 +288,10 @@ a:visited {
 a:hover,
 a:active {
   color: #bb8082;
+}
+
+button {
+  cursor: pointer;
 }
 
 img {
@@ -739,6 +785,7 @@ section.services .row .col .card .inner-card h3,
 section.services .row .col .card .inner-card h4,
 section.services .row .col .card .inner-card h5,
 section.services .row .col .card .inner-card h6 {
+  margin-bottom: 2em;
   text-align: center;
 }
 section.services .row .col .card .inner-card h1,
@@ -1048,6 +1095,14 @@ section.list p.card-content {
 section.video {
   margin: 2em auto;
   max-width: 1024px;
+  width: 100%;
+}
+section.video .card {
+  display: block;
+  width: 100%;
+}
+section.video .card .inner-card {
+  width: 100%;
 }
 
 /*****************
