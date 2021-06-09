@@ -31,6 +31,12 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
     name = "Contact"
     url = "/contact/"
     weight = -110
+
+  [[menu.main]]
+    identifier = "rent"
+    name = "For Rent"
+    url = "/for-rent/"
+    weight = -110
   
   [[menu.mobile]]
     identifier = "about"
@@ -78,4 +84,10 @@ title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse Cit
     name = "FAQs"
     url = "/faqs/"
     weight = -100
+
+  [[menu.mobile]]
+    identifier = "rent"
+    name = "For Rent"
+    url = "/for-rent/"
+    weight = -110
 

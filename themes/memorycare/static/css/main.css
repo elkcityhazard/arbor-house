@@ -255,6 +255,147 @@ section.faq .row .col .card .inner-card .card-content {
   -webkit-transition: all 250ms linear 250ms;
 }
 
+header.page-header {
+  position: relative;
+}
+header.page-header::before, header.page-header::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+header.page-header::before {
+  top: 0;
+  display: none;
+}
+header.page-header::after {
+  bottom: 0;
+}
+
+section.for-rent {
+  background: #438ba1;
+  color: #fff;
+  position: relative;
+}
+section.for-rent h1,
+section.for-rent h2,
+section.for-rent h3,
+section.for-rent h4,
+section.for-rent h5,
+section.for-rent h6 {
+  text-align: center;
+}
+section.for-rent a.call-now {
+  color: #fff;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+}
+section.for-rent a.call-now button.cta-btn {
+  background: #db8a86;
+  color: #fff;
+  display: block;
+  font-weight: 800;
+  height: 80px;
+  width: 250px;
+}
+section.for-rent a.call-now button.cta-btn:hover {
+  background: #fff;
+  color: #046582;
+}
+section.for-rent .row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em auto;
+  max-width: 1366px;
+  width: 100%;
+}
+section.for-rent .row .col {
+  padding: 0 1em;
+  width: 100%;
+}
+section.for-rent .row .col h3, section.for-rent .row .col h4, section.for-rent .row .col h5, section.for-rent .row .col h6 {
+  margin: auto;
+  width: 100%;
+}
+section.for-rent .row .col span.title {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0 auto;
+  padding-top: 0.33em;
+  padding-bottom: 0.33em;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+}
+section.for-rent footer p {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+section.for-rent::before, section.for-rent::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+section.for-rent::before {
+  top: 0;
+  display: none;
+}
+section.for-rent::after {
+  bottom: 0;
+}
+
+section.assisted-living {
+  background: #046582;
+  color: #fff;
+}
+section.assisted-living ul.fa-ul li {
+  padding-top: 0.33em;
+  padding-bottom: 0.33em;
+}
+section.assisted-living a {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: block;
+  font-weight: initial;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+}
+section.assisted-living a:hover {
+  color: #f3968e;
+}
+
+@media screen and (min-width: 768px) {
+  section.for-rent .row {
+    flex-direction: row;
+    max-width: 1200px;
+  }
+  section.for-rent .row .col {
+    flex: 1 1 33%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  section.assisted-living header,
+section.assisted-living h4 {
+    flex: 0 0 100%;
+  }
+  section.assisted-living .row {
+    flex-wrap: wrap;
+  }
+}
 *,
 *::before,
 *::after {

@@ -1,6 +1,7 @@
 @use './_single';
 @use './components/_contact_page';
 @use './components/_faq';
+@use './components/_for_rent';
 
 @mixin underline-title {
   h1,

@@ -1,0 +1,73 @@
+{{ define "header" }}
+{{ partial "navbar.html" . }}
+<header class="page-header">
+<h1>{{ .Title }}</h1>
+<h2>Assisted Living Home Specializing in Dementia and Alzheimer’s Care in Traverse City</h2>
+<figure>
+    <img data-src="{{ .Site.BaseURL}}images/for-rent-hero-image.jpg" class="lazy" alt="Arbor House in it's lovely natural surroundings">
+    <figcaption>Apartment is located next to Arbor House Assisted Living at 6901 Mission Ridge on beautiful Traverse City Old Mission Peninsula!</figcaption>
+</figure>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<section class="for-rent">
+    <div class="row">
+        <div class="col">
+            <span class="title">Featuring:</span>
+            <ul class="fa-ul">
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Only 1 mile out of city limits on the regular BATA route</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>2 bedroom apartment</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Kitchen with a Garden Window</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>French glass doors</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Private deck</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Full bath with walk-in tub</li>
+            </ul>
+        </div>
+        <div class="col">
+            <span class="title">Care Options Available:</span>
+            <ul class="fa-ul">
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Daily Personal Assistance-Incontinent okay</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Transportation to medical appointments</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Medications Monitored</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Meal Preparation</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Housekeeping</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Shopping</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>Laundry</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="for-rent assisted-living">
+    <header>
+        <h3>Assisted Living Apartment</h3>
+    </header>
+    <h4>Robertson-Smith Rentals</h4>
+    <div class="row">
+        <div class="col">
+            <span class="title">Semi-assisted living with special care options</span>
+            <ul class="fa-ul">
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Daily Personal Assistance</a></li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Medication Monitoring</a></li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Meal Preparation</a></li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Housekeeping</a></li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Shopping</a></li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span><a href="{{ .Site.BaseURL}}services">Laundry</a></li>
+            </ul>
+    </div>
+        <div class="col">
+            <span class="title">2 bedroom apartment has: </span>
+            <ul class="fa-ul">
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span>Living Room</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span>Kitchen</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span>1 large Bedroom with glass french doors that open up to a small private deck</li>
+                <li><span class="fa-li" aria-hidden="true"><i class="far fa-check-circle" aria-hidden="true"></i></span>1 medium sized bedroom on the main floor with a shared bathroom</li>
+            </ul>
+    </div>
+    </div>
+    <footer>
+        <p>Please call Cindy Robertson for more information including a price quote.</p>
+        <a href="tel:+12319353772" class="call-now" title="231-935-3772"><button class="cta-btn">Call Now</button></a>
+    </footer>
+</section>
+{{ end }}
