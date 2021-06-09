@@ -1,0 +1,158 @@
+@mixin reset-spacing {
+    margin: 0; 
+    padding: 0;
+}
+
+@mixin border {
+    &::before,
+    &::after {
+        background: linear-gradient(
+            0.25turn,
+            #046582,
+            #6e7582,
+            #bb8082,
+            #f39189,
+            #fff
+          );
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    &::before {
+        top: 0;
+        display: none;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+header.page-header {
+    position: relative;
+    @include border;
+}
+
+section.for-rent {
+    background: #438ba1;
+    color: #fff; 
+    position: relative;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+    a.call-now {
+        color: #fff;
+        padding: 1em 1.5em;
+        text-align: center;
+        text-decoration: none;
+        button.cta-btn {
+            background: #db8a86;
+            color: #fff;
+            display: block;
+            font-weight: 800;
+            height: 80px;
+            width: 250px;
+            &:hover {
+                background: #fff;
+                color:#046582;
+            }
+        }
+    }
+    .row {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1em auto;
+        max-width: 1366px;
+        width: 100%;
+        .col {
+            padding: 0 1em;
+            width: 100%;
+            h3,h4,h5,h6 {               
+                margin: auto;
+                width: 100%;
+            }
+            span.title {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: 1.20em;
+                font-weight: 700;
+                margin: 0 auto;
+                padding: {
+                    top: .33em;
+                    bottom: .33em;
+                    left: 1em;
+                    right: 1em;
+                }
+                width: 100%;
+            }
+        }
+    }
+    footer {
+        p {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+    }
+    @include border;
+}
+
+section.assisted-living {
+    background: #046582;
+    color: #fff;
+    ul.fa-ul {
+        li {
+            padding: {
+                top: .33em;
+                bottom: .33em;
+            }
+        }
+    }
+    a {
+        @include reset-spacing;
+        color: #fff;
+        display: block;
+        font-weight: initial;
+        text-decoration: underline;
+            text-decoration-thickness: 1px;
+        transition: all 250ms ease;
+        -webkit-transition: all 250ms ease;
+        &:hover {
+            color: #f3968e;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.for-rent {
+        .row {
+            flex-direction: row;
+            max-width: 1200px;
+            .col {
+                flex: 1 1 33%;
+                padding: {
+                    left: 1em;
+                    right: 1em;
+                }
+            }
+        }
+    }
+    section.assisted-living {
+        header,
+        h4 {
+            flex: 0 0 100%;
+        }
+        .row {
+            flex-wrap: wrap;
+            .col {
+            }
+        }
+    }
+}
