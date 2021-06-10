@@ -2,8 +2,8 @@ baseURL = "https://localhost:1313/"
 languageCode = "en-us"
 theme = "memorycare"
 [params]
-  description = "Adult Foster Care and Memory Care In Traverse City, Michigan"
-  subtitle = "Adult Foster Care Traverse City, Michigan"
+  description = "Arbor house is an assisted living home in Traverse City, Michigan that specializes in demential and Alzheimer's Disease."
+  subtitle = "Assisted Living Home Traverse City, Michigan"
 
 
   
