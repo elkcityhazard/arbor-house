@@ -504,7 +504,7 @@ body {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 a,
@@ -1083,7 +1083,7 @@ section.services .row .col .card .inner-card h3::after,
 section.services .row .col .card .inner-card h4::after,
 section.services .row .col .card .inner-card h5::after,
 section.services .row .col .card .inner-card h6::after {
-  bottom: -7px;
+  bottom: -5px;
   margin: 0 auto;
 }
 section.services .row .col .card .inner-card .card-content {
@@ -1230,7 +1230,7 @@ section.special-services .row .col {
   padding-left: 1rem;
 }
 section.special-services .row .col ul {
-  margin: 0;
+  margin: 1em auto;
   padding: 0;
 }
 section.special-services .row .col ul li {
@@ -1277,7 +1277,7 @@ section.special-services .row .col h3::after,
 section.special-services .row .col h4::after,
 section.special-services .row .col h5::after,
 section.special-services .row .col h6::after {
-  bottom: -7px;
+  bottom: -5px;
   margin: 0 auto;
 }
 section.special-services .row .col h3 {
