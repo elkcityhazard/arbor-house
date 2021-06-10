@@ -33,7 +33,7 @@
       width: 50%;
     }
     &::after {
-      bottom: -7px;
+      bottom: -5px;
       margin: 0 auto;
     }
   }
@@ -62,7 +62,7 @@ body {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 a,
@@ -822,7 +822,7 @@ section.special-services {
       flex: 1 1 100%;
       padding-left: 1rem;
       ul {
-        margin: 0;
+        margin: 1em auto;
         padding: 0;
         li {
           padding: 0.25rem 1rem;
