@@ -4,7 +4,7 @@ theme = "memorycare"
 title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse City, Michigan"
 [params]
   description = "Arbor House Assisted Living home specializes in providing total care for seniors with memory loss, alzheimer's care and dementia care."
-  subtitle = "Adult Foster Care Traverse City, Michigan"
+  subtitle = "Assisted Living Home Traverse City, Michigan"
   
 [menu]
   [[menu.main]]

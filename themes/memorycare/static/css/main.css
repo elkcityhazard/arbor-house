@@ -592,7 +592,15 @@ p > a {
 }
 
 #siteTitle {
+  font-family: Lato;
   margin: 0 auto -0.5em;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.33);
+}
+
+#siteSubtitle {
+  color: black;
+  text-shadow: 2px 2px 2px #fff;
 }
 
 .hidden {
@@ -888,9 +896,13 @@ header.page-header h1 {
   padding: 0;
 }
 .navbar-main nav .navbar-main__menu-title {
-  display: block;
+  display: inline-block;
   font-weight: 700;
-  padding-left: 10%;
+  margin-left: 10vw;
+  padding-bottom: 0;
+  padding-left: 1.5em;
+  padding-top: 1em;
+  padding-right: 20vw;
   position: relative;
   text-align: left;
   width: 100%;
@@ -907,7 +919,7 @@ header.page-header h1 {
 .navbar-main nav ul {
   display: block;
   list-style-position: inside;
-  margin: 2em auto 0;
+  margin: 0em auto 0;
   text-align: left;
   width: calc(100% * 0.75);
 }
