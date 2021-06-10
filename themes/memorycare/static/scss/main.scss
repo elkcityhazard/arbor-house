@@ -112,7 +112,7 @@ h6 {
 
 p,
 span {
-  max-width: 60ch;
+  max-width: 75ch;
 }
 
 p > a {
@@ -135,7 +135,9 @@ p > a {
 }
 
 #siteTitle {
+  display: inline-block;
   font-family: Lato;
+  flex: 1 1 100%;
   margin: 0 auto -0.5em;
   text-decoration: none;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.33);
@@ -363,7 +365,7 @@ header.page-header {
         float: right;
         margin-right: 1.5rem;
         padding: .75em;
-        position: fixed;
+        position: absolute;
         right: 0em;
         text-align: initial;
         top: 0.66em;
@@ -1107,6 +1109,10 @@ section.video {
       flex-wrap: wrap;
       .col {
         width: 45%;
+        &.header-col {
+          width: 100%;
+          max-width: 968px;
+        }
       }
     }
     &.about {
