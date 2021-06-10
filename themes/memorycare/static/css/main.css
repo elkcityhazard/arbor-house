@@ -278,21 +278,6 @@ section.faq .row .col .card .inner-card .card-content {
 header.page-header {
   position: relative;
 }
-header.page-header::before, header.page-header::after {
-  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-header.page-header::before {
-  top: 0;
-  display: none;
-}
-header.page-header::after {
-  bottom: 0;
-}
 
 section.for-rent {
   background: #438ba1;
