@@ -143,6 +143,7 @@ p > a {
 
 #siteSubtitle {
   color: black;
+  text-align: center;
   text-shadow: 2px 2px 2px #fff;
 }
 
@@ -1273,6 +1274,27 @@ section.video {
 }
 
 @media screen and (min-width: 1024px) {
+  #siteTitle,
+  #siteSubtitle {
+    margin: {
+      top: 0;
+      bottom: -.25em;
+      left: 1rem;
+      right: 0;
+    }
+    padding: 0;
+    text-align: left;
+  }
+  #siteTitle {
+    font-size: 1.66em;
+  }
+  #siteSubtitle + button.cta-btn {
+    margin: {
+      left: 1em;
+      right: 0;
+    }
+    width: 100%;
+  }
   header.header-main {
     background-image: url("../images/nurse-senior-walker-1024.jpg");
     flex-direction: row;
