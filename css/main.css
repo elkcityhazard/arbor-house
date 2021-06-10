@@ -722,6 +722,7 @@ header.header-main .col {
   padding: 1rem;
   width: 100%;
   transition: background 150ms linear;
+  -webkit-transition: background 150ms linear;
 }
 header.header-main .col h1 {
   font-family: "Satisfy", cursive;
