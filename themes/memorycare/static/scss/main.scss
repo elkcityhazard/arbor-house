@@ -273,6 +273,7 @@ header.header-main {
     padding: 1rem;
     width: 100%;
     transition: background 150ms linear;
+    -webkit-transition: background 150ms linear;
     h1 {
       font-family: "Satisfy", cursive;
       font-size: 3em;
