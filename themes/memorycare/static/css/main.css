@@ -102,6 +102,16 @@ footer.footer-main p {
     max-width: 968px;
   }
 }
+@keyframes visible {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 /******************
 *****Contact Page**
 *******************/
@@ -183,6 +193,17 @@ section.contact-us .row .main-form .form-control .cta-btn {
   color: #fff;
   flex: 1 1 100%;
   padding: 1em 1.5em;
+}
+section.contact-us .row .main-form .form-control small {
+  animation: visible 500ms linear forwards;
+  color: red;
+  display: block;
+  flex: 0 0 100%;
+  opacity: 0;
+  min-height: 25px;
+  visibility: hidden;
+  transition: all 500ms linear;
+  -webkit-transition: all 500ms linear;
 }
 section.contact-us ul li {
   padding: 0;

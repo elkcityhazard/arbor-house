@@ -9,8 +9,24 @@
 <section class="success">
     <div class="row">
         <div class="col">
+            <p><strong>Name: </strong> <span id="name"></span></p>
+            <p><strong>Email: </strong> <span id="email"></span></p>
+            <p><strong>Message: </strong><span id="message"></span></p>
+    </div>
+    <div class="row">
+        <div class="col">
             <p>{{ .Content }}</p>
         </div>
     </div>
 </section>
+<script>
+        const name =document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      const data = JSON.parse(localStorage.getItem('formData'));
+      console.log(data);
+      name.textContent = data.name;
+      email.textContent = data.email;
+      message.textContent = data.message;
+</script>
 {{ end }}

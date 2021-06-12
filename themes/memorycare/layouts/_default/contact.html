@@ -1,5 +1,4 @@
-{{ define "header" }}
-{{ partial "navbar.html" . }}
+{{ define "header" }} {{ partial "navbar.html" . }}
 <header>
   <h1>{{ .Title }}</h1>
   {{ partial "breadcrumbs.html" . }}
@@ -15,18 +14,25 @@
       <div class="card">
         <h3>Contact Information</h3>
         <ul>
-          <li><a href="tel:+12319353772"><i
-            aria-hidden="true"
-            class="fas fa-xl fa-phone"
-            title="231-935-3772"
-          ></i
-        >(231) 935-3772</a></li>
           <li>
-            <a href="mailto:info@arborhousealh.org"><i
+            <a href="tel:+12319353772"
+              ><i
+                aria-hidden="true"
+                class="fas fa-xl fa-phone"
+                title="231-935-3772"
+              ></i
+              >(231) 935-3772</a
+            >
+          </li>
+          <li>
+            <a href="mailto:info@arborhousealh.org"
+              ><i
                 aria-hidden="true"
                 class="fas fa-xl fa-paper-plane"
                 title="Email Us"
-              ></i>info@arborhousealh.org</a>
+              ></i
+              >info@arborhousealh.org</a
+            >
           </li>
         </ul>
       </div>
@@ -50,31 +56,38 @@
             target="_blank"
             rel="nofollow noreferrer"
             title="Facebook"
-            ><i aria-hidden="true" class="fab fa-xl fa-facebook"></i
-          >Facebook</a>
+            ><i aria-hidden="true" class="fab fa-xl fa-facebook"></i>Facebook</a
+          >
           <a href="mailto:andrew@andrew-mccall.com"
             ><i
               aria-hidden="true"
               class="fas fa-xl fa-paper-plane"
               title="Email Us"
             ></i
-          >info@arborhousealh.org</a>
+            >info@arborhousealh.org</a
+          >
           <a href="tel:+12319353772"
             ><i
               aria-hidden="true"
               class="fas fa-xl fa-phone"
               title="231-935-3772"
             ></i
-          >231 935 3772</a>
+            >231 935 3772</a
+          >
         </div>
       </div>
     </div>
     <div class="col">
-        <header>
-            <h2>Contact Us</h2>
-            <p>We will answer your inquiry as soon as possible.</p>
-          </header>
-      <form action="https://api.formcake.com/api/form/9d9ac373-7f50-43d9-abd0-c1ca773981cc/submission" class="main-form" id="mainForm">
+      <header>
+        <h2>Contact Us</h2>
+        <p>We will answer your inquiry as soon as possible.</p>
+      </header>
+      <form class="main-form" id="mainForm">
+        <input
+    type="text"
+    name="movie"
+    style="display: none;"
+/>
         <div class="form-control">
           <label for="username">Name: </label>
           <input type="text" name="username" id="username" />
@@ -91,8 +104,10 @@
           <small class="message"></small>
         </div>
         <div class="form-control">
-          <label for="math"><span id="numberOne"></span> + <span id="numberTwo"></span> = </label>
-          <input type="text" name="math" id="math">
+          <label for="math"
+            ><span id="numberOne"></span> + <span id="numberTwo"></span> =
+          </label>
+          <input type="text" name="math" id="math" />
           <small class="math"></small>
         </div>
         <div class="form-control">
@@ -106,20 +121,25 @@
 </section>
 
 <script>
-  const form = document.getElementById('mainForm');
-  const username = document.getElementById('username');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
-  const excludes = ['(', ')', '{', '}', '<', '>', ';', '/', '=']
-  const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  const form = document.getElementById("mainForm");
+  const username = document.getElementById("username");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  const excludes = ["(", ")", "{", "}", "<", ">", ";", "/", "=", "console.log"];
+  const regexEmail =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let sum;
 
   function showError(id, message) {
+    console.log(id.parentElement);
     const formControl = id.parentElement;
-    formControl.className = 'form-control error'
-    const small = formControl.querySelector('small')
-    small.style.color = 'red';
-    small.textContent = message;
+    formControl.className = "form-control error";
+    const small = formControl.querySelector("small");
+      small.textContent = message;
+  }
+
+  function showSuccess(id) {
+    const formControl = id.parentElement;
   }
 
   function validateField(id, length, message) {
@@ -128,36 +148,36 @@
 
     //   check if empty
     if (!value) {
-      return showError(id, 'cannot be empty')
+      return showError(id, "cannot be empty");
+    }
 
-    } 
-    
     //  check if too long
     if (value.length > length) {
-      return showError(id, `too many characters`)
+      return showError(id, `too many characters`);
     }
 
     //  check for special characteres
     for (let char of excludes) {
-        if ( value.includes(char)) {
-         return  showError(id, `invalid entries`)
-        }
+      if (value.includes(char)) {
+        return showError(id, `invalid entries`);
+      }
     }
-    
+    showSuccess(id);
     return true;
   }
 
   function validateEmail(id, message) {
     const value = id.value.toLowerCase().trim();
     if (!regexEmail.test(value)) {
-      return showError(id, message)
+      return showError(id, message);
     }
-    return true; 
+    showSuccess(id);
+    return true;
   }
 
   function mathGateway() {
-    const numberOne = document.getElementById('numberOne');
-    const numberTwo = document.getElementById('numberTwo');
+    const numberOne = document.getElementById("numberOne");
+    const numberTwo = document.getElementById("numberTwo");
     const number1 = Math.floor(Math.random() * 10) + 1;
     const number2 = Math.floor(Math.random() * 10) + 1;
     sum = number1 + number2;
@@ -166,13 +186,15 @@
     numberTwo.textContent = number2;
 
     console.log(number1);
-
   }
 
   function validateMath(id) {
-    if (document.getElementById(id).value != sum) {
-       return false;
+    id = document.getElementById(id);
+    if (id.value != sum) {
+      showError(id, "invalid response");
+      return false;
     } else {
+      showSuccess(id);
       return true;
     }
   }
@@ -180,60 +202,67 @@
   mathGateway();
 
   function resetFormControl() {
-    const formControls = document.querySelectorAll('.form-control');
+    const formControls = document.querySelectorAll(".form-control");
     formControls.forEach((control) => {
-      control.classList = 'form-control';
-     control.querySelector('small').textContent = '';
-    })
+      control.classList = "form-control";
+      control.querySelector("small").textContent = "";
+    });
   }
 
-  async function sendRequest(url) {
-    const response  = await fetch(url, {
-      method: 'POST',
+  async function sendRequest(url, data) {
+    data = {
+      name: username.value,
+      email: email.value,
+      message: message.value,
+    };
+    const response = await fetch(url, {
+      method: "POST",
       headers: {
-        'Content-Type' : 'application/json',
+        "Content-Type": "application/json",
       },
-      body: {
-        name: username.value,
-        email: email.value,
-        message: message.value
-      },
-    })
-    console.log(response)
-    location.assign('/success')
+      body: JSON.stringify(data),
+    });
+    return response;
   }
 
-
-  form.addEventListener('submit', (e) => {
-    const formControls = document.querySelectorAll('.form-control');
-    const valid = []
+  form.addEventListener("submit", (e) => {
+    const formControls = document.querySelectorAll(".form-control");
+    const valid = [];
     e.preventDefault();
     resetFormControl();
-    validateField(username, 40, 'invalid message') ? valid.push(true) : valid.push(false)
-    validateField(email, 50, 'invalid message') ? valid.push(true) : valid.push(false)
-    validateEmail(email, 'invalid email') ? valid.push(true) : valid.push(false)
-    validateField(message, 500, 'invalid message') ? valid.push(true) : valid.push(false)
-    validateMath('math') ? valid.push(true) : valid.push(false);
-    console.log(valid)
+    validateField(username, 40, "invalid message")
+      ? valid.push(true)
+      : valid.push(false);
+    validateField(email, 50, "invalid message")
+      ? valid.push(true)
+      : valid.push(false);
+    validateEmail(email, "invalid email")
+      ? valid.push(true)
+      : valid.push(false);
+    validateField(message, 500, "invalid message")
+      ? valid.push(true)
+      : valid.push(false);
+    validateMath("math") ? valid.push(true) : valid.push(false);
+    console.log(valid);
 
-  const checkTruth = (currentValue) => currentValue == true;
+    const checkTruth = (currentValue) => currentValue == true;
 
-   const checkValid = valid.every(checkTruth)
-
-   if (!checkValid) {
-     console.log('error...')
-   } else {
-     console.log(form.username.value)
-     sendRequest('https://api.formcake.com/api/form/9d9ac373-7f50-43d9-abd0-c1ca773981cc/submission')
-   }
-
-   console.log(checkValid)
-
-    
-
-  })
-
-
-
+    const checkValid = valid.every(checkTruth);
+    if (form.movie.value !== '') {
+      return;
+    }
+    if (!checkValid) {
+      console.log("error...");
+    } else {
+      sendRequest(
+        "https://api.formcake.com/api/form/9d9ac373-7f50-43d9-abd0-c1ca773981cc/submission"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          localStorage.setItem("formData", JSON.stringify(data.data));
+          location.assign("/success");
+        });
+    }
+  });
 </script>
 {{ end }}
