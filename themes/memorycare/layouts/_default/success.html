@@ -1,0 +1,16 @@
+{{ define "header" }}
+
+{{ partial "navbar.html" . }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+{{ end }}
+{{ define "main" }}
+<section class="success">
+    <div class="row">
+        <div class="col">
+            <p>{{ .Content }}</p>
+        </div>
+    </div>
+</section>
+{{ end }}

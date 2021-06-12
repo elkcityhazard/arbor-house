@@ -74,25 +74,166 @@
             <h2>Contact Us</h2>
             <p>We will answer your inquiry as soon as possible.</p>
           </header>
-      <form action="" class="main-form">
+      <form action="https://api.formcake.com/api/form/9d9ac373-7f50-43d9-abd0-c1ca773981cc/submission" class="main-form" id="mainForm">
         <div class="form-control">
-          <label for="name">Name: </label>
-          <input type="text" name="name" id="name" />
+          <label for="username">Name: </label>
+          <input type="text" name="username" id="username" />
+          <small class="username"></small>
         </div>
         <div class="form-control">
           <label for="email">Email: </label>
-          <input type="email" name="email" id="email" />
+          <input type="text" name="email" id="email" />
+          <small class="email"></small>
         </div>
         <div class="form-control">
           <label for="message">Message:</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <small class="message"></small>
         </div>
         <div class="form-control">
-          <button class="cta-btn" type="submit">Submit</button>
-          <button class="cta-btn" type="reset">Reset</button>
+          <label for="math"><span id="numberOne"></span> + <span id="numberTwo"></span> = </label>
+          <input type="text" name="math" id="math">
+          <small class="math"></small>
+        </div>
+        <div class="form-control">
+          <button class="cta-btn" id="submit" type="submit">Submit</button>
+          <button class="cta-btn" id="clear" type="reset">Reset</button>
+          <small class="button"></small>
         </div>
       </form>
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById('mainForm');
+  const username = document.getElementById('username');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  const excludes = ['(', ')', '{', '}', '<', '>', ';', '/', '=']
+  const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  let sum;
+
+  function showError(id, message) {
+    const formControl = id.parentElement;
+    formControl.className = 'form-control error'
+    const small = formControl.querySelector('small')
+    small.style.color = 'red';
+    small.textContent = message;
+  }
+
+  function validateField(id, length, message) {
+    //   get input value
+    const value = id.value.toLowerCase().trim();
+
+    //   check if empty
+    if (!value) {
+      return showError(id, 'cannot be empty')
+
+    } 
+    
+    //  check if too long
+    if (value.length > length) {
+      return showError(id, `too many characters`)
+    }
+
+    //  check for special characteres
+    for (let char of excludes) {
+        if ( value.includes(char)) {
+         return  showError(id, `invalid entries`)
+        }
+    }
+    
+    return true;
+  }
+
+  function validateEmail(id, message) {
+    const value = id.value.toLowerCase().trim();
+    if (!regexEmail.test(value)) {
+      return showError(id, message)
+    }
+    return true; 
+  }
+
+  function mathGateway() {
+    const numberOne = document.getElementById('numberOne');
+    const numberTwo = document.getElementById('numberTwo');
+    const number1 = Math.floor(Math.random() * 10) + 1;
+    const number2 = Math.floor(Math.random() * 10) + 1;
+    sum = number1 + number2;
+
+    numberOne.textContent = number1;
+    numberTwo.textContent = number2;
+
+    console.log(number1);
+
+  }
+
+  function validateMath(id) {
+    if (document.getElementById(id).value != sum) {
+       return false;
+    } else {
+      return true;
+    }
+  }
+
+  mathGateway();
+
+  function resetFormControl() {
+    const formControls = document.querySelectorAll('.form-control');
+    formControls.forEach((control) => {
+      control.classList = 'form-control';
+     control.querySelector('small').textContent = '';
+    })
+  }
+
+  async function sendRequest(url) {
+    const response  = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json',
+      },
+      body: {
+        name: username.value,
+        email: email.value,
+        message: message.value
+      },
+    })
+    console.log(response)
+    location.assign('/success')
+  }
+
+
+  form.addEventListener('submit', (e) => {
+    const formControls = document.querySelectorAll('.form-control');
+    const valid = []
+    e.preventDefault();
+    resetFormControl();
+    validateField(username, 40, 'invalid message') ? valid.push(true) : valid.push(false)
+    validateField(email, 50, 'invalid message') ? valid.push(true) : valid.push(false)
+    validateEmail(email, 'invalid email') ? valid.push(true) : valid.push(false)
+    validateField(message, 500, 'invalid message') ? valid.push(true) : valid.push(false)
+    validateMath('math') ? valid.push(true) : valid.push(false);
+    console.log(valid)
+
+  const checkTruth = (currentValue) => currentValue == true;
+
+   const checkValid = valid.every(checkTruth)
+
+   if (!checkValid) {
+     console.log('error...')
+   } else {
+     console.log(form.username.value)
+     sendRequest('https://api.formcake.com/api/form/9d9ac373-7f50-43d9-abd0-c1ca773981cc/submission')
+   }
+
+   console.log(checkValid)
+
+    
+
+  })
+
+
+
+</script>
 {{ end }}
