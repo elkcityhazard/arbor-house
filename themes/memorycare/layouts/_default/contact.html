@@ -260,7 +260,7 @@
         .then((response) => response.json())
         .then((data) => {
           localStorage.setItem("formData", JSON.stringify(data.data));
-          location.assign("/success");
+          location.assign("{{.Site.BaseURL}}success");
         });
     }
   });
