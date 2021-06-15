@@ -1,5 +1,7 @@
 ---
 title: "Memory Care In Traverse City, Michigan"
+description: "Our staff members are trained to care for your family member with dementia.  We provide intensive, specialized care in a small environment."
+Date: 2021-06-15
 layout: single
 singleCSS: true
 cardContent: "When it becomes difficult to care for someone with Alzheimer's disease or dementia at home, you may want to consider memory care.  We provide intensive, specialized care for people with memory issues to help them get the most out of life."

@@ -379,6 +379,7 @@ section.for-rent .row .col span.title {
 section.for-rent footer p {
   font-size: 1.5em;
   font-weight: 700;
+  text-align: center;
 }
 section.for-rent::before, section.for-rent::after {
   background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);

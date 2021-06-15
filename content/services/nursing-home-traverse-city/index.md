@@ -1,7 +1,8 @@
 ---
 title: "Nursing Home In Traverse City Michigan"
+Date: 2021-06-15
 singleCSS: true
-description: "This is a description"
+description: "We specialize in Alzheimer's & Dementia Care.  Find out more about how Arbor House can help your family member."
 cardContent: "Our community encourages personal independence and provides a safe, calm environment.  We have skilled nurses on hand 24 hours a day to ensure your loved one is well cared for."
 imageURL: "images/cover-photo-3.jpg"
 ---

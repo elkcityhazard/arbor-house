@@ -1,5 +1,7 @@
 ---
 title: "Assisted Living Traverse City"
+description: "Our assisted living faciltity stresses the importance of socialization, nutrition, and physical and mental stimulation."
+Date: 2021-06-15
 singleCSS: true
 cardContent: "We are a long term assisted living facility capable of ensuring that resident's personal needs get met and and autonomy is encouraged" 
 imageURL: "images/senior-woman-holding-hands-with-caretaker-1x.jpg"

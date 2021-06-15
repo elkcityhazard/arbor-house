@@ -1,8 +1,10 @@
 ---
 title: "Dementia Care Traverse City"
+description: "Each of our residents receive a personalized dementia care plan to help them manage their symptoms and have as much independence as possible"
+Date: 2021-06-15
 singleCSS: true
 cardContent: "Our approach to dementia care is to create a calm environment and support our resident's independence.  We encourage familiar routines that provide stability to your loved one."
-imageURL: "images/nurse-helps-senior-woman.jpg"
+imageURL: "images/nurse-helps-senior-woman-2x.jpg"
 sources: ['https://www.alz.org']
 ---
 

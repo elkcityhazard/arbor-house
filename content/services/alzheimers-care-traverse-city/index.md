@@ -1,6 +1,7 @@
 ---
 title: "Alzheimer's Care Traverse City"
 description: "Our memory care program provides a safe, nurturing environment for people with memory loss who need specialized care.  Our team of experts give exceptional care to your loved one."
+Date: 2021-06-15
 singleCSS: true
 cardContent: "Arbor house is an Assisted Living home specializing in dementia, memory loss and alzheimers. "
 imageURL: "images/assisted-living-1x.jpg"
