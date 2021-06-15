@@ -1,3 +1,15 @@
+{{- if .Params.sources -}}
+<section class="sources">
+    <header>
+        <p>Sources</p>
+    </header>
+    <ul>
+        {{ range .Params.sources }}
+        <li><a href="{{ . }}" title="{{ . }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
 <section class="video">
     <div class="card">
       <div class="inner-card">
