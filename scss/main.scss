@@ -2,6 +2,7 @@
 @use './components/_contact_page';
 @use './components/_faq';
 @use './components/_for_rent';
+@use './components/_sources';
 
 @mixin underline-title {
   h1,
@@ -432,6 +433,9 @@ header.page-header {
       a {
         display: inline;
       }
+    }
+    &.active {
+      text-decoration: indigo 2px solid;
     }
   }
   nav {

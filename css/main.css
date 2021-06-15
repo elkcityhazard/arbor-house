@@ -87,6 +87,22 @@ div#content aside .card {
   width: 100%;
 }
 
+section#main p {
+  max-width: 60ch;
+}
+section#main p + ul {
+  max-width: 60ch;
+}
+section#main p + ul li {
+  font-weight: 600;
+}
+section#main p + ul li a {
+  padding: 0;
+}
+section#main p + ul li ul li {
+  font-weight: 500;
+}
+
 footer.footer-main p {
   font-size: 0.9em;
   max-width: initial;
@@ -505,6 +521,17 @@ section.images .row img:hover {
     height: auto;
   }
 }
+section.sources {
+  margin: auto;
+  max-width: 60ch;
+  text-align: center;
+}
+section.sources ul {
+  margin: 0 auto;
+  max-width: 60ch;
+  text-align: left;
+}
+
 *,
 *::before,
 *::after {
@@ -879,6 +906,9 @@ header.page-header h1 {
 }
 .navbar-main .desktop-nav > a + ul.sub-menu a {
   display: inline;
+}
+.navbar-main .desktop-nav > a.active {
+  text-decoration: indigo 2px solid;
 }
 .navbar-main nav {
   background: #fff;

@@ -95,6 +95,26 @@
         }
     }
 
+    section#main {
+        p {
+            max-width: 60ch;
+        }
+        p + ul {
+            max-width: 60ch;
+            li {
+                font-weight: 600;
+                a {
+                    padding: 0;
+                }
+                ul {
+                    li {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
 
 
 

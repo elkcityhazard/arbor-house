@@ -123,3 +123,11 @@ const currentYear = new Date().getFullYear();
 yearContainer.textContent = currentYear;
 yearContainer.style.textDecoration = "none";
 yearContainer.style.display = "inline";
+
+
+document.querySelectorAll('.desktop-nav a').forEach((link) => {
+  if (link.getAttribute('href') === location.pathname) {
+    link.style.fontWeight = 900;
+    link.style.color = "indigo";
+  }
+})
