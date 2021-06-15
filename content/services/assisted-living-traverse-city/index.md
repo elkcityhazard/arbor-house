@@ -5,12 +5,26 @@ cardContent: "We are a long term assisted living facility capable of ensuring th
 imageURL: "images/senior-woman-holding-hands-with-caretaker-1x.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Volutpat consequat mauris nunc congue nisi vitae suscipit. Et ligula ullamcorper malesuada proin. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Netus et malesuada fames ac turpis egestas sed. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Et malesuada fames ac turpis egestas sed. Nisi quis eleifend quam adipiscing vitae proin. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ridiculus mus mauris vitae ultricies leo. Posuere urna nec tincidunt praesent semper.
+## How to Choose Assisted living
 
-Id aliquet risus feugiat in ante metus dictum at. Elit ut aliquam purus sit amet. Ipsum dolor sit amet consectetur adipiscing elit ut. Laoreet suspendisse interdum consectetur libero id. Amet luctus venenatis lectus magna fringilla urna. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Sit amet nulla facilisi morbi tempus. Eget nulla facilisi etiam dignissim. Tortor aliquam nulla facilisi cras fermentum. Donec ac odio tempor orci dapibus ultrices in. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Quis blandit turpis cursus in hac habitasse platea. Dui ut ornare lectus sit amet est placerat in egestas.
+When your loved one needs help with daily tasks but doesn't need intensive medical care, assisted living may be a good option.  It is a way to them live independently but in a safe and caring environment.  Sometimes, assisted living can be a parge of a larger nursing care center, hospital, or senior community.  Arbor house Assisted Living Home is a small assisted living facility that can accomodate up to 8 adults.  We specialize in Alzheimer's and dementia care.
 
-Et tortor at risus viverra adipiscing at in. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Dignissim cras tincidunt lobortis feugiat vivamus at. Etiam sit amet nisl purus in mollis nunc sed id. Nunc non blandit massa enim nec dui nunc mattis enim. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Malesuada fames ac turpis egestas sed. A condimentum vitae sapien pellentesque habitant morbi tristique senectus. Magna sit amet purus gravida quis blandit turpis cursus in. Eu non diam phasellus vestibulum lorem sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Metus dictum at tempor commodo ullamcorper. Duis at consectetur lorem donec massa. Nec feugiat nisl pretium fusce id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Semper quis lectus nulla at. Erat pellentesque adipiscing commodo elit at.
+## What is Assisted Living Like
+Residents have their own private rooms and there is a common room for socialization and activities.  This is beneficial because residents can have privacy when they want but are encouraged to participate in the community and gain a sense of choice and independence.  
 
-Tristique magna sit amet purus gravida quis blandit turpis. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque. Consectetur lorem donec massa sapien faucibus et. Aenean sed adipiscing diam donec. Porttitor massa id neque aliquam vestibulum. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ac feugiat sed lectus vestibulum mattis. Ornare suspendisse sed nisi lacus. Malesuada proin libero nunc consequat interdum. Tristique magna sit amet purus gravida quis blandit.
+## Benefits of Living In An Assisted Living Home
 
-Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Etiam non quam lacus suspendisse. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Eu facilisis sed odio morbi quis commodo. Nec dui nunc mattis enim ut tellus. Elit duis tristique sollicitudin nibh. Eu turpis egestas pretium aenean pharetra magna ac placerat. Mi quis hendrerit dolor magna. Amet est placerat in egestas erat imperdiet sed. Mattis aliquam faucibus purus in. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Sit amet purus gravida quis blandit. Cursus metus aliquam eleifend mi. Quis lectus nulla at volutpat diam ut. Consequat interdum varius sit amet mattis.
+There are many benefits that come with living in an assisted living home.
+- Socialization  
+    - It gives residents a chance to socialize which will make them less likely to feel isolated and lonely.  
+- Nutrition  
+    - Residents nutritional needs are assessed and met on a daily basis.  
+    - Often times, as our loved ones age, getting proper nutrition becomes difficult.  
+- Stimulation  
+    - Participating in activities will help them feel physically and mentally stimulated.
+- Less Stress
+    - Knowing that your loved one is in a safe, nurturing environment, and that their needs are taken care of, will lead to less stress for their family members.  
+
+### Arbor House Traverse City is here to help
+
+We specialize in Alzheimer's and Dementia care in Traverse City, Michigan.  Contact Cindy Robertson to schedule a personalized tour to see how we can help your family and your loved one.
