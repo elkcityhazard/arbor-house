@@ -1826,7 +1826,7 @@ header.header-main .col p {
   }
   section.services.about .fixed-background {
     align-items: center;
-    background: linear-gradient(1turn, #f39189, rgba(243, 145, 137, 0.66), rgba(243, 145, 137, 0.33), rgba(243, 145, 137, 0)), url("../images/child-elderly-parent-1365.jpg") no-repeat fixed center center/cover;
+    background: url("../images/child-elderly-parent-1365.jpg") no-repeat fixed center center/cover;
     height: 100%;
   }
   section.services.about .fixed-background .col {
