@@ -10,7 +10,7 @@ sources: ['https://www.alz.org']
 
 ## Types Of dementia
 
-Although Alzheimer's disease is the most common cause of dementia, there are many kinds of dementia that can affect a person.  If your loved one was recently diagnosed with a form of dementia it is a good idea to get [an care plan in place](/arbor-house/services).  Arbor House Assisted Living specializes in caring for those affected by dementia. 
+Although Alzheimer's disease is the most common cause of dementia, there are many kinds of dementia that can affect a person.  If your loved one was recently diagnosed with a form of dementia it is a good idea to get [an care plan in place](/services).  Arbor House Assisted Living specializes in caring for those affected by dementia. 
 
 
 ### Creutzfeldt-Jakob disease
@@ -23,7 +23,7 @@ Throughout the process, brain cells are destroyed.  The resulting damage leads t
 
 ### Lewy Body Dementia
 
-Lewy body dementia is a progressive dementia caused by abnormal microscopic deposits that damage the brain over time.  It is estimated that Lewy body dementia is the third most common type of dementia which accounts for up to 10% of all cases.  Lew bodies are also found in other brain disorders, including Alzheimer's disease and Parkinson's disease dementia. [We can help you plan for Lewy body dementia care](/arbor-house/contact).
+Lewy body dementia is a progressive dementia caused by abnormal microscopic deposits that damage the brain over time.  It is estimated that Lewy body dementia is the third most common type of dementia which accounts for up to 10% of all cases.  Lew bodies are also found in other brain disorders, including Alzheimer's disease and Parkinson's disease dementia. [We can help you plan for Lewy body dementia care](/contact).
 
 [Learn more about Lewy body dementia](https://www.alz.org/alzheimers-dementia/what-is-dementia/types-of-dementia/lewy-body-dementia).
 
