@@ -92,6 +92,7 @@ section#main p {
 }
 section#main p + ul {
   max-width: 60ch;
+  padding: 1em;
 }
 section#main p + ul li {
   font-weight: 600;
