@@ -663,6 +663,7 @@ aside.breadcrumbs ol.breadcrumbs li.active a {
 }
 aside.breadcrumbs ol.breadcrumbs li::after {
   content: "/";
+  font-weight: 900;
 }
 aside.breadcrumbs ol.breadcrumbs li:last-child::after {
   display: none;
