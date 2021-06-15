@@ -1,3 +1,36 @@
+const parallax = (id, rate) => {
+  let el = document.querySelector(id);
+
+  const sp = () => {
+      //   Define X and Y
+    let x = el.getBoundingClientRect().top / rate;
+    let y = Math.round(x * 100) / 100;
+
+    //   Define Background Position Dynamically 
+
+    el.style.backgroundPosition = 'center ' + y + 'px';
+
+  }
+
+  // initiate parameter function to position background;
+  sp();
+
+  // initiate scroll event listener and call parameter callback on scroll event
+
+  window.addEventListener('scroll', function() { sp() });
+
+}
+
+parallax('.fixed-background', 3);
+
+
+  
+
+
+
+
+
+
 (function () {
   const navToggle = document.querySelector(".hamburger-container");
   const hamburger = document.querySelector(".hamburger-container > span");
