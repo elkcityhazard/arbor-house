@@ -73,9 +73,9 @@
       <div class="hamburger-container">
         <span class="hamburger"></span>
       </div>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
         {{range .Site.Menus.main }}
-    <a href="{{ .URL}}" title="{{ .Name }}">{{ .Name }}</a>
+    <a href="{{ .URL}}" itemprop="url" title="{{ .Name }}"><span itemprop="name">{{ .Name }}</span></a>
         {{ end }}
             </nav>
     </div>
