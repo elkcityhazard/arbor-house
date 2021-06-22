@@ -157,10 +157,12 @@ section.images {
         .col {
             display: flex;
             flex-direction: column;
+            flex-wrap: wrap;
             max-width: 768px;
             text-align: center;
             button {
                 margin: 1em 1em;
+                min-width: 125px;
                 padding: 1em 1.5em;
             }
         }
