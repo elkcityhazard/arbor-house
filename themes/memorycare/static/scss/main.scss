@@ -960,7 +960,8 @@ section.video {
       margin: 1rem auto 0;
       nav.footer-nav {
         a {
-          display: block;
+          display: inline;
+          margin-right: 1em;
           text-align: center;
         }
       }
