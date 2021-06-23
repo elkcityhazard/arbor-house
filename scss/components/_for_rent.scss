@@ -226,7 +226,7 @@ section.images {
             flex-basis: 350px;
             height: auto;
             max-height: 225px;
-            max-width: 350px;
+            max-width: 100%;
             margin: 1em auto;
             padding: 0 1em;
             opacity: 0;
@@ -255,12 +255,38 @@ section.images {
     }
 }
 
+@media screen and (min-width: 768px) {
+    section.images {
+        .row {
+            img {
+                max-width: calc(768px / 2);
+                flex: 1 1 50%;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1366px) {
     section.images {
         .row {
                 img {
                     flex: 1 1 33%;
                     height: auto;
+                    max-width: calc(1366px / 3);
+                }
+            
+        }
+    }
+}
+
+
+@media screen and (min-width: 1920px) {
+    section.images {
+        .row {
+                img {
+                    flex: 1 1 33%;
+                    height: auto;
+                    max-width: calc(1920px / 5);
                 }
             
         }
