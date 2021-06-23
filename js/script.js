@@ -153,7 +153,7 @@ window.addEventListener('load', () => {
 const yearContainer = document.getElementById("currentYear");
 const currentYear = new Date().getFullYear();
 
-yearContainer.textContent = currentYear;
+yearContainer.textContent = currentYear + ' ';
 yearContainer.style.textDecoration = "none";
 yearContainer.style.display = "inline";
 
