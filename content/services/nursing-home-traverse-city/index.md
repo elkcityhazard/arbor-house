@@ -30,8 +30,3 @@ If you decide on a nursing home make sure to read your contract carefully before
 
 We specialize in Alzheimer's and Dementia care in Traverse City, Michigan.  Contact Cindy Robertson to schedule a personalized tour to see how we can help your family and your loved one.
 
-
-
-### Arbor House Traverse City is here to help
-
-We specialize in Alzheimer's and Dementia care in Traverse City, Michigan.  Contact Cindy Robertson to schedule a personalized tour to see how we can help your family and your loved one.
