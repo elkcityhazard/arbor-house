@@ -899,7 +899,7 @@ section.list {
     color: #fff;
     display: block;
     margin: auto;
-    padding: 1em 1.5em;
+    padding: 1.25em 1.5em;
     &:hover {
       color: #046582;
     }
@@ -996,8 +996,9 @@ section.video {
         justify-content: center;
         span.hero-text {
           color: #fff;
-          font-size: 20px;
+          font-size: 2em;
           margin: 2rem auto;
+          padding: .25rem;
           height: 100%;
           text-decoration: none;
         }
@@ -1299,14 +1300,13 @@ section.video {
     text-align: left;
   }
   #siteTitle {
-    font-size: 1.66em;
+    font-size: 2em;
   }
   #siteSubtitle + button.cta-btn {
     margin: {
-      left: 1em;
-      right: 0;
+      left: .33em;
+      right: auto;
     }
-    width: 100%;
   }
   header.header-main {
     background-image: url("../images/nurse-senior-walker-1024.jpg");
@@ -1342,6 +1342,7 @@ section.video {
           display: block;
           max-height: 100px;
           min-height: unset;
+          overflow-y: hidden;
           padding: 0;
           position: relative;
           transform: translateX(0);
