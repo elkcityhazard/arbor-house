@@ -476,13 +476,13 @@ section.images .row.interior.exterior {
   height: 75px;
   margin-right: 2rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: rem;
   width: 75px;
   z-index: 1002;
 }
 .lightbox-container figure img.lightbox-full {
   left: 50%;
-  max-height: 100vh;
+  max-height: 66vh;
   max-width: 968px;
   min-width: 350px;
   position: absolute;
