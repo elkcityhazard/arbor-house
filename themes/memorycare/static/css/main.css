@@ -95,7 +95,9 @@ section#main p + ul {
   padding: 1em;
 }
 section#main p + ul li {
+  font-size: 1.25em;
   font-weight: 600;
+  margin-bottom: 0.5em;
 }
 section#main p + ul li a {
   padding: 0;
@@ -313,6 +315,14 @@ section.faq .row .col .card .inner-card .card-content {
     transform: translateX(0);
   }
 }
+@keyframes fadeToVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header.page-header {
   position: relative;
 }
@@ -438,6 +448,55 @@ section.images .row.interior.exterior {
   margin-bottom: 0;
 }
 
+.lightbox-container {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 100%;
+  left: 0;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  width: 100%;
+  z-index: 10000;
+}
+.lightbox-container figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.lightbox-container figure button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  float: right;
+  font-size: 2em;
+  height: 75px;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 75px;
+  z-index: 1002;
+}
+.lightbox-container figure img.lightbox-full {
+  left: 50%;
+  max-height: 100vh;
+  max-width: 968px;
+  min-width: 350px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  opacity: 0;
+  width: 100%;
+}
+.lightbox-container figure img.lightbox-full.animate {
+  animation: fadeToVisible 500ms ease 0.3s forwards;
+}
+
 @media screen and (min-width: 768px) {
   section.for-rent .row {
     flex-direction: row;
@@ -516,7 +575,7 @@ section.images .row img:nth-child(even).fadeIn {
 section.images .row img:hover {
   filter: grayscale(0);
   transform: scale(1.25);
-  z-index: 1000000;
+  z-index: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1397,7 +1456,7 @@ section.list .cta-btn {
   color: #fff;
   display: block;
   margin: auto;
-  padding: 1em 1.5em;
+  padding: 1.25em 1.5em;
 }
 section.list .cta-btn:hover {
   color: #046582;
@@ -1492,8 +1551,9 @@ section.video .card .inner-card {
 }
 .footer-main .row:nth-child(1) .col span.hero-text {
   color: #fff;
-  font-size: 20px;
+  font-size: 2em;
   margin: 2rem auto;
+  padding: 0.25rem;
   height: 100%;
   text-decoration: none;
 }
@@ -1736,13 +1796,12 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 
   #siteTitle {
-    font-size: 1.66em;
+    font-size: 2em;
   }
 
   #siteSubtitle + button.cta-btn {
-    margin-left: 1em;
-    margin-right: 0;
-    width: 100%;
+    margin-left: 0.33em;
+    margin-right: auto;
   }
 
   header.header-main {
@@ -1778,6 +1837,7 @@ header.header-main .col p {
     display: block;
     max-height: 100px;
     min-height: unset;
+    overflow-y: hidden;
     padding: 0;
     position: relative;
     transform: translateX(0);

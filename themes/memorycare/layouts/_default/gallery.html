@@ -74,9 +74,39 @@
     const galleryImages = document.querySelectorAll('.gallery');
     const rows = document.querySelectorAll('.row')
 
+    function fadeToVisible() {
+                    document.querySelector('.lightbox-full').classList.add('animate');
+                }
+
     galleryImages.forEach((img) => {
         img.addEventListener('click', (e) => {
-            location.href = e.target.getAttribute('data-full')
+            if (document.querySelector('.lightbox-container')) {
+                document.body.removeChild(document.querySelector('.lightbox-container'))
+            }
+            const lightBox = document.createElement('div');
+            lightBox.classList.add('lightbox-container')
+            lightBox.style.top = document.body.scrollTop + 'px';
+            lightBox.innerHTML = `
+                
+            <figure>
+                <button id="closeLightbox"><i class="fas fa-times"></i></button>
+                        <img class="lightbox-full" src="${e.target.getAttribute('data-full')}" onload="fadeToVisible()" height="auto" width="100%" alt="Gallery Image">    
+                    </figure>
+                `;
+
+            // append all to document
+
+                document.body.prepend(lightBox);
+            
+        
+            document.getElementById('closeLightbox').addEventListener('click', () => {
+                if (document.querySelector('.lightbox-container')) {
+                document.body.removeChild(document.querySelector('.lightbox-container'))
+            }
+            })
+
+
+            // location.href = e.target.getAttribute('data-full')
 
         })
     })

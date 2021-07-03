@@ -103,7 +103,11 @@
             max-width: 60ch;
             padding: 1em;
             li {
+                font-size: 1.25em;
                 font-weight: 600;
+                margin: {
+                    bottom: .5em;
+                }
                 a {
                     padding: 0;
                 }
