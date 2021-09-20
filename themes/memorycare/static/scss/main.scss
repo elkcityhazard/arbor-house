@@ -1300,16 +1300,40 @@ section.video {
     text-align: left;
   }
   #siteTitle {
-    font-size: 2em;
+    font-size: 4.5rem;
+  }
+  #siteSubtitle {
+    font-size: 3.0rem;
   }
   #siteSubtitle + button.cta-btn {
     margin: {
-      left: .33em;
+      left: .5em;
       right: auto;
     }
+    max-width: 275px;
+    width: 100%;
+  }
+
+  #headerServices {
+    padding-left: 1.75rem;
+    font-size: 2.0rem;
+      li.service {
+        background: transparent;
+        color: black;
+        position: relative;
+        text-transform: capitalize;
+        &::before {
+          content: '👍';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -1rem;;
+          z-index: 5;
+        }
+      }
   }
   header.header-main {
-    background-image: url("../images/nurse-senior-walker-1024.jpg");
+    background: linear-gradient(0.25turn, rgba(255,255,255,0.33), rgba(255,255,255,0.33)), url("../images/nurse-senior-walker-1024.jpg");
     flex-direction: row;
     height: calc(100% - 100px);
     padding: 0 3rem;
@@ -1492,6 +1516,18 @@ section.list {
 
 @media screen and (min-width: 1920px) {
   header.header-main {
+    background: linear-gradient(0.25turn, rgba(255,255,255,0.33), rgba(255,255,255,0.33)), url("../images/nurse-senior-walker-1920.jpg") no-repeat fixed center center;
     height: 75vh;
+  }
+  #siteSubtitle + button.cta-btn {
+    margin: unset;
+    margin: {
+      top: .5rem;
+      right: auto;
+      bottom: 0;
+      left: .25rem;
+    }
+    max-width: 500px;
+    width: 100%;
   }
 }

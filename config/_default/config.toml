@@ -1,7 +1,7 @@
 baseURL = "https://arborhousealh.org/"
 languageCode = "en-us"
 theme = "memorycare"
-title = "Arbor House Nursing Home, Alzheimer's Care, Dementia Care, Traverse City, Michigan"
+title = "Arbor House Nursing Home | Traverse City Alzheimer's Care | Traverse City Dementia Care |  Traverse City Nursing Home"
 [params]
   description = "Arbor house is an assisted living home in Traverse City, Michigan that specializes in demential and Alzheimer's Disease."
   subtitle = "Assisted Living Home Traverse City, Michigan"

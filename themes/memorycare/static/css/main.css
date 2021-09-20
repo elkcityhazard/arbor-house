@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap&text=ARBORHUSE");
 /******************
@@ -1796,16 +1797,41 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 
   #siteTitle {
-    font-size: 2em;
+    font-size: 4.5rem;
+  }
+
+  #siteSubtitle {
+    font-size: 3rem;
   }
 
   #siteSubtitle + button.cta-btn {
-    margin-left: 0.33em;
+    margin-left: 0.5em;
     margin-right: auto;
+    max-width: 275px;
+    width: 100%;
+  }
+
+  #headerServices {
+    padding-left: 1.75rem;
+    font-size: 2rem;
+  }
+  #headerServices li.service {
+    background: transparent;
+    color: black;
+    position: relative;
+    text-transform: capitalize;
+  }
+  #headerServices li.service::before {
+    content: "👍";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    z-index: 5;
   }
 
   header.header-main {
-    background-image: url("../images/nurse-senior-walker-1024.jpg");
+    background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.33)), url("../images/nurse-senior-walker-1024.jpg");
     flex-direction: row;
     height: calc(100% - 100px);
     padding: 0 3rem;
@@ -1931,7 +1957,18 @@ header.header-main .col p {
 }
 @media screen and (min-width: 1920px) {
   header.header-main {
+    background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.33)), url("../images/nurse-senior-walker-1920.jpg") no-repeat fixed center center;
     height: 75vh;
+  }
+
+  #siteSubtitle + button.cta-btn {
+    margin: unset;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0.25rem;
+    max-width: 500px;
+    width: 100%;
   }
 }
 
