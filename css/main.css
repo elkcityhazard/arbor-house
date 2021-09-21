@@ -1797,11 +1797,11 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 
   #siteTitle {
-    font-size: 4.5rem;
+    font-size: 3.25rem;
   }
 
   #siteSubtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   #siteSubtitle + button.cta-btn {
@@ -1813,7 +1813,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 
   #headerServices {
     padding-left: 1.75rem;
-    font-size: 2rem;
+    font-size: 1.66rem;
   }
   #headerServices li.service {
     background: transparent;
@@ -1959,6 +1959,18 @@ header.header-main .col p {
   header.header-main {
     background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.33)), url("../images/nurse-senior-walker-1920.jpg") no-repeat fixed center center;
     height: 75vh;
+  }
+
+  #siteTitle {
+    font-size: 4rem;
+  }
+
+  #siteSubtitle {
+    font-size: 3.25rem;
+  }
+
+  #headerServices {
+    font-size: 1.75rem;
   }
 
   #siteSubtitle + button.cta-btn {
