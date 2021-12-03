@@ -1,0 +1,56 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+section.faq {
+  button {
+    border: none;
+    transition: color 250ms ease;
+    -webkit-transition: color 250ms ease;
+    width: 100%;
+    i.fa-plus,
+    i.fa-minus {
+        animation: fadeIn 250ms linear forwards 150ms;
+        opacity: 0;
+        transition: all 250ms linear;
+        -webkit-transition: all 250ms linear;
+      margin: {
+        right: 1em;
+      }
+    }
+    &:hover {
+        color: #d68885;
+    }
+  }
+  h3 {
+    text-align: left;
+    width: 100%;
+  }
+  .row {
+    width: 100%;
+    .col {
+      padding: 1em;
+      width: 100%;
+      .card {
+        background: #ddd;
+        height: 100%;
+        margin: auto;
+        max-width: 60ch;
+        width: 100%;
+        .inner-card {
+            .card-content {
+                height: 0;
+                overflow: hidden;
+                transition: all 250ms linear 250ms;
+                -webkit-transition: all 250ms linear 250ms;
+            }
+        }
+      }
+    }
+  }
+}

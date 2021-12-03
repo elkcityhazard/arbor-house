@@ -1,11 +1,14 @@
 const menuToggle = document.querySelectorAll('.subToggle > a');
+const mainMenuToggle = document.querySelectorAll('.desktop-nav > a');
+const submenu = document.querySelector('.sub')
 
 function slideToggle(el) {
-    el.style.height = el.scrollHeight + 'px';
-    el.scrollHeight = el.scrollHeight;
+    const submenu = document.querySelector('.sub-menu')
+    submenu.style.height = submenu.scrollHeight + 'px';
+    submenu.scrollHeight = submenu.scrollHeight;
 
-    el.classList.toggle('active');
-    el.style.height = el.classList.contains('active') ? el.scrollHeight + 'px' : 0;
+    submenu.classList.toggle('active');
+    submenu.style.height = submenu.classList.contains('active') ? submenu.scrollHeight + 'px' : 0;
 }
 
 

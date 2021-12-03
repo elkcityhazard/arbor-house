@@ -1,3 +1,36 @@
+const parallax = (id, rate) => {
+  let el = document.querySelector(id);
+
+  const sp = () => {
+      //   Define X and Y
+    let x = el.getBoundingClientRect().top / rate;
+    let y = Math.round(x * 100) / 100;
+
+    //   Define Background Position Dynamically 
+
+    el.style.backgroundPosition = 'center ' + y + 'px';
+
+  }
+
+  // initiate parameter function to position background;
+  sp();
+
+  // initiate scroll event listener and call parameter callback on scroll event
+
+  window.addEventListener('scroll', function() { sp() });
+
+}
+
+parallax('.fixed-background', 3);
+
+
+  
+
+
+
+
+
+
 (function () {
   const navToggle = document.querySelector(".hamburger-container");
   const hamburger = document.querySelector(".hamburger-container > span");
@@ -39,17 +72,43 @@
 
 //lazy load images
 
+function lazyLoad(elements) {
+  // get DOMList of class
+  elements = document.querySelectorAll(elements);
+  //  Config for Intersection Observer
+  const config = {
+    rootMargin: "15px 0px 0px 15px",
+    threshold: [1, 0.5, 0.5, 1]
+  };
+
+  // Create Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.src = entry.target.getAttribute('data-src');
+        entry.target.classList.add('fadeIn');
+        observer.unobserve(entry.target);
+      }
+    })
+  }, config);
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  })
+
+
+}
+
 const images = document.querySelectorAll(".lazy");
 
 const config = {
   rootMargin: "15px 0px 0px 15px",
-  threshold: [1, 0.5, 0.5, 1],
+  threshold: [1, 0.5, 0.5, 1]
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries ) => {
+  entries.forEach( (entry) => {
     if (entry.intersectionRatio > 0) {
-      console.log();
       entry.target.src = entry.target.getAttribute("data-src");
       entry.target.classList.add("fadeIn");
       observer.unobserve(entry.target);
@@ -61,18 +120,6 @@ images.forEach((image) => {
   observer.observe(image);
 });
 
-function parallax(el, multiplier) {
-  window.addEventListener("scroll", () => {
-    const cont = document.querySelector(el);
-    const y = document.documentElement.getBoundingClientRect().top;
-    const x = document.documentElement.scrollWidth;
-    const rate = y / x * multiplier;
-    console.log(x, y, rate)
-    if (y < 0) {
-      cont.style.backgroundPosition = `center ${rate}px`;
-    }
-  });
-}
 
 window.addEventListener('load', () => {
   const services = document.querySelectorAll('.service');
@@ -106,6 +153,14 @@ window.addEventListener('load', () => {
 const yearContainer = document.getElementById("currentYear");
 const currentYear = new Date().getFullYear();
 
-yearContainer.textContent = currentYear;
+yearContainer.textContent = currentYear + ' ';
 yearContainer.style.textDecoration = "none";
 yearContainer.style.display = "inline";
+
+
+document.querySelectorAll('.desktop-nav a').forEach((link) => {
+  if (link.getAttribute('href') === location.pathname) {
+    link.style.fontWeight = 900;
+    link.style.color = "indigo";
+  }
+})
