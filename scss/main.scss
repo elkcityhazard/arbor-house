@@ -312,8 +312,8 @@ header.header-main {
         padding: 0rem 1.5rem;
         opacity: 0;
         transform: translateX(-100%);
-        transition: all 250ms ease 1.5s;
-        -webkit-transition: all 250ms ease 1.5s;
+        transition: all 500ms ease 1.5s;
+        -webkit-transition: all 500ms ease 1.5s;
       }
     }
     .cta-btn {
@@ -1300,10 +1300,10 @@ section.video {
     text-align: left;
   }
   #siteTitle {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   #siteSubtitle {
-    font-size: 2.0rem;
+    font-size: 3.0rem;
   }
   #siteSubtitle + button.cta-btn {
     margin: {
@@ -1322,14 +1322,7 @@ section.video {
         color: black;
         position: relative;
         text-transform: capitalize;
-        &::before {
-          content: '👍';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: -1rem;;
-          z-index: 5;
-        }
+        transition-duration: 750ms;
       }
   }
   header.header-main {
