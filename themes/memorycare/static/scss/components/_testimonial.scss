@@ -1,0 +1,67 @@
+.testimonials {
+    padding: 1.5rem 0;
+  .row {
+    .swiper {
+        width: 100%;
+      .swiper-wrapper {
+          display: grid;
+          place-items: start center;
+          gap: 1.75rem;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          padding: 1rem;
+        .swiper-slide {
+            height: 100%;
+          .card {
+              max-width: 50ch;
+              height: 100%;
+              position: relative;
+            &.testimonial {
+              border-radius: 10px;
+              box-shadow: 2px 2px 20px -7px rgba(0, 0, 0, 0.75);
+              margin: 1rem auto;
+              padding: 1rem;
+              .fa-quote-right {
+                  color: #046582;
+              }
+            }
+            .inner-card {
+                .card-content {
+                    margin-bottom: 100px;
+                }
+                .fa-calendar {
+                    color: #ef9088;
+                }
+            }
+            .card-footer {
+                position: absolute;
+                top: calc(100% - 100px);
+                left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-date {
+        padding-left: 1rem;    
+}
+
+img.testimonial-image {
+  cursor: pointer;
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  transition: transform 500ms ease;
+  -webkit-transition: transform 500ms ease;
+  -moz-transition: transform 500ms ease;
+  z-index: 2;
+  &:hover {
+      transform: scale(1.1);
+  }
+}

@@ -7,6 +7,39 @@
         </div>
     </header>
     <div class="row">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                    {{ with .GetPage "testimonial"}}
+                        {{ range .Params.reviews }}
+                        <div class="swiper-slide">
+                            <div class="card testimonial">
+                                <i class="fas fa-quote-right fa-2x"></i>
+                                    <div class="inner-card">
+                                        <h3>{{ .name | markdownify }}</h3>
+                                        <figure>
+                                            <a href="{{ .image | absURL}}" title="image">
+                                            <img src="{{ .image | absURL }}" alt="testimonial image" class="testimonial-image" loading="lazy" height="400" width="400">
+                                        </a>
+                                        </figure>
+                                        <div class="card-content">
+                                            <p>{{ .text | markdownify }}</p>
+                                            <p class="card-footer">
+                                                <strong><i class="fas fa-calendar fa-2x"></i></strong> <span class="card-date">{{ time.Format "January 1, 2006" .date  }}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
         <div class="col">
             <div class="card testimonial">
                 <i class="fas fa-quote-right fa-2x"></i>
@@ -40,5 +73,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>

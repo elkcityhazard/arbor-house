@@ -24,6 +24,9 @@ const parallax = (id, rate) => {
 parallax('.fixed-background', 3);
 
 
+
+
+
   
 
 
