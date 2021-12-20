@@ -121,6 +121,70 @@ footer.footer-main p {
     max-width: 968px;
   }
 }
+.testimonials {
+  padding: 1.5rem 0;
+}
+.testimonials .row .swiper {
+  width: 100%;
+}
+.testimonials .row .swiper .swiper-wrapper {
+  display: grid;
+  place-items: start center;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1rem;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide {
+  height: 100%;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card {
+  max-width: 50ch;
+  height: 100%;
+  position: relative;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card.testimonial {
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px -7px rgba(0, 0, 0, 0.75);
+  margin: 1rem auto;
+  padding: 1rem;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card.testimonial .fa-quote-right {
+  color: #046582;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card .inner-card .card-content {
+  margin-bottom: 100px;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card .inner-card .fa-calendar {
+  color: #ef9088;
+}
+.testimonials .row .swiper .swiper-wrapper .swiper-slide .card .card-footer {
+  position: absolute;
+  top: calc(100% - 100px);
+  left: 0;
+}
+
+.card-date {
+  padding-left: 1rem;
+}
+
+img.testimonial-image {
+  cursor: pointer;
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  transition: transform 500ms ease;
+  -webkit-transition: transform 500ms ease;
+  -moz-transition: transform 500ms ease;
+  z-index: 2;
+}
+img.testimonial-image:hover {
+  transform: scale(1.1);
+}
+
 @keyframes visible {
   from {
     opacity: 0;
