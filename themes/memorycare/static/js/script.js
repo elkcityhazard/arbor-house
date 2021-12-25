@@ -181,6 +181,18 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
   incrementSlide(innerSwiper, initSlider);
 })
+
+innerSwiper.addEventListener('touchstart', (e) => {
+  console.log(e.touches)
+})
+innerSwiper.addEventListener('touchmove', (e) => {
+console.log(e)
+})
+innerSwiper.addEventListener('touchend', (e) => {
+console.log(e)
+})
 }
 
 testimonialSlides()
+
+
