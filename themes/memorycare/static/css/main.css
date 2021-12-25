@@ -230,6 +230,7 @@ footer.footer-main p {
 .testimonials .row .swiper .swiper-wrapper .swiper-slide .card .inner-card .card-content p {
   padding: 1rem 2rem;
   position: relative;
+  text-align: left;
 }
 .testimonials .row .swiper .swiper-wrapper .swiper-slide .card .inner-card .card-content p .fa-quote-right {
   color: #fff;
