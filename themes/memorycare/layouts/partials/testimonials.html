@@ -11,31 +11,37 @@
             <div class="swiper-wrapper">
                     {{ with .GetPage "testimonial"}}
                         {{ range .Params.reviews }}
-                        <div class="swiper-slide">
+                        <div data-id="{{ .id }}" class="swiper-slide">
                             <div class="card testimonial">
-                                <i class="fas fa-quote-right fa-2x"></i>
                                     <div class="inner-card">
-                                        <h3>{{ .name | markdownify }}</h3>
+                                        <div class="inner-card__column">
+                                            <h3>{{ .name | markdownify }}</h3>
+                                        {{ with .image }}
                                         <figure>
-                                            <a href="{{ .image | absURL}}" title="image">
-                                            <img src="{{ .image | absURL }}" alt="testimonial image" class="testimonial-image" loading="lazy" height="400" width="400">
+                                            <a href="{{ . | absURL}}" title="image">
+                                            <img src="{{ . | absURL }}" alt="testimonial image" class="testimonial-image" loading="lazy" height="400" width="400">
                                         </a>
                                         </figure>
-                                        <div class="card-content">
-                                            <p>{{ .text | markdownify }}</p>
-                                            <p class="card-footer">
-                                                <strong><i class="fas fa-calendar fa-2x"></i></strong> <span class="card-date">{{ time.Format "January 1, 2006" .date  }}</span>
-                                            </p>
+                                        {{ end }}
+                                        </div>
+                                        <div class="inner-card__column">
+                                            <div class="card-content">
+                                                <p>
+                                                    <i class="fas fa-quote-right fa-lg"></i>
+                                                    {{ .text | markdownify }}</p>
+                                                <p class="card-footer">
+                                                    <strong><i class="fas fa-calendar fa-lg"></i></strong> <span class="card-date">{{ time.Format "January 1, 2006" .date  }}</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                             </div>
                         </div>
                         {{ end }}
                     {{ end }}
-
-                    
                 </div>
-                <div class="swiper-pagination"></div>
+                <button id="prev-testimonial" aria-label="button"><i class="fas fa-arrow-left"></i></button>
+               <button id="next-testimonial" aria-label="button"><i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
