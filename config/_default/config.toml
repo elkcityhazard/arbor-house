@@ -8,11 +8,6 @@ title = "Arbor House Nursing Home | Traverse City Alzheimer's Care | Traverse Ci
   
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = -200
-  [[menu.main]]
     identifier = "about"
     name = "About Us"
     url = "/about/"

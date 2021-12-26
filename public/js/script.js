@@ -124,6 +124,11 @@ document.querySelectorAll(".desktop-nav a").forEach((link) => {
 
 // Testimonial slider
 let counter = 0;
+let isDragging = false,
+startPost = 0,
+currentTranslate = 0,
+prevTranslate = 0,
+animationID = 0
 
 function handleDisabledButtons() {
   const totalSlides = document.querySelectorAll('.swiper-slide').length;
