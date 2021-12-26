@@ -124,6 +124,11 @@ document.querySelectorAll(".desktop-nav a").forEach((link) => {
 
 // Testimonial slider
 let counter = 0;
+let isDragging = false,
+startPost = 0,
+currentTranslate = 0,
+prevTranslate = 0,
+animationID = 0
 
 function handleDisabledButtons() {
   const totalSlides = document.querySelectorAll('.swiper-slide').length;
@@ -181,18 +186,6 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
   incrementSlide(innerSwiper, initSlider);
 })
-
-innerSwiper.addEventListener('touchstart', (e) => {
-  console.log(e.touches)
-})
-innerSwiper.addEventListener('touchmove', (e) => {
-console.log(e)
-})
-innerSwiper.addEventListener('touchend', (e) => {
-console.log(e)
-})
 }
 
 testimonialSlides()
-
-

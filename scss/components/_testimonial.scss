@@ -45,11 +45,14 @@
             }
             .inner-card {
               margin: auto;
+              max-width: 100%;
               .inner-card__column {
               display: grid;
               margin: auto;
+              max-width: 100%;
               padding: 1rem;
               place-items: center;
+              text-align: center;
               h3 {
                 grid-area: 1 / 2;
               }
@@ -156,11 +159,11 @@
             transition: all 250ms ease;
             -webkit-transition: all 250ms;
           }
-          &:focus-within {
-            border: none;
-            border-radius: 0;
-            color: #f39189;
-            outline: 1px dotted black;
+          &:focus-within,
+          &:focus {
+            background: #fff;            
+            color: #333;
+            outline: 1px solid #fff;
           }
         }
         #prev-testimonial {
