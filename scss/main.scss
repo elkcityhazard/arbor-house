@@ -1212,6 +1212,12 @@ section.video {
 ****************/
 
 section.list {
+  .cta-btn {
+    color: #046582;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 @media screen and (min-width: 1365px) {
