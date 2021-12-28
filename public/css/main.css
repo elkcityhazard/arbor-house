@@ -899,7 +899,7 @@ section.sources ul {
   text-decoration: underline;
 }
 .footer-main .row .col h4.hero-text {
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #fff;
   font-size: 2em;
   margin-bottom: 1rem;
   text-align: center;
@@ -972,7 +972,7 @@ section.sources ul {
 }
 @media screen and (min-width: 968px) {
   .footer-main .row .col:not(:first-child) {
-    border-left: 1px solid #666;
+    border-left: 1px solid #fff;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2113,6 +2113,13 @@ header.header-main .col p {
 /***************
 **List Section**
 ****************/
+section.list .cta-btn {
+  color: #046582;
+}
+section.list .cta-btn:hover {
+  color: #fff;
+}
+
 @media screen and (min-width: 1365px) {
   header.header-main {
     max-height: 75vh;
