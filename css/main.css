@@ -1258,6 +1258,7 @@ header.header-main .col ul li {
 }
 header.header-main .col .cta-btn {
   background: #046582;
+  border-radius: 2.5rem;
   color: #fff;
   opacity: 0;
 }
@@ -1265,7 +1266,7 @@ header.header-main .col .cta-btn a {
   color: #fff;
 }
 header.header-main .col .cta-btn:hover {
-  background: #fff;
+  background: transparent;
   color: #046582;
 }
 header.header-main .col .cta-btn:hover a {
@@ -2025,11 +2026,13 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   }
 
   #headerServices {
+    padding-top: 0rem;
     padding-left: 1.75rem;
     font-size: 2rem;
   }
   #headerServices li.service {
     background: transparent;
+    font-size: 0.75em;
     color: black;
     position: relative;
     text-transform: capitalize;
@@ -2043,7 +2046,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
     padding: 0 3rem;
   }
   header.header-main .col {
-    align-items: center;
+    align-items: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2122,6 +2125,7 @@ section.list .cta-btn:hover {
 
 @media screen and (min-width: 1365px) {
   header.header-main {
+    align-items: start;
     max-height: 75vh;
     background-image: url("../images/nurse-senior-walker-1365.jpg");
   }
@@ -2172,6 +2176,7 @@ section.list .cta-btn:hover {
   header.header-main {
     background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.33)), url("../images/nurse-senior-walker-1920.jpg") no-repeat fixed center center;
     height: 75vh;
+    align-items: center;
   }
 
   #siteSubtitle + button.cta-btn {
