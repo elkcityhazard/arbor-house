@@ -287,13 +287,14 @@ header.header-main {
     }
     .cta-btn {
       background:rgba(4, 101, 130, 1.0);
+      border-radius: 2.5rem;
       color: #fff;
       opacity: 0;
       a {
         color: #fff;
       }
       &:hover {
-        background: #fff;
+        background: transparent;
         color: rgba(4, 101, 130, 1.0);
         a {
           color: rgba(4, 101, 130, 1.0) !important;
@@ -1095,10 +1096,12 @@ section.video {
   }
 
   #headerServices {
+    padding-top: 0rem;
     padding-left: 1.75rem;
     font-size: 2.0rem;
       li.service {
         background: transparent;
+        font-size: 0.75em;
         color: black;
         position: relative;
         text-transform: capitalize;
@@ -1111,7 +1114,7 @@ section.video {
     height: calc(100% - 100px);
     padding: 0 3rem;
     .col {
-      align-items: center;
+      align-items: start;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1222,6 +1225,7 @@ section.list {
 
 @media screen and (min-width: 1365px) {
   header.header-main {
+    align-items: start;
     max-height: 75vh;
     background-image: url("../images/nurse-senior-walker-1365.jpg");
     .col {
@@ -1288,6 +1292,7 @@ section.list {
   header.header-main {
     background: linear-gradient(0.25turn, rgba(255,255,255,0.33), rgba(255,255,255,0.33)), url("../images/nurse-senior-walker-1920.jpg") no-repeat fixed center center;
     height: 75vh;
+    align-items: center;
   }
   #siteSubtitle + button.cta-btn {
     margin: unset;

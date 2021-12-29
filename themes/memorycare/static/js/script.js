@@ -1,6 +1,11 @@
 const parallax = (id, rate) => {
+  if (window.innerWidth < 1200) {
+    return
+  }
   let el = document.querySelector(id);
-
+  if (!el) {
+    return;
+  }
   const sp = () => {
     //   Define X and Y
     let x = el.getBoundingClientRect().top / rate;
@@ -22,6 +27,7 @@ const parallax = (id, rate) => {
 };
 
 parallax(".fixed-background", 3);
+parallax(".header-main", 3);
 
 
 

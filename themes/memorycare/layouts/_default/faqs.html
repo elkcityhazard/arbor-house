@@ -36,21 +36,17 @@
     const btns = document.querySelectorAll('.data-btn');
     const answerBoxes = document.querySelectorAll('.card-content');
 
-    function expandCard(el, toggleClose) {
-        // el.style.height = el.scrollHeight + 'px';
-        // el.scrollHeight = el.scrollHeight;
-        el.firstElementChild.childNodes[0].classList.toggle('fa-plus')
-        el.firstElementChild.childNodes[0].classList.toggle('fa-minus')
-        const toExpand = el.getAttribute('data-id');
-        const target = document.getElementById(toExpand);
-        target.classList.toggle('active');
-        target.style.height = target.classList.contains('active') ? target.scrollHeight + 'px' : 0;        
-    }
 
     btns.forEach((btn) => {
         btn.addEventListener('click', (e) => {
-            // heightToZero(answerBoxes)
-            expandCard(btn);
+            btn.classList.toggle('active')
+        if (btn.classList.contains('active')) {
+            btn.firstElementChild.firstChild.style.transform = `rotateZ(405deg)`;
+            btn.nextElementSibling.style.height = `${btn.nextElementSibling.scrollHeight}px`
+        } else {
+            btn.firstElementChild.firstChild.style.transform = `rotateZ(0)`;
+            btn.nextElementSibling.style.height = 0;
+        }
 
         })
     })
