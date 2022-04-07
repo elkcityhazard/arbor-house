@@ -818,7 +818,7 @@ section.images .row img:hover {
 
 @media screen and (min-width: 768px) {
   section.images .row img {
-    max-width: calc(768px / 2);
+    max-width: 384px;
     flex: 1 1 50%;
   }
 }
@@ -826,14 +826,14 @@ section.images .row img:hover {
   section.images .row img {
     flex: 1 1 33%;
     height: auto;
-    max-width: calc(1366px / 3);
+    max-width: 455.3333333333px;
   }
 }
 @media screen and (min-width: 1920px) {
   section.images .row img {
     flex: 1 1 33%;
     height: auto;
-    max-width: calc(1920px / 5);
+    max-width: 384px;
   }
 }
 section.sources {
@@ -1257,7 +1257,7 @@ header.header-main .col ul li {
   -webkit-transition: all 500ms ease 1.5s;
 }
 header.header-main .col .cta-btn {
-  background: #046582;
+  background: rgb(4, 101, 130);
   border-radius: 2.5rem;
   color: #fff;
   opacity: 0;
@@ -1267,10 +1267,10 @@ header.header-main .col .cta-btn a {
 }
 header.header-main .col .cta-btn:hover {
   background: transparent;
-  color: #046582;
+  color: rgb(4, 101, 130);
 }
 header.header-main .col .cta-btn:hover a {
-  color: #046582 !important;
+  color: rgb(4, 101, 130) !important;
 }
 header.header-main:hover > .col {
   background: rgba(0, 0, 0, 0);
@@ -1433,7 +1433,7 @@ header.page-header h1 {
   list-style-position: inside;
   margin: 0em auto 0;
   text-align: left;
-  width: calc(100% * 0.75);
+  width: 75%;
 }
 .navbar-main nav ul li {
   align-items: center;
@@ -1678,8 +1678,8 @@ section.services.about.testimonials .row .col .card {
 section.services.about.testimonials .row .col .card i {
   color: #046582;
   position: absolute;
-  top: calc(-56px / 2);
-  right: calc(-32px / 2);
+  top: -28px;
+  right: -16px;
 }
 section.services.about.testimonials .row .col .card .inner-card .card-content {
   padding: 1rem;
@@ -1728,7 +1728,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
   outline: 2px dotted rgba(4, 101, 130, 0.75);
 }
 section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control button {
-  background: #046582;
+  background: rgb(4, 101, 130);
   color: #fff;
   margin: 1rem auto;
   max-width: 175px;
@@ -1737,7 +1737,7 @@ section.services.about.testimonials.contact .row .col .card .inner-card .main-fo
 }
 section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control button:hover {
   background: #fff;
-  color: #046582;
+  color: rgb(4, 101, 130);
 }
 
 /***********************
@@ -1974,7 +1974,7 @@ section.services.about .row .col .card .card-content {
   }
   section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control {
     margin: 0 auto;
-    max-width: calc(100% * 0.66);
+    max-width: 66%;
   }
   section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control label,
 section.services.about.testimonials.contact .row .col .card .inner-card .main-form .form-control input,
