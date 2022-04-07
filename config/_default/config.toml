@@ -8,6 +8,11 @@ title = "Arbor House Nursing Home | Traverse City Alzheimer's Care | Traverse Ci
   
 [menu]
   [[menu.main]]
+    identifier = "closing message"
+    name = "Closing Message"
+    url = "/closing-message/"
+    weight = -200
+  [[menu.main]]
     identifier = "about"
     name = "About Us"
     url = "/about/"
