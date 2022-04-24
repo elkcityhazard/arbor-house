@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contact Us on Arbor House Nursing Home | Traverse City Alzheimer's Care | Traverse City Dementia Care | Traverse City Nursing Home</title><link>https://arborhousealh.org/contact/</link><description>Recent content in Contact Us on Arbor House Nursing Home | Traverse City Alzheimer's Care | Traverse City Dementia Care | Traverse City Nursing Home</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://arborhousealh.org/contact/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contact Us on Arbor House Nursing Home | Traverse City Alzheimer&#39;s Care | Traverse City Dementia Care |  Traverse City Nursing Home</title>
+    <link>https://arborhousealh.org/contact/</link>
+    <description>Recent content in Contact Us on Arbor House Nursing Home | Traverse City Alzheimer&#39;s Care | Traverse City Dementia Care |  Traverse City Nursing Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://arborhousealh.org/contact/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
